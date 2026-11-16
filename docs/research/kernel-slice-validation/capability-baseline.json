@@ -1,0 +1,798 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-16",
+  "task": "T0",
+  "plan": "../2026-11-16-kernel-slice-implementation-plan.md",
+  "plan_commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+  "scope": {
+    "static_only": true,
+    "product_code_changed": false,
+    "live_gateway_connected": false,
+    "app_server_started": false,
+    "new_fixture_runs": 0,
+    "new_paid_model_experiment_tokens": 0,
+    "research_assistant_tokens_included": false,
+    "T0_P_started": false
+  },
+  "status_semantics": {
+    "contract_status": "仅指命名入口和语义，受 limits 限制，不代表集成通过",
+    "current_integration_status": "独立运行时尚未集成，均为 unknown",
+    "historical_report": "复用既有记录，本轮未重跑"
+  },
+  "versions": {
+    "hermes": {
+      "source_commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "branch": "multiAgent",
+      "clean_at_start": true,
+      "installed_entry": "/Users/season/.local/bin/hermes",
+      "launcher_target": "/Users/season/workspace/github/hermes-agent/.hermes/bin/hermes",
+      "managed_python": "3.14.9",
+      "version_method": "host Python -I -B 只读 get_version_info；未执行 launcher",
+      "base_version": "0.23.1",
+      "derived_version": "0.23.1+71957.g72b056b",
+      "live_gateway_version": null,
+      "historical_gateway_commit": "18e659dfc93ef319771d51441573e3fa31b8f5b7",
+      "historical_cli_commit": "e7b9eb6c7d89f1df2b63ef4bbf68e986e88ac786"
+    },
+    "codex": {
+      "source_commit": "e241c18544bab47f729dbfea6d6f2e21531ba0a7",
+      "clean_at_start": true,
+      "installed_entry": "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex",
+      "version": "0.169.0-alpha.11.1",
+      "version_method": "installed binary --version",
+      "binary_sha256": "3ea20787e106af94573d3d6c19480aed93a1334b0dd32b6b04e2f780ce82cf4b",
+      "binary_build_commit": null,
+      "warning": "沙箱内无法创建 PATH aliases，版本命令成功；未修复或重装"
+    }
+  },
+  "repositories": {
+    "hermes": "/Users/season/workspace/github/hermes-agent",
+    "codex": "/Users/season/workspace/github/codex"
+  },
+  "evidence": {
+    "E01": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "docs/research/2026-11-16-kernel-slice-implementation-plan.md",
+      "line": 1,
+      "sha256": "9becc79ec131188b43bc59e134a89b13f35ae30403451d2aa417da33accf3393",
+      "kind": "source_or_contract"
+    },
+    "E02": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "hermes_cli/version_info.py",
+      "line": 293,
+      "sha256": "0dfc8448704eaaf4843db5f907bc1fb7db7aa83194d72ce03d74f4a456822f76",
+      "kind": "source_or_contract"
+    },
+    "E03": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "hermes_cli/version_info.py",
+      "line": 242,
+      "sha256": "0dfc8448704eaaf4843db5f907bc1fb7db7aa83194d72ce03d74f4a456822f76",
+      "kind": "source_or_contract"
+    },
+    "E04": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "docs/research/g0-g2-2026-11-16/hermes/G1-evidence.md",
+      "line": 1,
+      "sha256": "660b2758e64d8466e67242932c317ecf87b602e86263e25d536e1d619c0ae135",
+      "kind": "historical_report"
+    },
+    "E05": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "docs/research/g0-g2-2026-11-16/codex-dsh/README.md",
+      "line": 1,
+      "sha256": "105af9dbe91fef325763ac307769c4a37e03233fa2e90755e3a8c88bfbbda901",
+      "kind": "historical_report"
+    },
+    "E06": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "website/docs/developer-guide/gateway-internals.md",
+      "line": 582,
+      "sha256": "96780d76f017b6457d34b48d8b8e434ab48906b30fddced31662ca1332e55d73",
+      "kind": "source_or_contract"
+    },
+    "E07": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "tui_gateway/contracts/canonical_sessions.py",
+      "line": 30,
+      "sha256": "54190dc496d19b895ed41657d552f338066596e89cafa540f8226e44900d3189",
+      "kind": "source_or_contract"
+    },
+    "E08": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "tui_gateway/contracts/canonical.py",
+      "line": 402,
+      "sha256": "ba58becd97d762321045fdbae715ad4acbd43ec29fb65190d25d7d952192a909",
+      "kind": "source_or_contract"
+    },
+    "E09": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "tui_gateway/contracts/canonical_sessions.py",
+      "line": 249,
+      "sha256": "54190dc496d19b895ed41657d552f338066596e89cafa540f8226e44900d3189",
+      "kind": "source_or_contract"
+    },
+    "E10": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "tui_gateway/contracts/canonical.py",
+      "line": 42,
+      "sha256": "ba58becd97d762321045fdbae715ad4acbd43ec29fb65190d25d7d952192a909",
+      "kind": "source_or_contract"
+    },
+    "E11": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "gateway/session_controls.py",
+      "line": 785,
+      "sha256": "b7317ba18b74c4b23d9d5683551415ac0c7baaae2187762e9fe02c08d3120794",
+      "kind": "source_or_contract"
+    },
+    "E12": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "gateway/session_local_recovery.py",
+      "line": 476,
+      "sha256": "b52e2b1f2e4fe4803a75d4c644631e8dd0e64ef24161dab77401df31689696ae",
+      "kind": "source_or_contract"
+    },
+    "E13": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "gateway/session_usage.py",
+      "line": 1,
+      "sha256": "e6096daeb1cdf50b4d99d90fea158be7e48e4825928281e108af39267826a9d3",
+      "kind": "source_or_contract"
+    },
+    "E14": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "model_tools.py",
+      "line": 851,
+      "sha256": "b2a5b8d955e8d3ecb5517cf14935b1a692d536048eef78959fe2bbe0b449c77a",
+      "kind": "source_or_contract"
+    },
+    "E15": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "website/docs/developer-guide/plugins/index.md",
+      "line": 887,
+      "sha256": "11ee54d56b773f90bd60392061c3e0e13d720ca657deeb08fea7e44854848341",
+      "kind": "source_or_contract"
+    },
+    "E16": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "gateway/session_policy.py",
+      "line": 669,
+      "sha256": "22b42f98d6ae57c23a0963530f5aa50852f55fc623dc0c7a77940d7647ab6e09",
+      "kind": "source_or_contract"
+    },
+    "E17": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "agent/api_request_hooks.py",
+      "line": 164,
+      "sha256": "6d320559f3df689cb24a93c9b110124abc7c32f4dcce88ea5aead5f59bdee2a7",
+      "kind": "source_or_contract"
+    },
+    "E18": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "agent/auxiliary_hooks.py",
+      "line": 26,
+      "sha256": "fb2cce2525e104cdecab1ef62a6858db5c02796bc87b31872ac19ea0667eeb37",
+      "kind": "source_or_contract"
+    },
+    "E19": {
+      "repository": "hermes",
+      "commit": "72b056be3b9d1548f3a59731189943b64e1ec694",
+      "path": "agent/auxiliary_hooks.py",
+      "line": 159,
+      "sha256": "fb2cce2525e104cdecab1ef62a6858db5c02796bc87b31872ac19ea0667eeb37",
+      "kind": "source_or_contract"
+    },
+    "E20": {
+      "repository": "codex",
+      "commit": "e241c18544bab47f729dbfea6d6f2e21531ba0a7",
+      "path": "codex-rs/app-server-protocol/src/protocol/v2/thread.rs",
+      "line": 147,
+      "sha256": "6b030a558283c2b3b0e85b3f0a5080ce606fe8f81ba01e3c7a7f6f9eb2d381fd",
+      "kind": "source_or_contract"
+    },
+    "E21": {
+      "repository": "codex",
+      "commit": "e241c18544bab47f729dbfea6d6f2e21531ba0a7",
+      "path": "codex-rs/app-server/src/message_processor.rs",
+      "line": 1043,
+      "sha256": "1ad88f252050fde824693c49e9b780bb207e2cd3ef7a87a806cda3e4d4f60392",
+      "kind": "source_or_contract"
+    },
+    "E22": {
+      "repository": "codex",
+      "commit": "e241c18544bab47f729dbfea6d6f2e21531ba0a7",
+      "path": "codex-rs/app-server/src/bespoke_event_handling.rs",
+      "line": 1122,
+      "sha256": "7914a6c2818739d246a5b0a59932e33a5300719b1b42c198ec7e9407d4a674d8",
+      "kind": "source_or_contract"
+    },
+    "E23": {
+      "repository": "codex",
+      "commit": "e241c18544bab47f729dbfea6d6f2e21531ba0a7",
+      "path": "codex-rs/app-server/src/request_processors/turn_processor.rs",
+      "line": 722,
+      "sha256": "37b72492c7c07dca4fe1fef909f36884097480d15c19511db1e32fc7bb880fec",
+      "kind": "source_or_contract"
+    },
+    "E24": {
+      "repository": "codex",
+      "commit": "e241c18544bab47f729dbfea6d6f2e21531ba0a7",
+      "path": "codex-rs/core/src/session/session.rs",
+      "line": 1602,
+      "sha256": "b6dc605889226060cb6151bee024625def912f95275dec6891710101def94b16",
+      "kind": "source_or_contract"
+    },
+    "E25": {
+      "repository": "codex",
+      "commit": "e241c18544bab47f729dbfea6d6f2e21531ba0a7",
+      "path": "codex-rs/app-server-protocol/schema/typescript/v2/ThreadTokenUsageUpdatedNotification.ts",
+      "line": 6,
+      "sha256": "53ce4421d686b8a7f9a86c5ad54de2a7dceecfb95df74fa5f441947e136f063d",
+      "kind": "source_or_contract"
+    },
+    "E26": {
+      "repository": "codex",
+      "commit": "e241c18544bab47f729dbfea6d6f2e21531ba0a7",
+      "path": "codex-rs/core/src/tools/spec_plan.rs",
+      "line": 1289,
+      "sha256": "ebe63d4445f56f3c5b0cad03160dfc453f20d6c1908a31e46026cbbadd0a9ca1",
+      "kind": "source_or_contract"
+    },
+    "E27": {
+      "repository": "codex",
+      "commit": "e241c18544bab47f729dbfea6d6f2e21531ba0a7",
+      "path": "codex-rs/app-server/src/lib.rs",
+      "line": 1241,
+      "sha256": "0c82d2343d9ebd4dc0d443eaddb13744c241be13ee301b7a083f0e0457be1877",
+      "kind": "source_or_contract"
+    },
+    "E28": {
+      "repository": "codex",
+      "commit": "e241c18544bab47f729dbfea6d6f2e21531ba0a7",
+      "path": "codex-rs/app-server/src/lib.rs",
+      "line": 1402,
+      "sha256": "0c82d2343d9ebd4dc0d443eaddb13744c241be13ee301b7a083f0e0457be1877",
+      "kind": "source_or_contract"
+    },
+    "E29": {
+      "repository": "codex",
+      "commit": "e241c18544bab47f729dbfea6d6f2e21531ba0a7",
+      "path": "codex-rs/app-server/src/dynamic_tools.rs",
+      "line": 18,
+      "sha256": "b93d2e6adb139da47f1e0479f5c0099b5c2b612ed1080e12917a4b590eb286c0",
+      "kind": "source_or_contract"
+    }
+  },
+  "capabilities": [
+    {
+      "id": "H_DISCOVERY",
+      "harness": "hermes",
+      "contract_status": "supported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "hermes gateway attach --json",
+        "runtime.describe"
+      ],
+      "evidence": [
+        "E06",
+        "E08",
+        "E10"
+      ],
+      "limits": "仅发现，不加 start/recover；ticket 不落盘；当前存活 Gateway 版本未新鲜确认。",
+      "blocking_items": [
+        "B01"
+      ],
+      "next_validation": "T0-P"
+    },
+    {
+      "id": "H_CANONICAL_SESSION",
+      "harness": "hermes",
+      "contract_status": "supported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "session.create(request_id,source,toolsets)",
+        "session.resume(session_id)"
+      ],
+      "evidence": [
+        "E04",
+        "E07",
+        "E09"
+      ],
+      "limits": "使用 canonical 合同；不混用 standalone 的 idempotency_key。历史同进程恢复不等于冷恢复。",
+      "blocking_items": [
+        "B01",
+        "B03"
+      ],
+      "next_validation": "T0-P/T6"
+    },
+    {
+      "id": "H_ADMISSION",
+      "harness": "hermes",
+      "contract_status": "supported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "prompt.submit(submission_id|input_id)",
+        "prompt.receipt(include_result=true)",
+        "prompt.cancel"
+      ],
+      "evidence": [
+        "E04",
+        "E07",
+        "E08",
+        "E09",
+        "E10",
+        "E11"
+      ],
+      "limits": "接受、排队、取消响应不等于终态；忙成员由运行时排队；unknown 不准自动重发。",
+      "blocking_items": [
+        "B03",
+        "B06"
+      ],
+      "next_validation": "T6/T8"
+    },
+    {
+      "id": "H_EVENT_REPLAY",
+      "harness": "hermes",
+      "contract_status": "supported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "session.events.since(last_sequence,replay_epoch)"
+      ],
+      "evidence": [
+        "E04",
+        "E07",
+        "E09",
+        "E11"
+      ],
+      "limits": "snapshot_required/truncated 必须重同步；原生游标不是业务消息消费确认。",
+      "blocking_items": [
+        "B06"
+      ],
+      "next_validation": "T6/T8"
+    },
+    {
+      "id": "H_COLD_RECOVERY",
+      "harness": "hermes",
+      "contract_status": "unknown",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "session.resume",
+        "recover_local_sessions",
+        "prompt.resolve_unknown"
+      ],
+      "evidence": [
+        "E04",
+        "E08",
+        "E10",
+        "E12"
+      ],
+      "limits": "恢复源码存在，但本项目冷重启未知；resolve_unknown 显式接受丢失风险，不自动清障。",
+      "blocking_items": [
+        "B06"
+      ],
+      "next_validation": "T8"
+    },
+    {
+      "id": "H_EXTERNAL_TOOL",
+      "harness": "hermes",
+      "contract_status": "supported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "plugin.yaml",
+        "register(ctx)",
+        "ctx.register_tool"
+      ],
+      "evidence": [
+        "E15"
+      ],
+      "limits": "公开插件注册可承载 send/read；当前实际插件加载和工具选择未测。",
+      "blocking_items": [
+        "B02"
+      ],
+      "next_validation": "T0-P"
+    },
+    {
+      "id": "H_HANDLER_IDENTITY",
+      "harness": "hermes",
+      "contract_status": "supported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "task_id",
+        "session_id",
+        "conversation_id"
+      ],
+      "evidence": [
+        "E14",
+        "E15"
+      ],
+      "limits": "支持指定原生字段，不等于已实现唯一作者映射；child 可共享 conversation，execute_code 嵌套可能缺上下文；压缩须重绑定。",
+      "blocking_items": [
+        "B03"
+      ],
+      "next_validation": "T0-P/T6"
+    },
+    {
+      "id": "H_ORDINARY_CALL_ID",
+      "harness": "hermes",
+      "contract_status": "unsupported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "ordinary handler tool_call_id/turn_id"
+      ],
+      "evidence": [
+        "E14"
+      ],
+      "limits": "普通派发没有这些参数；观察 hooks 的相关性不是 handler 合同。",
+      "blocking_items": [
+        "B03"
+      ],
+      "next_validation": "T6"
+    },
+    {
+      "id": "H_SAFE_MODE_PLUGIN",
+      "harness": "hermes",
+      "contract_status": "unsupported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "safe_mode=true with external plugin toolset"
+      ],
+      "evidence": [
+        "E16"
+      ],
+      "limits": "safe_mode 剔除插件工具集；改用隔离 profile、显式工具集和真实权限检查。",
+      "blocking_items": [
+        "B02"
+      ],
+      "next_validation": "T0-P"
+    },
+    {
+      "id": "H_USAGE",
+      "harness": "hermes",
+      "contract_status": "supported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "receipt.usage",
+        "session.usage/session.stats",
+        "post_api_request",
+        "post_auxiliary_call"
+      ],
+      "evidence": [
+        "E04",
+        "E13",
+        "E17",
+        "E18",
+        "E19"
+      ],
+      "limits": "累计流和逐调用流不重复加账；辅助 streaming/error usage 可空，父身份可空；hooks 不提供硬预算或持久重放。",
+      "blocking_items": [
+        "B04",
+        "B06"
+      ],
+      "next_validation": "T0-P/T6/T8"
+    },
+    {
+      "id": "C_DYNAMIC_TOOLS",
+      "harness": "codex",
+      "contract_status": "supported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "initialize.capabilities.experimentalApi",
+        "thread/start.dynamicTools",
+        "item/tool/call"
+      ],
+      "evidence": [
+        "E20",
+        "E21",
+        "E22"
+      ],
+      "limits": "开关每连接协商；稳定 schema 可能省略实验字段；安装版独立适配仍待测。",
+      "blocking_items": [
+        "B01",
+        "B05"
+      ],
+      "next_validation": "T0-P"
+    },
+    {
+      "id": "C_CALL_IDENTITY",
+      "harness": "codex",
+      "contract_status": "supported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "threadId",
+        "turnId",
+        "callId",
+        "namespace",
+        "tool",
+        "arguments"
+      ],
+      "evidence": [
+        "E22"
+      ],
+      "limits": "这些由服务端产生；仍须映射受控成员/Attempt，不信正文自报身份。",
+      "blocking_items": [
+        "B05"
+      ],
+      "next_validation": "T0-P/T5"
+    },
+    {
+      "id": "C_TURN_LIFECYCLE",
+      "harness": "codex",
+      "contract_status": "supported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "turn/start",
+        "turn/completed",
+        "turn/interrupt",
+        "thread/read"
+      ],
+      "evidence": [
+        "E05",
+        "E20",
+        "E23"
+      ],
+      "limits": "busy 可 steer 旧 turn；取消响应不是终态；没有回执不能推定未执行。",
+      "blocking_items": [
+        "B06"
+      ],
+      "next_validation": "T0-P/T5/T8"
+    },
+    {
+      "id": "C_NATIVE_DEDUP",
+      "harness": "codex",
+      "contract_status": "unsupported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "clientUserMessageId"
+      ],
+      "evidence": [
+        "E05",
+        "E23"
+      ],
+      "limits": "历史 fixture 已出现重复 user item，此字段不提供原生提交去重。",
+      "blocking_items": [
+        "B06"
+      ],
+      "next_validation": "T5/T8"
+    },
+    {
+      "id": "C_HISTORY_RESUME",
+      "harness": "codex",
+      "contract_status": "supported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "thread/resume using same isolated CODEX_HOME"
+      ],
+      "evidence": [
+        "E05",
+        "E20"
+      ],
+      "limits": "历史 fixture 支持跨进程终态历史恢复且无新增 provider 请求；不是所有在途情况。",
+      "blocking_items": [
+        "B05",
+        "B06"
+      ],
+      "next_validation": "T0-P/T8"
+    },
+    {
+      "id": "C_TOOL_DEFINITION_RESUME",
+      "harness": "codex",
+      "contract_status": "supported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "InitialHistory::Resumed -> persisted_dynamic_tools"
+      ],
+      "evidence": [
+        "E24"
+      ],
+      "limits": "源码在未显式指定动态工具时恢复定义；安装二进制新连接上的回调未验证。",
+      "blocking_items": [
+        "B05"
+      ],
+      "next_validation": "T0-P"
+    },
+    {
+      "id": "C_PENDING_CALLBACK_RESUME",
+      "harness": "codex",
+      "contract_status": "unknown",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "pending item/tool/call across disconnect"
+      ],
+      "evidence": [
+        "E24",
+        "E27",
+        "E28",
+        "E29"
+      ],
+      "limits": "丢失 receiver 可能转为失败工具结果；恢复定义不是恢复未决 RPC，业务意图可能已经落盘。",
+      "blocking_items": [
+        "B05",
+        "B06"
+      ],
+      "next_validation": "T0-P/T8"
+    },
+    {
+      "id": "C_STDIO_OWNERSHIP",
+      "harness": "codex",
+      "contract_status": "supported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "dedicated AppServer stdio process"
+      ],
+      "evidence": [
+        "E27",
+        "E28"
+      ],
+      "limits": "single_client_mode 的 stdio 断开可退出并关闭线程；新写者启动前确认旧实例退出，每连接重新 initialize。",
+      "blocking_items": [
+        "B06"
+      ],
+      "next_validation": "T0-P/T8"
+    },
+    {
+      "id": "C_USAGE",
+      "harness": "codex",
+      "contract_status": "supported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "thread/tokenUsage/updated",
+        "tokenUsage.total/last"
+      ],
+      "evidence": [
+        "E05",
+        "E25"
+      ],
+      "limits": "持久化累计基线；恢复旧累计可能挂后续 interrupted turn，不能二次记账；尾账丢失保留 unknown。",
+      "blocking_items": [
+        "B06"
+      ],
+      "next_validation": "T0-P/T5/T8"
+    },
+    {
+      "id": "EFFECTIVE_TOOL_SET",
+      "harness": "both",
+      "contract_status": "unknown",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "Hermes explicit toolsets",
+        "Codex dynamicTools/config/permissions"
+      ],
+      "evidence": [
+        "E16",
+        "E26"
+      ],
+      "limits": "新增两个工具不等于删除其他内置工具；完整表、原生子树禁用与权限待测。",
+      "blocking_items": [
+        "B02",
+        "B07"
+      ],
+      "next_validation": "T0-P/T5/T6"
+    },
+    {
+      "id": "STRICT_PROVIDER_TOKEN_CAP",
+      "harness": "both",
+      "contract_status": "unknown",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "public usage observers / native limits"
+      ],
+      "evidence": [
+        "E05",
+        "E17",
+        "E18",
+        "E19"
+      ],
+      "limits": "未建立严格 provider 硬限能力，不能承诺；运行时预约、软限和未知尾账保留不等于硬限。",
+      "blocking_items": [
+        "B04",
+        "B06"
+      ],
+      "next_validation": "T6/T8"
+    },
+    {
+      "id": "COMPLETE_BLACK_BOX_READ_SET",
+      "harness": "both",
+      "contract_status": "unsupported",
+      "current_integration_status": "unknown",
+      "entrypoints": [
+        "injected context + collaboration callbacks"
+      ],
+      "evidence": [
+        "E14",
+        "E22"
+      ],
+      "limits": "这些入口不观察全部文件/网页读取；关键源通过受控入口，其余依赖标 opaque。",
+      "blocking_items": [
+        "B07"
+      ],
+      "next_validation": "T4/T5/T6"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "B01",
+      "scope": "版本适配门槛",
+      "gap": "当前 Gateway 进程版本/能力未新鲜确认；Codex 二进制与源码构建提交不能一一对应",
+      "exit_evidence": "T0-P 记录实际 endpoint/runtime.describe 与固定 Codex schema；不自动重启用户服务",
+      "blocks_static_T0_completion": false
+    },
+    {
+      "id": "B02",
+      "scope": "Hermes 配置门槛",
+      "gap": "safe_mode 排除插件；尚无实际加载、最小工具表与有效权限证据",
+      "exit_evidence": "T0-P 隔离 profile＋显式工具集；真实受控 send 被选择且无越权表项，不能仅插件 doctor 成功",
+      "blocks_static_T0_completion": false
+    },
+    {
+      "id": "B03",
+      "scope": "Hermes 身份/回执门槛",
+      "gap": "当前 Attempt 的可信映射、缺上下文拒绝、压缩/child 分流和回执重传未集成",
+      "exit_evidence": "T0-P 先证正常作者；T6 fixture 证拒绝/幂等；未知原调用禁止自动重放",
+      "blocks_static_T0_completion": false
+    },
+    {
+      "id": "B04",
+      "scope": "Hermes 用量门槛",
+      "gap": "辅助 streaming/error/无父身份、hook 丢失时费用完整性不明",
+      "exit_evidence": "T0-P 对账正常总量/coverage；T6/T8 验证缺失保留预约。总量不能核对就停止新调用",
+      "blocks_static_T0_completion": false
+    },
+    {
+      "id": "B05",
+      "scope": "Codex 冷恢复能力门槛",
+      "gap": "源码恢复工具定义，但安装版重启后 callback/待决 RPC 未验证",
+      "exit_evidence": "T0-P 用确定性 fixture 恢复原工具并观察新回调；不能把继承 native child 的旧实验当作独立线程证据",
+      "blocks_static_T0_completion": false
+    },
+    {
+      "id": "B06",
+      "scope": "两路径在途恢复门槛",
+      "gap": "对端接受后断线、原生终态与迟到费用的真实边界未验证",
+      "exit_evidence": "T8 各一次已接受/未对账窗口，原业务 submit=1；分列 reconciled/safely_blocked/unsafe",
+      "blocks_static_T0_completion": false
+    },
+    {
+      "id": "B07",
+      "scope": "工具/来源边界",
+      "gap": "两边完整工具表、原生子树禁用、黑盒关键读取依赖覆盖尚未实证",
+      "exit_evidence": "T0-P/T5/T6 固定实效表；关键源受控读，其他依赖标 opaque；无凭据/工具越权",
+      "blocks_static_T0_completion": false
+    }
+  ],
+  "minimum_tool_contract": {
+    "new_tools": [
+      "collab_send",
+      "evidence_read"
+    ],
+    "actual_effective_tool_set": "unknown",
+    "send": "可信作者绑定；稳定 request_id；持久回执；不阻塞等同伴",
+    "read": "授权 artifact/version/hash；不可用保留 unknown",
+    "role_result": "V3.2 固定 Worker/Lead 结构化文本；Owner 提案由运行时校验，不新增通用批准工具"
+  },
+  "rulings": [
+    "复用用户指定 multiAgent checkout；本轮仅 T0 文档核对。",
+    "不继续 T0-P，不执行 fixture、付费探针或产品实现。",
+    "G-D 质量筛查不硬门控协议内核。",
+    "仅提交两份新 T0 记录，不推送。"
+  ]
+}
