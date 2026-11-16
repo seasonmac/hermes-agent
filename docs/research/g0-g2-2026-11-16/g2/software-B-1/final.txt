@@ -1,0 +1,7 @@
+Both E17 deliveries passed the `processed` check before either inserted a row. Both called `charge`. The unique constraint could reject a second insert only after the charge call. The third delivery skipped the call because the row already existed.
+
+**Fix.** Correction C1 confirms that the provider honors `Idempotency-Key` for 24 hours, while the queue can redeliver for seven days. Use `charge_intent_id` as the provider key so distinct legitimate charges on one order get distinct keys.
+
+The peer identified a gap in retaining only completed outcomes. Persist a unique pending record per intent and its immutable earliest possible submission time before calling the provider. Reuse the same key on retries only while the request can reach the provider within the 24-hour window. Persist confirmed success before acknowledging, and retain it through the full seven-day redelivery horizon. Once the safe retry window closes, route unresolved intents to reconciliation and keep their records until resolved.
+
+**Tests.** Verify one provider charge for concurrent E17 deliveries and for a retry after provider success followed by a worker crash before the local write. Verify that an acknowledgment failure and a day-seven redelivery of a completed intent cause no new provider call. Verify that an unresolved intent at the retry cutoff goes to reconciliation, and that two distinct intents for one order both charge.

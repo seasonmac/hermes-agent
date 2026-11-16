@@ -1,0 +1,50 @@
+{
+  "01a1e345-169a-7710-9d7c-133f67817f6d": {
+    "world_state_hashes": {
+      "tools": [
+        "5d9c2a3adc48e37e4dee45f704736de59a4926060f18b118170365b4681b66b5"
+      ],
+      "top_level_tools": [
+        "079f678007810b015e1d5e7b0291498e22d3f1263c125c5c5db72768cb31f6f5"
+      ],
+      "skills": [
+        "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf"
+      ],
+      "host_skills": [
+        "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf"
+      ],
+      "managed_developer_instructions": [
+        "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      ]
+    },
+    "dynamic_tools_hash": "4e4cc9ebb115cc4697ccad9de92d3cee5e33d87a5f6b4ec790a2d676a9b3ed3e",
+    "world_states": 1,
+    "models": [
+      "gpt-6.1-sol"
+    ]
+  },
+  "01a1e345-16ad-7e62-b8be-35db73591088": {
+    "world_state_hashes": {
+      "tools": [
+        "5d9c2a3adc48e37e4dee45f704736de59a4926060f18b118170365b4681b66b5"
+      ],
+      "top_level_tools": [
+        "079f678007810b015e1d5e7b0291498e22d3f1263c125c5c5db72768cb31f6f5"
+      ],
+      "skills": [
+        "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf"
+      ],
+      "host_skills": [
+        "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf"
+      ],
+      "managed_developer_instructions": [
+        "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      ]
+    },
+    "dynamic_tools_hash": "4e4cc9ebb115cc4697ccad9de92d3cee5e33d87a5f6b4ec790a2d676a9b3ed3e",
+    "world_states": 1,
+    "models": [
+      "gpt-6.1-sol"
+    ]
+  }
+}

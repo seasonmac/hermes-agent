@@ -1,0 +1,32 @@
+[
+  {
+    "file": "hermes-observed.md",
+    "source": "/Users/season/workspace/github/dsh-superagent-prototype/docs/research/g0-g2-2026-11-16/hermes/G1-evidence.md",
+    "sha256": "660b2758e64d8466e67242932c317ecf87b602e86263e25d536e1d619c0ae135",
+    "bytes": 3027
+  },
+  {
+    "file": "hermes-observation.json",
+    "source": "/Users/season/workspace/github/dsh-superagent-prototype/docs/research/g0-g2-2026-11-16/hermes/G1-observation.json",
+    "sha256": "fb5f11732e447a85dac641eb4843382fe3a665189c080e585027dc3781bc65ba",
+    "bytes": 2707
+  },
+  {
+    "file": "codex-observed.md",
+    "source": "/Users/season/workspace/github/dsh-superagent-prototype/docs/research/g0-g2-2026-11-16/codex-dsh/README.md",
+    "sha256": "105af9dbe91fef325763ac307769c4a37e03233fa2e90755e3a8c88bfbbda901",
+    "bytes": 4083
+  },
+  {
+    "file": "codex-observation.json",
+    "source": "/Users/season/workspace/github/dsh-superagent-prototype/docs/research/g0-g2-2026-11-16/codex-dsh/codex-smoke.json",
+    "sha256": "d21280da727b67b79e31c4ccb5b02b1492a923c0df64095bcfa1605f9581275e",
+    "bytes": 3596
+  },
+  {
+    "file": "native-message-trace.json",
+    "source": "/Users/season/workspace/github/dsh-superagent-prototype/docs/research/g0-g2-2026-11-16/g2/software-B-1-persistent/trace.json",
+    "sha256": "85fbfda62488ff2eb266dc0544262eccb9d8dc016da80834b4d74dc7d17d996e",
+    "bytes": 6442
+  }
+]

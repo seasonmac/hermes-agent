@@ -1,0 +1,9 @@
+**Audit memo**
+
+1. **Rebuild the data as of each trading decision.** Use `published_at` and revision timestamps to select the latest fundamental value actually available at the decision cutoff. Reconstruct historical eligibility and use the available delisted price histories. Verify coverage of delisting returns.
+2. **Rerun validation in chronological order.** Fit the scaler within each training window and tune the 200 variants using only development-period data, with forward validation. Freeze the strategy before evaluating it on an untouched later period. Treat the original test set as development data because it informed selection.
+3. **Estimate net performance.** Model fees, spreads, and slippage at the intended trading size. Report sensitivity to those assumptions. Fill-level data is unavailable, so realized execution costs remain unverified.
+
+**Self-review after correction.** The timestamps and delisted price histories make the data repairs feasible. The correction supplies no evidence that those repairs were applied or that Sharpe was independently recomputed.
+
+**Conclusion.** The reported 2.1 is an unverified gross Sharpe from a compromised backtest. Whether the strategy has deployable alpha remains undetermined.

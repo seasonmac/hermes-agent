@@ -1,0 +1,18 @@
+{
+  "initial": {
+    "id": "START-A",
+    "task_ref": "T-A",
+    "text": "Assign the research review to its worker."
+  },
+  "followup": {
+    "id": "E-A5",
+    "actor": "human",
+    "text": "Regarding T-A, why did we not use that earlier list, and can we run now? I am asking for status and reasons, not lifting any prior pause.",
+    "refs": [
+      "T-A"
+    ]
+  },
+  "followup_sha256": "07ae0984e128a027909e8454dfcaaf9eb2c344b8bb23d58874a4b3ddc1b0b3ae",
+  "followup_path": "host_subscription",
+  "delivered_task": "T-A"
+}

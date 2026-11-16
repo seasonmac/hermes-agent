@@ -1,0 +1,62 @@
+{
+  "run_id": "software-B-1-persistent",
+  "usage_method": "Latest cumulative total_token_usage in each exact root/peer rollout. Sum one total per thread. Cached input and reasoning output are breakdown fields.",
+  "threads": [
+    {
+      "role": "root",
+      "thread_id": "01a1e04d-ec6b-7e22-b7f3-9e0244569d7a",
+      "turn_statuses": [
+        {
+          "id": "01a1e04d-f280-76d3-bf58-3a3065ac3c6a",
+          "status": "completed"
+        }
+      ],
+      "rollout_usage": {
+        "outcome": "observed",
+        "token_count_event_count": 7,
+        "latest_total": {
+          "total_tokens": 119268,
+          "input_tokens": 118184,
+          "cached_input_tokens": 115328,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1084,
+          "reasoning_output_tokens": 124
+        }
+      }
+    },
+    {
+      "role": "peer",
+      "thread_id": "01a1e04e-3869-7e92-a11e-f4e428fb961d",
+      "turn_statuses": [
+        {
+          "id": "01a1e04e-3878-7ba1-bc7b-88c85b7c9c47",
+          "status": "completed"
+        }
+      ],
+      "rollout_usage": {
+        "outcome": "observed",
+        "token_count_event_count": 4,
+        "latest_total": {
+          "total_tokens": 88773,
+          "input_tokens": 88505,
+          "cached_input_tokens": 65664,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 268,
+          "reasoning_output_tokens": 28
+        }
+      }
+    }
+  ],
+  "peer_count": 1,
+  "root_to_peer_interactions": 2,
+  "peer_to_root_interactions": 1,
+  "all_session_usage_available": true,
+  "sum_observed_thread_totals": {
+    "total_tokens": 208041,
+    "input_tokens": 206689,
+    "cached_input_tokens": 180992,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1352,
+    "reasoning_output_tokens": 152
+  }
+}

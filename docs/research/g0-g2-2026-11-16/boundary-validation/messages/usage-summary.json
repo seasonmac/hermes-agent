@@ -1,0 +1,40 @@
+{
+  "threads": {
+    "root": {
+      "thread_id": "01a1e1e3-b309-73e0-9fdd-532898cf82b7",
+      "usage_increment_events": 5,
+      "complete_usage_available": true,
+      "recorded_cumulative_usage": {
+        "input_tokens": 63170,
+        "cached_input_tokens": 36992,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 471,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 63641
+      }
+    },
+    "peer": {
+      "thread_id": "01a1e1e3-ed85-7bf2-831a-641777e2714d",
+      "usage_increment_events": 3,
+      "complete_usage_available": true,
+      "recorded_cumulative_usage": {
+        "input_tokens": 36172,
+        "cached_input_tokens": 23552,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 297,
+        "reasoning_output_tokens": 107,
+        "total_tokens": 36469
+      }
+    }
+  },
+  "recorded_group_usage": {
+    "input_tokens": 99342,
+    "cached_input_tokens": 60544,
+    "output_tokens": 768,
+    "reasoning_output_tokens": 107,
+    "total_tokens": 100110,
+    "uncached_input_tokens": 38798
+  },
+  "scope": "complete recorded successful run",
+  "actual_currency_cost": null
+}

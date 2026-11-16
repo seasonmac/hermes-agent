@@ -1,0 +1,9 @@
+**Decision memo**
+
+Defer approval of the proposal’s paid-growth and market-sizing claims. The corrected evidence does not establish paid-user growth, total addressable market (TAM), or the 30% market-growth rate.
+
+The October vendor release (P) reports 1.2 million cumulative global registrations, including free and inactive accounts. Correction C1 clarifies that the November analyst note (Q) estimates 400,000 monthly active accounts in the EU, with ±15% uncertainty and no audit. The figures differ in geography and activity window. Establishing whether paid users tripled requires two comparable paid-user counts with a consistent definition, geography, and baseline period. Paid conversion is also unknown.
+
+Multiplying 1.2 million by $100 yields $120 million per month. Even if the price is verified, cumulative registrations measure historical sign-ups. A defensible TAM estimate requires a defined market, a count of eligible paying units across that market, and a supported monthly price per unit.
+
+The internal sales slide (R) cites only P for its 30% market-growth claim. Verify the market definition, growth period, and underlying market-wide data before using that rate.

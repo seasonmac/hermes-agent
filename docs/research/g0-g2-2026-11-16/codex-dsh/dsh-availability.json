@@ -1,0 +1,21 @@
+{
+  "prototype_head": "8c32a9dc5d72c033816c6a8110b37f40cf94fba4",
+  "outcome": "blocked_no_accessible_runtime_found",
+  "observed": {
+    "dsh_in_path": false,
+    "node_in_path": false,
+    "tmux_in_path": false,
+    "prototype_node_modules_present": false,
+    "conventional_dsh_cli_or_desktop_install_found": false,
+    "local_dsh_or_tmux_executable_name_observed": false,
+    "local_port_3080_or_3082_tcp_listener_observed": false
+  },
+  "scope": "Existing local runtime only. Process check inspected executable names, not startup arguments. Port check used lsof outside the default shell sandbox.",
+  "attempted_session_operations": 0,
+  "real_model_calls": 0,
+  "still_unverified": [
+    "Exact dependency combination described by the prototype deployment instructions",
+    "New isolated DSH Session, inbox delivery and deduplication",
+    "Status, cancellation, restart recovery and usage through the selected DSH entry point"
+  ]
+}

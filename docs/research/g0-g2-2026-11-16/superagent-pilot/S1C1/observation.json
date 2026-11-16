@@ -1,0 +1,25 @@
+{
+  "name": "S1C1",
+  "status": "completed",
+  "variant": "normal",
+  "context": 1,
+  "score_passed": true,
+  "recall_errors": 0,
+  "usage": {
+    "input_tokens": 43518,
+    "cached_input_tokens": 31104,
+    "output_tokens": 291,
+    "reasoning_output_tokens": 40,
+    "total_tokens": 43809,
+    "uncached_input_plus_output": 12705
+  },
+  "complete_thread_usage": true,
+  "threads": {
+    "router": "01a1e345-169a-7710-9d7c-133f67817f6d",
+    "worker": "01a1e345-16ad-7e62-b8be-35db73591088"
+  },
+  "read_calls": 1,
+  "read_chars": 923,
+  "process_returncode": 0,
+  "wall_seconds": 31.59
+}

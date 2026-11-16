@@ -1,0 +1,209 @@
+{
+  "runtime": "codex-cli 0.169.0-alpha.11.1",
+  "real_model_calls": 0,
+  "actual_model_cost": 0,
+  "credential_headers_sent": 0,
+  "limit_tokens": 100,
+  "result": "verified_non_hard_cap",
+  "cases": {
+    "breach": {
+      "provider_requests": 4,
+      "stages": [
+        {
+          "stage": 0,
+          "requests_before": 0,
+          "requests_after": 1,
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          }
+        },
+        {
+          "stage": 1,
+          "requests_before": 1,
+          "requests_after": 2,
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          }
+        }
+      ],
+      "max_simultaneous_requests": 1,
+      "server_exit": 0
+    },
+    "cached": {
+      "provider_requests": 3,
+      "stages": [
+        {
+          "stage": 0,
+          "requests_before": 0,
+          "requests_after": 1,
+          "status": "completed",
+          "error": null
+        },
+        {
+          "stage": 1,
+          "requests_before": 1,
+          "requests_after": 2,
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          }
+        },
+        {
+          "stage": 2,
+          "requests_before": 2,
+          "requests_after": 3,
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          }
+        }
+      ],
+      "max_simultaneous_requests": 1,
+      "server_exit": 0
+    },
+    "units": {
+      "provider_requests": 3,
+      "stages": [
+        {
+          "stage": 0,
+          "requests_before": 0,
+          "requests_after": 1,
+          "status": "completed",
+          "error": null
+        },
+        {
+          "stage": 1,
+          "requests_before": 1,
+          "requests_after": 2,
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          }
+        },
+        {
+          "stage": 2,
+          "requests_before": 2,
+          "requests_after": 3,
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          }
+        }
+      ],
+      "max_simultaneous_requests": 1,
+      "server_exit": 0
+    },
+    "shared": {
+      "provider_requests": 5,
+      "stages": [
+        {
+          "stage": 0,
+          "requests_before": 0,
+          "requests_after": 3,
+          "status": "completed",
+          "error": null
+        },
+        {
+          "stage": 1,
+          "requests_before": 3,
+          "requests_after": 4,
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          }
+        },
+        {
+          "stage": 2,
+          "requests_before": 4,
+          "requests_after": 5,
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          }
+        }
+      ],
+      "max_simultaneous_requests": 1,
+      "server_exit": 0
+    },
+    "inflight": {
+      "provider_requests": 5,
+      "stages": [
+        {
+          "stage": 0,
+          "requests_before": 0,
+          "requests_after": 3,
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          }
+        },
+        {
+          "stage": 1,
+          "requests_before": 3,
+          "requests_after": 4,
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          }
+        },
+        {
+          "stage": 2,
+          "requests_before": 4,
+          "requests_after": 5,
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          }
+        }
+      ],
+      "max_simultaneous_requests": 2,
+      "server_exit": 0
+    }
+  },
+  "resume": {
+    "same_process_status": "failed",
+    "cold_status": "completed",
+    "each_usage": 1,
+    "each_request_delta": 1
+  },
+  "verification": {
+    "assertions_passed": true,
+    "fixture_final_suite_provider_requests": 20,
+    "all_servers_exited_zero": true
+  }
+}

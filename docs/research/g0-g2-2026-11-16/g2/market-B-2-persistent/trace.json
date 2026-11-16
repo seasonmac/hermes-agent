@@ -1,0 +1,193 @@
+{
+  "run_id": "market-B-2-persistent",
+  "root_thread_id": "01a1e051-60f2-78f1-a64c-585f52d31f7a",
+  "model_requests_by_this_probe": 0,
+  "methods": [
+    "initialize",
+    "thread/read",
+    "thread/list (ancestor filter), if available",
+    "thread/items/list if needed"
+  ],
+  "primary_thread_usage_from_original_exec_ended_events": [
+    {
+      "input_tokens": 170919,
+      "cached_input_tokens": 140416,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 872,
+      "reasoning_output_tokens": 17
+    }
+  ],
+  "root": {
+    "thread_id": "01a1e051-60f2-78f1-a64c-585f52d31f7a",
+    "methods": [
+      "thread/read(includeTurns=true)"
+    ],
+    "turn_statuses": [
+      {
+        "id": "01a1e051-7b09-7372-b515-b106e5c0f018",
+        "status": "completed"
+      }
+    ],
+    "visible_item_types": {
+      "userMessage": 1,
+      "agentMessage": 2,
+      "subAgentActivity": 4,
+      "commandExecution": 1,
+      "collabAgentToolCall": 1,
+      "reasoning": 1
+    },
+    "sanitized_collaboration_projection": [
+      {
+        "turnId": "01a1e051-7b09-7372-b515-b106e5c0f018",
+        "id": "call_df1c4b24df694920bc6ae74e2adbed7d",
+        "type": "subAgentActivity",
+        "kind": "started",
+        "agentThreadId": "01a1e051-ca8d-70e1-a57f-f79eb589b0bc",
+        "agentPath": "/root/peer",
+        "model": "gpt-6.1-sol",
+        "reasoningEffort": "medium"
+      },
+      {
+        "turnId": "01a1e051-7b09-7372-b515-b106e5c0f018",
+        "id": "call_c05d277525a74c2b8c10bb39a252aca3",
+        "type": "subAgentActivity",
+        "kind": "interacted",
+        "agentThreadId": "01a1e051-ca8d-70e1-a57f-f79eb589b0bc",
+        "agentPath": "/root/peer",
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e051-7b09-7372-b515-b106e5c0f018",
+        "id": "call_7b772af6106d4f2db4e2ccd5c65e91ba",
+        "type": "collabAgentToolCall",
+        "tool": "wait",
+        "status": "completed",
+        "senderThreadId": "01a1e051-60f2-78f1-a64c-585f52d31f7a",
+        "receiverThreadIds": [],
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e051-7b09-7372-b515-b106e5c0f018",
+        "id": "call_c7ade64f8973428ca7e8962a10193de9",
+        "type": "subAgentActivity",
+        "kind": "interacted",
+        "agentThreadId": "01a1e051-ca8d-70e1-a57f-f79eb589b0bc",
+        "agentPath": "/root/peer",
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e051-7b09-7372-b515-b106e5c0f018",
+        "id": "subagent-completed-01a1e051-ca94-7c10-833f-4ca41b69a7f4",
+        "type": "subAgentActivity",
+        "kind": "completed",
+        "agentThreadId": "01a1e051-ca8d-70e1-a57f-f79eb589b0bc",
+        "agentPath": "/root/peer",
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e051-7b09-7372-b515-b106e5c0f018",
+        "type": "agentMessage",
+        "id": "msg_0919bc9918d9a700016af9f020a1a487d2a20c2d168d132c7c",
+        "text_excerpts": [
+          "Correction C1 clarifies that the November analyst note (Q) estimates 400,000 monthly active accounts in the EU, with ±15% uncertainty and no audit."
+        ],
+        "text_role": "model_statement_only"
+      }
+    ],
+    "rollout_usage": {
+      "outcome": "observed",
+      "token_count_event_count": 6,
+      "latest_total": {
+        "total_tokens": 171791,
+        "input_tokens": 170919,
+        "cached_input_tokens": 140416,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 872,
+        "reasoning_output_tokens": 17
+      }
+    }
+  },
+  "descendant_lookup": "succeeded",
+  "children": [
+    {
+      "thread_id": "01a1e051-ca8d-70e1-a57f-f79eb589b0bc",
+      "methods": [
+        "thread/read(includeTurns=true)"
+      ],
+      "turn_statuses": [
+        {
+          "id": "01a1e051-ca94-7c10-833f-4ca41b69a7f4",
+          "status": "completed"
+        }
+      ],
+      "visible_item_types": {
+        "reasoning": 2,
+        "collabAgentToolCall": 2,
+        "subAgentActivity": 1,
+        "agentMessage": 1
+      },
+      "sanitized_collaboration_projection": [
+        {
+          "turnId": "01a1e051-ca94-7c10-833f-4ca41b69a7f4",
+          "id": "call_a5d560000b7c47ddbd33211b09ae7631",
+          "type": "collabAgentToolCall",
+          "tool": "wait",
+          "status": "completed",
+          "senderThreadId": "01a1e051-ca8d-70e1-a57f-f79eb589b0bc",
+          "receiverThreadIds": [],
+          "model": null,
+          "reasoningEffort": null
+        },
+        {
+          "turnId": "01a1e051-ca94-7c10-833f-4ca41b69a7f4",
+          "id": "call_e9f3b6282fc34e9fa9368f3160ff62bf",
+          "type": "subAgentActivity",
+          "kind": "interacted",
+          "agentThreadId": "01a1e051-60f2-78f1-a64c-585f52d31f7a",
+          "agentPath": "/root",
+          "model": null,
+          "reasoningEffort": null
+        },
+        {
+          "turnId": "01a1e051-ca94-7c10-833f-4ca41b69a7f4",
+          "id": "call_8ba9d0c77f9c4d64b0c6c38291b8819c",
+          "type": "collabAgentToolCall",
+          "tool": "wait",
+          "status": "completed",
+          "senderThreadId": "01a1e051-ca8d-70e1-a57f-f79eb589b0bc",
+          "receiverThreadIds": [],
+          "model": null,
+          "reasoningEffort": null
+        },
+        {
+          "turnId": "01a1e051-ca94-7c10-833f-4ca41b69a7f4",
+          "type": "agentMessage",
+          "id": "msg_07ec10e327a25fec016af9f020123887d2837a141ab004b533",
+          "text_excerpts": [
+            "Challenge resolved."
+          ],
+          "text_role": "model_statement_only"
+        }
+      ],
+      "rollout_usage": {
+        "outcome": "observed",
+        "token_count_event_count": 4,
+        "latest_total": {
+          "total_tokens": 88319,
+          "input_tokens": 88153,
+          "cached_input_tokens": 65408,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 166,
+          "reasoning_output_tokens": 28
+        }
+      }
+    }
+  ],
+  "projected_native_tool_message_payload_count": 0,
+  "verification_boundary": "No readable peer-addressed native tool argument payload from this App Server history projection. Agent text and spawn metadata alone do not independently prove a directly addressed challenge/reply exchange.",
+  "outcome": "read_completed"
+}

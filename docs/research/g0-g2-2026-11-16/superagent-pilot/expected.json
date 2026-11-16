@@ -1,0 +1,25 @@
+{
+  "normal": {
+    "task_id": "T-A",
+    "deliverable": "research_report",
+    "trading_allowed": false,
+    "list_policy": "historical_point_in_time",
+    "coverage_year": 2022,
+    "execution_allowed": false,
+    "progress": "gap_checklist_done_backtest_not_run",
+    "rejection_reason": "survivorship_bias"
+  },
+  "source_requirements": {
+    "deliverable": "T-A",
+    "trading_allowed": "T-A",
+    "list_policy": "E-A2",
+    "coverage_year": "D-A-v2",
+    "execution_allowed": "E-A3",
+    "progress": "R-A",
+    "rejection_reason": "E-A2"
+  },
+  "broken_overrides": {
+    "list_policy": "unknown",
+    "rejection_reason": "unknown"
+  }
+}

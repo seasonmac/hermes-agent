@@ -1,0 +1,194 @@
+{
+  "run_id": "software-B-1-persistent",
+  "root_thread_id": "01a1e04d-ec6b-7e22-b7f3-9e0244569d7a",
+  "model_requests_by_this_probe": 0,
+  "methods": [
+    "initialize",
+    "thread/read",
+    "thread/list (ancestor filter), if available",
+    "thread/items/list if needed"
+  ],
+  "primary_thread_usage_from_original_exec_ended_events": [
+    {
+      "input_tokens": 118184,
+      "cached_input_tokens": 115328,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1084,
+      "reasoning_output_tokens": 124
+    }
+  ],
+  "root": {
+    "thread_id": "01a1e04d-ec6b-7e22-b7f3-9e0244569d7a",
+    "methods": [
+      "thread/read(includeTurns=true)"
+    ],
+    "turn_statuses": [
+      {
+        "id": "01a1e04d-f280-76d3-bf58-3a3065ac3c6a",
+        "status": "completed"
+      }
+    ],
+    "visible_item_types": {
+      "userMessage": 1,
+      "agentMessage": 2,
+      "subAgentActivity": 4,
+      "commandExecution": 1,
+      "reasoning": 1,
+      "collabAgentToolCall": 1
+    },
+    "sanitized_collaboration_projection": [
+      {
+        "turnId": "01a1e04d-f280-76d3-bf58-3a3065ac3c6a",
+        "id": "call_dbfdc91df2e342b88cb83624d2aa8029",
+        "type": "subAgentActivity",
+        "kind": "started",
+        "agentThreadId": "01a1e04e-3869-7e92-a11e-f4e428fb961d",
+        "agentPath": "/root/peer",
+        "model": "gpt-6.1-sol",
+        "reasoningEffort": "medium"
+      },
+      {
+        "turnId": "01a1e04d-f280-76d3-bf58-3a3065ac3c6a",
+        "id": "call_d4e6abea48e94d95b95c776a86c2e108",
+        "type": "subAgentActivity",
+        "kind": "interacted",
+        "agentThreadId": "01a1e04e-3869-7e92-a11e-f4e428fb961d",
+        "agentPath": "/root/peer",
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e04d-f280-76d3-bf58-3a3065ac3c6a",
+        "id": "call_6c2a773d86f54158bec13366bca44dbc",
+        "type": "subAgentActivity",
+        "kind": "interacted",
+        "agentThreadId": "01a1e04e-3869-7e92-a11e-f4e428fb961d",
+        "agentPath": "/root/peer",
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e04d-f280-76d3-bf58-3a3065ac3c6a",
+        "id": "subagent-completed-01a1e04e-3878-7ba1-bc7b-88c85b7c9c47",
+        "type": "subAgentActivity",
+        "kind": "completed",
+        "agentThreadId": "01a1e04e-3869-7e92-a11e-f4e428fb961d",
+        "agentPath": "/root/peer",
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e04d-f280-76d3-bf58-3a3065ac3c6a",
+        "id": "call_9a4d25b2ce8f4299b04f340b397b6f37",
+        "type": "collabAgentToolCall",
+        "tool": "wait",
+        "status": "completed",
+        "senderThreadId": "01a1e04d-ec6b-7e22-b7f3-9e0244569d7a",
+        "receiverThreadIds": [],
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e04d-f280-76d3-bf58-3a3065ac3c6a",
+        "type": "agentMessage",
+        "id": "msg_05fc01bcd316558c016af9ef3f813887d0aa0fdace374d9333",
+        "text_excerpts": [
+          "Pass that same ID as the provider’s `Idempotency-Key`, disable automatic resubmission, and persist confirmed success before acknowledging.",
+          "The provider retains keys for 24 hours."
+        ],
+        "text_role": "model_statement_only"
+      }
+    ],
+    "rollout_usage": {
+      "outcome": "observed",
+      "token_count_event_count": 7,
+      "latest_total": {
+        "total_tokens": 119268,
+        "input_tokens": 118184,
+        "cached_input_tokens": 115328,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1084,
+        "reasoning_output_tokens": 124
+      }
+    }
+  },
+  "descendant_lookup": "succeeded",
+  "children": [
+    {
+      "thread_id": "01a1e04e-3869-7e92-a11e-f4e428fb961d",
+      "methods": [
+        "thread/read(includeTurns=true)"
+      ],
+      "turn_statuses": [
+        {
+          "id": "01a1e04e-3878-7ba1-bc7b-88c85b7c9c47",
+          "status": "completed"
+        }
+      ],
+      "visible_item_types": {
+        "reasoning": 1,
+        "collabAgentToolCall": 2,
+        "subAgentActivity": 1,
+        "agentMessage": 1
+      },
+      "sanitized_collaboration_projection": [
+        {
+          "turnId": "01a1e04e-3878-7ba1-bc7b-88c85b7c9c47",
+          "id": "call_454a7f04c1b640439a9b9c5f7d91c1bd",
+          "type": "collabAgentToolCall",
+          "tool": "wait",
+          "status": "completed",
+          "senderThreadId": "01a1e04e-3869-7e92-a11e-f4e428fb961d",
+          "receiverThreadIds": [],
+          "model": null,
+          "reasoningEffort": null
+        },
+        {
+          "turnId": "01a1e04e-3878-7ba1-bc7b-88c85b7c9c47",
+          "id": "call_2ecb2dba4d724d4eb9f6c8276c2896e1",
+          "type": "subAgentActivity",
+          "kind": "interacted",
+          "agentThreadId": "01a1e04d-ec6b-7e22-b7f3-9e0244569d7a",
+          "agentPath": "/root",
+          "model": null,
+          "reasoningEffort": null
+        },
+        {
+          "turnId": "01a1e04e-3878-7ba1-bc7b-88c85b7c9c47",
+          "id": "call_ea32bd27517348d0aa7792c20b641835",
+          "type": "collabAgentToolCall",
+          "tool": "wait",
+          "status": "completed",
+          "senderThreadId": "01a1e04e-3869-7e92-a11e-f4e428fb961d",
+          "receiverThreadIds": [],
+          "model": null,
+          "reasoningEffort": null
+        },
+        {
+          "turnId": "01a1e04e-3878-7ba1-bc7b-88c85b7c9c47",
+          "type": "agentMessage",
+          "id": "msg_05a399e08b1031d3016af9ef3a832487d0a835e3119eec76bc",
+          "text_excerpts": [
+            "Use an atomic, durable claim per `charge_intent_id`, and pass that ID as the provider’s idempotency key."
+          ],
+          "text_role": "model_statement_only"
+        }
+      ],
+      "rollout_usage": {
+        "outcome": "observed",
+        "token_count_event_count": 4,
+        "latest_total": {
+          "total_tokens": 88773,
+          "input_tokens": 88505,
+          "cached_input_tokens": 65664,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 268,
+          "reasoning_output_tokens": 28
+        }
+      }
+    }
+  ],
+  "projected_native_tool_message_payload_count": 0,
+  "verification_boundary": "No readable peer-addressed native tool argument payload from this App Server history projection. Agent text and spawn metadata alone do not independently prove a directly addressed challenge/reply exchange.",
+  "outcome": "read_completed"
+}

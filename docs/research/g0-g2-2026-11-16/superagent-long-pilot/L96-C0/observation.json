@@ -1,0 +1,29 @@
+{
+  "name": "L96-C0",
+  "context": 0,
+  "variant": "normal",
+  "status": "completed",
+  "known_suite_usage_before": 62437,
+  "planning_reserve": 50000,
+  "packet_bytes": 98304,
+  "score_passed": true,
+  "recall_errors": 0,
+  "factual_errors": 0,
+  "source_errors": 0,
+  "usage": {
+    "input_tokens": 27134,
+    "cached_input_tokens": 0,
+    "output_tokens": 167,
+    "reasoning_output_tokens": 0,
+    "total_tokens": 27301,
+    "uncached_input_plus_output": 27301
+  },
+  "complete_thread_usage": true,
+  "threads": {
+    "worker": "01a1e353-56bb-75a2-8d98-00f28be84792"
+  },
+  "read_calls": 0,
+  "read_chars": 0,
+  "process_returncode": 0,
+  "wall_seconds": 15.92
+}

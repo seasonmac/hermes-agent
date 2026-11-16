@@ -1,0 +1,9 @@
+**Revised audit memo**
+
+The reported gross Sharpe of 2.1 remains unverified. Joining fundamentals on fiscal period end can introduce look-ahead bias, using today’s listings introduces survivorship bias, and selecting the best of 200 variants on the test set makes that set part of model selection.
+
+1. Rebuild the dataset first. At each decision time, use the latest fundamental version actually available by then, applying publication and revision timestamps. Reconstruct historical universe membership and include delisted securities and their exit returns where available.
+2. Rerun with chronological walk-forward validation. Fit the scaler on each training window, keep overlapping label periods from crossing split boundaries, and select parameters within validation windows. Freeze the strategy before evaluating it on an untouched holdout or collecting forward results.
+3. Independently recompute gross performance and estimate net performance under explicit execution assumptions, including spreads, fees, slippage, and market impact. Stress-test those assumptions. With no fill-level data, net results remain modeled.
+
+**Self-review after C1.** The timestamps and licensed delisted-price history make the first repairs feasible. Whether the rebuilt dataset has adequate coverage and whether the strategy survives those repairs remain open. The current evidence supports further testing. It establishes neither net alpha nor deployability.

@@ -1,0 +1,32 @@
+{
+  "worker": {
+    "thread_id": "01a1e353-56bb-75a2-8d98-00f28be84792",
+    "usage_events": [
+      {
+        "timestamp": "2026-11-16T07:47:47.995Z",
+        "info": {
+          "total_token_usage": {
+            "input_tokens": 27134,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 167,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 27301
+          },
+          "last_token_usage": {
+            "input_tokens": 27134,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 167,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 27301
+          },
+          "last_usage_includes_reasoning": true,
+          "model_context_window": 475000
+        }
+      }
+    ],
+    "base_instructions_hash": "cbe05f8770fb9460073e3c1ff39feb07397c8083daf893dbed27626a7f18f37c",
+    "rollout_sha256": "0a6cb688b39669682559edc7855af2170b4814433633c04af3bb2d25dec2b784"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "task_id": "T-A",
+  "deliverable": "research_report",
+  "trading_allowed": false,
+  "list_policy": "unknown",
+  "coverage_year": 2022,
+  "execution_allowed": false,
+  "progress": "gap_checklist_done_backtest_not_run",
+  "rejection_reason": "unknown",
+  "sources": {
+    "deliverable": [
+      "T-A"
+    ],
+    "trading_allowed": [
+      "T-A"
+    ],
+    "list_policy": [],
+    "coverage_year": [
+      "D-A-v2"
+    ],
+    "execution_allowed": [
+      "E-A3",
+      "E-A5"
+    ],
+    "progress": [
+      "R-A"
+    ],
+    "rejection_reason": []
+  }
+}

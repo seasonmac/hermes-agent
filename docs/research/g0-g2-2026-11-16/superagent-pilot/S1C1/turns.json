@@ -1,0 +1,83 @@
+[
+  {
+    "threadId": "01a1e345-169a-7710-9d7c-133f67817f6d",
+    "turn": {
+      "id": "01a1e345-16b0-7bb1-8d5e-53dcd2dfea6b",
+      "rootTurnId": "01a1e345-16b0-7bb1-8d5e-53dcd2dfea6b",
+      "items": [
+        {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_094be76c0193596d016afab17d5d1487d2bcb91b70c4ab2649",
+          "text": "{\"target\":\"T-A\"}",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794814333534,
+          "completedAtMs": 1794814333601
+        }
+      ],
+      "itemsView": "summary",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1794814318,
+      "completedAt": 1794814333,
+      "durationMs": 15353
+    }
+  },
+  {
+    "threadId": "01a1e345-16ad-7e62-b8be-35db73591088",
+    "turn": {
+      "id": "01a1e345-52b3-7ee3-8e12-d6843949d7b3",
+      "rootTurnId": "01a1e345-52b3-7ee3-8e12-d6843949d7b3",
+      "items": [
+        {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_0c3fa36b023ed724016afab183d9dc87d281055d21c1f987d1",
+          "text": "READY",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794814340015,
+          "completedAtMs": 1794814340053
+        }
+      ],
+      "itemsView": "summary",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1794814333,
+      "completedAt": 1794814340,
+      "durationMs": 6443
+    }
+  },
+  {
+    "threadId": "01a1e345-16ad-7e62-b8be-35db73591088",
+    "turn": {
+      "id": "01a1e345-6be9-78a3-9ceb-75e8042fbe22",
+      "rootTurnId": "01a1e345-6be9-78a3-9ceb-75e8042fbe22",
+      "items": [
+        {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_0c3fa36b023ed724016afab1893ea887d29b428ddfafac462a",
+          "text": "{\n  \"task_id\": \"T-A\",\n  \"deliverable\": \"research_report\",\n  \"trading_allowed\": false,\n  \"list_policy\": \"historical_point_in_time\",\n  \"coverage_year\": 2022,\n  \"execution_allowed\": false,\n  \"progress\": \"gap_checklist_done_backtest_not_run\",\n  \"rejection_reason\": \"survivorship_bias\",\n  \"sources\": {\n    \"deliverable\": [\"T-A\"],\n    \"trading_allowed\": [\"T-A\"],\n    \"list_policy\": [\"E-A2\"],\n    \"coverage_year\": [\"D-A-v2\"],\n    \"execution_allowed\": [\"E-A3\", \"E-A5\"],\n    \"progress\": [\"R-A\"],\n    \"rejection_reason\": [\"E-A2\"]\n  }\n}",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794814345417,
+          "completedAtMs": 1794814349633
+        }
+      ],
+      "itemsView": "summary",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1794814340,
+      "completedAt": 1794814349,
+      "durationMs": 9607
+    }
+  }
+]

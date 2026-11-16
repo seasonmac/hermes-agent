@@ -1,0 +1,102 @@
+{
+  "threads": [
+    {
+      "case": "L32-C0",
+      "version": "0.169.0-alpha.11.1",
+      "base_instructions": "5e24e8b895f69c405e237f49e1eaaa3e2825be0b2b8793badac0365e1e81b750",
+      "dynamic_tools": "4e4cc9ebb115cc4697ccad9de92d3cee5e33d87a5f6b4ec790a2d676a9b3ed3e",
+      "tools": "5d9c2a3adc48e37e4dee45f704736de59a4926060f18b118170365b4681b66b5",
+      "top_level_tools": "079f678007810b015e1d5e7b0291498e22d3f1263c125c5c5db72768cb31f6f5",
+      "skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "host_skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "managed_developer_instructions": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "case": "L32-C1",
+      "version": "0.169.0-alpha.11.1",
+      "base_instructions": "5e24e8b895f69c405e237f49e1eaaa3e2825be0b2b8793badac0365e1e81b750",
+      "dynamic_tools": "4e4cc9ebb115cc4697ccad9de92d3cee5e33d87a5f6b4ec790a2d676a9b3ed3e",
+      "tools": "5d9c2a3adc48e37e4dee45f704736de59a4926060f18b118170365b4681b66b5",
+      "top_level_tools": "079f678007810b015e1d5e7b0291498e22d3f1263c125c5c5db72768cb31f6f5",
+      "skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "host_skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "managed_developer_instructions": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "case": "L96-C0",
+      "version": "0.169.0-alpha.11.1",
+      "base_instructions": "5e24e8b895f69c405e237f49e1eaaa3e2825be0b2b8793badac0365e1e81b750",
+      "dynamic_tools": "4e4cc9ebb115cc4697ccad9de92d3cee5e33d87a5f6b4ec790a2d676a9b3ed3e",
+      "tools": "5d9c2a3adc48e37e4dee45f704736de59a4926060f18b118170365b4681b66b5",
+      "top_level_tools": "079f678007810b015e1d5e7b0291498e22d3f1263c125c5c5db72768cb31f6f5",
+      "skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "host_skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "managed_developer_instructions": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "case": "L96-C1",
+      "version": "0.169.0-alpha.11.1",
+      "base_instructions": "5e24e8b895f69c405e237f49e1eaaa3e2825be0b2b8793badac0365e1e81b750",
+      "dynamic_tools": "4e4cc9ebb115cc4697ccad9de92d3cee5e33d87a5f6b4ec790a2d676a9b3ed3e",
+      "tools": "5d9c2a3adc48e37e4dee45f704736de59a4926060f18b118170365b4681b66b5",
+      "top_level_tools": "079f678007810b015e1d5e7b0291498e22d3f1263c125c5c5db72768cb31f6f5",
+      "skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "host_skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "managed_developer_instructions": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "case": "silent-C0",
+      "version": "0.169.0-alpha.11.1",
+      "base_instructions": "5e24e8b895f69c405e237f49e1eaaa3e2825be0b2b8793badac0365e1e81b750",
+      "dynamic_tools": "4e4cc9ebb115cc4697ccad9de92d3cee5e33d87a5f6b4ec790a2d676a9b3ed3e",
+      "tools": "5d9c2a3adc48e37e4dee45f704736de59a4926060f18b118170365b4681b66b5",
+      "top_level_tools": "079f678007810b015e1d5e7b0291498e22d3f1263c125c5c5db72768cb31f6f5",
+      "skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "host_skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "managed_developer_instructions": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "case": "silent-C1",
+      "version": "0.169.0-alpha.11.1",
+      "base_instructions": "5e24e8b895f69c405e237f49e1eaaa3e2825be0b2b8793badac0365e1e81b750",
+      "dynamic_tools": "4e4cc9ebb115cc4697ccad9de92d3cee5e33d87a5f6b4ec790a2d676a9b3ed3e",
+      "tools": "5d9c2a3adc48e37e4dee45f704736de59a4926060f18b118170365b4681b66b5",
+      "top_level_tools": "079f678007810b015e1d5e7b0291498e22d3f1263c125c5c5db72768cb31f6f5",
+      "skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "host_skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "managed_developer_instructions": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "case": "unannounced-C0",
+      "version": "0.169.0-alpha.11.1",
+      "base_instructions": "5e24e8b895f69c405e237f49e1eaaa3e2825be0b2b8793badac0365e1e81b750",
+      "dynamic_tools": "4e4cc9ebb115cc4697ccad9de92d3cee5e33d87a5f6b4ec790a2d676a9b3ed3e",
+      "tools": "5d9c2a3adc48e37e4dee45f704736de59a4926060f18b118170365b4681b66b5",
+      "top_level_tools": "079f678007810b015e1d5e7b0291498e22d3f1263c125c5c5db72768cb31f6f5",
+      "skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "host_skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "managed_developer_instructions": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "case": "unannounced-C1",
+      "version": "0.169.0-alpha.11.1",
+      "base_instructions": "5e24e8b895f69c405e237f49e1eaaa3e2825be0b2b8793badac0365e1e81b750",
+      "dynamic_tools": "4e4cc9ebb115cc4697ccad9de92d3cee5e33d87a5f6b4ec790a2d676a9b3ed3e",
+      "tools": "5d9c2a3adc48e37e4dee45f704736de59a4926060f18b118170365b4681b66b5",
+      "top_level_tools": "079f678007810b015e1d5e7b0291498e22d3f1263c125c5c5db72768cb31f6f5",
+      "skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "host_skills": "7fe547a6e591dd837d1df2f5f7152de62c1667243bba5a35dc12bec0a1252abf",
+      "managed_developer_instructions": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    }
+  ],
+  "same": {
+    "version": true,
+    "base_instructions": true,
+    "dynamic_tools": true,
+    "tools": true,
+    "top_level_tools": true,
+    "skills": true,
+    "host_skills": true,
+    "managed_developer_instructions": true
+  }
+}

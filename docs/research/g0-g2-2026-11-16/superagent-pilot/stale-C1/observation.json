@@ -1,0 +1,24 @@
+{
+  "name": "stale-C1",
+  "status": "completed",
+  "variant": "stale",
+  "context": 1,
+  "score_passed": true,
+  "recall_errors": 0,
+  "usage": {
+    "input_tokens": 22670,
+    "cached_input_tokens": 11136,
+    "output_tokens": 238,
+    "reasoning_output_tokens": 0,
+    "total_tokens": 22908,
+    "uncached_input_plus_output": 11772
+  },
+  "complete_thread_usage": true,
+  "threads": {
+    "worker": "01a1e348-6949-7023-88fa-d4fe8ddfc95e"
+  },
+  "read_calls": 1,
+  "read_chars": 923,
+  "process_returncode": 0,
+  "wall_seconds": 14.44
+}

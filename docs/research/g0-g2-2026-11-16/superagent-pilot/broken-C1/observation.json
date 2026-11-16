@@ -1,0 +1,24 @@
+{
+  "name": "broken-C1",
+  "status": "completed",
+  "variant": "broken",
+  "context": 1,
+  "score_passed": true,
+  "recall_errors": 0,
+  "usage": {
+    "input_tokens": 22556,
+    "cached_input_tokens": 20736,
+    "output_tokens": 289,
+    "reasoning_output_tokens": 69,
+    "total_tokens": 22845,
+    "uncached_input_plus_output": 2109
+  },
+  "complete_thread_usage": true,
+  "threads": {
+    "worker": "01a1e349-784f-7b93-bf7c-ee9c2694ec5f"
+  },
+  "read_calls": 1,
+  "read_chars": 712,
+  "process_returncode": 0,
+  "wall_seconds": 28.2
+}

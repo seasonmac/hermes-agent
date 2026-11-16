@@ -1,0 +1,9 @@
+**Decision memo**
+
+Return the proposal for revision. The supplied evidence does not substantiate the claims that paid users tripled or that the market grew 30%, and it does not support the proposed TAM estimate.
+
+Correction C1 clarifies that P’s 1.2 million figure counts cumulative global registrations, including free and inactive accounts. Q’s 400,000 figure estimates monthly active accounts in the EU, with a reported uncertainty of ±15%. The estimate is unaudited and includes no paid-seat count. The figures use different populations and time windows, and neither provides a comparable paid baseline or a paid conversion rate.
+
+R cites only P. That citation reports one vendor’s registrations and does not substantiate the 30% market-growth claim. Multiplying 1.2 million by $100 yields $120 million per month arithmetically. The proposal provides no basis for treating those registrations as addressable paying units or for applying that price to them.
+
+Before reconsidering, obtain comparable paid counts across two periods under the same definition and geography, a market-growth source with a defined market and comparison period, and a TAM model grounded in eligible buyers, billable units per buyer, and supported pricing.

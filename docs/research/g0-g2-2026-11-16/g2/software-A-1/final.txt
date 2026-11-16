@@ -1,0 +1,9 @@
+**Diagnosis.** Both E17 deliveries passed the processed check before either inserted a row. The unique constraint prevented a second record after both deliveries had already called `charge`.
+
+**Smallest safe fix.** Use `charge_intent_id` as the provider’s `Idempotency-Key` and the key for a durable local record. Record the earliest possible submission time before calling the provider. Persist confirmed success before acknowledging, and skip the provider call on redelivery once success is recorded. Retain local state through the full seven-day redelivery window.
+
+Retry unresolved calls with the same key only while they can reach the provider within its 24-hour retention window. After that, route unresolved intents to reconciliation and suppress automatic charges. Distinct intents for the same order use distinct keys.
+
+**Tests.** Verify that concurrent E17 deliveries produce one charge. Simulate a lost response and a crash after provider success but before local persistence, then verify that retries within the safe window recover the result without charging again. Verify that redelivery after provider key expiry skips confirmed intents and routes unresolved intents to reconciliation without calling `charge`. Verify that two legitimate intents for the same order each charge once.
+
+**Self-review.** The correction enables safe retries within the provider window. The durable record covers later redeliveries, and reconciliation handles outcomes still unknown at expiry.

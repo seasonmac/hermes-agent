@@ -1,0 +1,50 @@
+[
+  {
+    "run": "market-B-1",
+    "excluded_from_primary_comparison": true,
+    "spawn_missing_rollout_error": true,
+    "explicit_invalid_peer": false,
+    "root_total_tokens": 153727,
+    "child_usage": "not fully recovered; do not count as zero"
+  },
+  {
+    "run": "market-B-2",
+    "excluded_from_primary_comparison": true,
+    "spawn_missing_rollout_error": true,
+    "explicit_invalid_peer": false,
+    "root_total_tokens": 181827,
+    "child_usage": "not fully recovered; do not count as zero"
+  },
+  {
+    "run": "quant-B-1",
+    "excluded_from_primary_comparison": true,
+    "spawn_missing_rollout_error": true,
+    "explicit_invalid_peer": true,
+    "root_total_tokens": 49852,
+    "child_usage": "not fully recovered; do not count as zero"
+  },
+  {
+    "run": "quant-B-2",
+    "excluded_from_primary_comparison": true,
+    "spawn_missing_rollout_error": true,
+    "explicit_invalid_peer": true,
+    "root_total_tokens": 32913,
+    "child_usage": "not fully recovered; do not count as zero"
+  },
+  {
+    "run": "software-B-1",
+    "excluded_from_primary_comparison": true,
+    "spawn_missing_rollout_error": true,
+    "explicit_invalid_peer": false,
+    "root_total_tokens": 209070,
+    "child_usage": "not fully recovered; do not count as zero"
+  },
+  {
+    "run": "software-B-2",
+    "excluded_from_primary_comparison": true,
+    "spawn_missing_rollout_error": true,
+    "explicit_invalid_peer": true,
+    "root_total_tokens": 66613,
+    "child_usage": "not fully recovered; do not count as zero"
+  }
+]

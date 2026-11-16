@@ -1,0 +1,35 @@
+{
+  "software": {
+    "initial": "Synthetic incident. Queue delivers at least once. Handler: if not processed(event.id): charge(event.order_id); insert processed(event.id); ack(). unique constraint exists on processed.event_id. Two deliveries of event E17 both passed the initial check at 10:00:01 and both called charge. A third delivery after processed insertion was skipped. Initial provider note says charge API has no idempotency feature. Diagnose the duplicate and propose the smallest safe fix and tests; do not change code.",
+    "correction": "Correction C1, authoritative API contract: charge supports an Idempotency-Key retained for 24h. The same order may have distinct legitimate charges; stable charge_intent_id identifies one charge attempt across message redelivery. Queue can redeliver up to 7 days. Do not use order_id alone.",
+    "rubric": [
+      "Identifies check-then-act race and external effect before durable record",
+      "Rejects unique processed insert as sufficient protection",
+      "Uses stable charge_intent_id not order_id/event alone",
+      "Handles 24h key retention versus 7d redelivery and unknown results with reconciliation",
+      "Includes concurrent duplicate and crash-after-charge tests; updates initial no-key belief"
+    ]
+  },
+  "quant": {
+    "initial": "Synthetic research audit, not investment advice. Strategy uses a file of company fundamentals with columns fiscal_period_end and value, joining to daily prices on fiscal_period_end. Universe is stocks still listed today. Random 80/20 split across rows; scaler fitted on all rows. Researcher picked best of 200 parameter variants on the test set. Gross Sharpe 2.1; transaction costs omitted. Proposal says this proves deployable alpha. Audit method, prioritize repairs, and state what can be concluded.",
+    "correction": "Correction C1 from data steward: raw source also has published_at and revision timestamps, previously omitted by analyst; historical delisted price data is licensed and available. Sharpe is not independently recomputed. No fill-level trading data exists yet.",
+    "rubric": [
+      "Identifies lookahead and revisions; point-in-time published_at join",
+      "Identifies survivorship and uses available delisted data",
+      "Identifies random split overlap and all-data scaling leakage",
+      "Identifies multiple testing/test reuse and requires untouched chronological holdout",
+      "Rejects deployable alpha, includes costs/slippage uncertainty and incorporates correction"
+    ]
+  },
+  "market": {
+    "initial": "Synthetic fixed evidence, no web needed. Vendor press release P dated 2026-10 says product has 1.2 million users. Analyst note Q dated 2026-11 says 400,000 monthly active paid seats. Internal sales slide R says market grows 30% but links only to P. Proposal claims paid users tripled and TAM can be estimated by 1.2m times $100/month. Assess evidence and write a defensible decision memo with key unknowns.",
+    "correction": "Correction C1 with source definitions: P counts cumulative registered accounts globally, including free and inactive. Q actually reports 400,000 monthly active accounts, NOT paid seats; region EU only; sampled estimate ±15%, not audited. No common baseline period or paid conversion rate is provided.",
+    "rubric": [
+      "Separates cumulative registered vs monthly active vs paid",
+      "Incorporates correction Q is not paid and EU vs global mismatch",
+      "Rejects tripling claim without comparable baseline",
+      "Rejects TAM inference and unsupported 30% circular citation",
+      "Preserves uncertainty and names concrete missing conversion/pricing/market evidence"
+    ]
+  }
+}

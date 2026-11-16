@@ -1,0 +1,4 @@
+2026-11-15T17:41:29.279416Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-11-15T17:41:29.308281Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-11-15T17:41:42.714877Z ERROR codex_core::tools::router: error=collab spawn failed: Fatal error: failed to load model context for thread 01a1e04c-c23c-7f31-b33c-f6702c5d7669: invalid thread-store request: no rollout found for thread id 01a1e04c-c23c-7f31-b33c-f6702c5d7669
+2026-11-15T17:42:11.138804Z  WARN codex_core::hook_runtime: failed to resolve parent transcript path for subagent hook parent_thread_id=01a1e04c-c23c-7f31-b33c-f6702c5d7669 error=invalid thread-store request: no rollout found for thread id 01a1e04c-c23c-7f31-b33c-f6702c5d7669

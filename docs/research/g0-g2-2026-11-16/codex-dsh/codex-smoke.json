@@ -1,0 +1,143 @@
+{
+  "runtime": "codex-cli 0.169.0-alpha.11.1",
+  "transport": "stdio",
+  "model_provider": "deterministic HTTP SSE fixture on loopback",
+  "real_model_calls": 0,
+  "evidence": {
+    "create": {
+      "matched_thread_started": true
+    },
+    "busy": {
+      "both_start_requests_reused_active_turn": [
+        true,
+        true
+      ],
+      "explicit_steer_reused_active_turn": true,
+      "stale_steer_error_code": -32600
+    },
+    "first_turn": {
+      "status": "completed",
+      "user_item_count": 4,
+      "same_client_id_input_occurrences": 2,
+      "distinct_item_ids_for_same_client_id": 2,
+      "response_item_client_ids": [
+        "g1-initial",
+        "g1-reused",
+        "g1-reused",
+        "g1-steer"
+      ],
+      "usage_events": [
+        {
+          "total": {
+            "totalTokens": 13,
+            "inputTokens": 11,
+            "cachedInputTokens": 3,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 2,
+            "reasoningOutputTokens": 1
+          },
+          "last": {
+            "totalTokens": 13,
+            "inputTokens": 11,
+            "cachedInputTokens": 3,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 2,
+            "reasoningOutputTokens": 1
+          },
+          "modelContextWindow": 258400
+        }
+      ],
+      "event_counts": {
+        "remoteControl/status/changed": 1,
+        "thread/started": 1,
+        "thread/status/changed": 2,
+        "turn/started": 1,
+        "item/started": 5,
+        "item/completed": 5,
+        "account/rateLimits/updated": 2,
+        "thread/tokenUsage/updated": 1,
+        "turn/completed": 1,
+        "deprecationNotice": 1
+      },
+      "assistant_fixture_result_seen": true
+    },
+    "interrupt": {
+      "new_turn_id": true,
+      "acknowledgment_body": {},
+      "terminal_status": "interrupted"
+    },
+    "first_server_exit": 0,
+    "cold_resume": {
+      "same_thread_id": true,
+      "same_turn_order": true,
+      "historical_statuses": [
+        "completed",
+        "interrupted"
+      ],
+      "fixture_requests_before_resume": 4,
+      "event_counts_before_thread_read_response": {
+        "remoteControl/status/changed": 1,
+        "deprecationNotice": 2,
+        "thread/status/changed": 1,
+        "thread/tokenUsage/updated": 1,
+        "thread/goal/cleared": 1
+      },
+      "usage_replay": {
+        "completed_turn": [],
+        "interrupted_turn": [
+          {
+            "total": {
+              "totalTokens": 13,
+              "inputTokens": 11,
+              "cachedInputTokens": 3,
+              "cacheWriteInputTokens": 0,
+              "outputTokens": 2,
+              "reasoningOutputTokens": 1
+            },
+            "last": {
+              "totalTokens": 13,
+              "inputTokens": 11,
+              "cachedInputTokens": 3,
+              "cacheWriteInputTokens": 0,
+              "outputTokens": 2,
+              "reasoningOutputTokens": 1
+            },
+            "modelContextWindow": 258400
+          }
+        ]
+      },
+      "fixture_requests_after_resume": 4,
+      "no_new_model_request": true
+    },
+    "second_server_exit": 0
+  },
+  "fixture_self_check_http_status": 204,
+  "outcome": "passed_protocol_smoke",
+  "provider_requests": 4,
+  "fixture_http_routes": [
+    [
+      "GET",
+      "/fixture-health"
+    ],
+    [
+      "POST",
+      "/v1/responses"
+    ],
+    [
+      "POST",
+      "/v1/responses"
+    ],
+    [
+      "POST",
+      "/v1/responses"
+    ],
+    [
+      "POST",
+      "/v1/responses"
+    ]
+  ],
+  "fixture_model_requests_by_phase": {
+    "first_turn": 3,
+    "interrupt": 1
+  }
+}

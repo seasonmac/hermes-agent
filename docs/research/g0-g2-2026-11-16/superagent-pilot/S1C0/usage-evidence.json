@@ -1,0 +1,85 @@
+{
+  "router": {
+    "thread_id": "01a1e346-e5fa-74d2-aeee-33ce50831c59",
+    "usage_events": [
+      {
+        "timestamp": "2026-11-16T07:34:12.645Z",
+        "info": {
+          "total_token_usage": {
+            "input_tokens": 10418,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 10,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 10428
+          },
+          "last_token_usage": {
+            "input_tokens": 10418,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 10,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 10428
+          },
+          "last_usage_includes_reasoning": true,
+          "model_context_window": 475000
+        }
+      }
+    ],
+    "base_instructions_hash": "cbe05f8770fb9460073e3c1ff39feb07397c8083daf893dbed27626a7f18f37c",
+    "rollout_sha256": "c4872251358e2003187573e988e12fb3f9079ea2562feff03f9704b967bdfc72"
+  },
+  "worker": {
+    "thread_id": "01a1e346-e601-7442-a886-ff30bb578e43",
+    "usage_events": [
+      {
+        "timestamp": "2026-11-16T07:34:17.233Z",
+        "info": {
+          "total_token_usage": {
+            "input_tokens": 10371,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 5,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 10376
+          },
+          "last_token_usage": {
+            "input_tokens": 10371,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 5,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 10376
+          },
+          "last_usage_includes_reasoning": true,
+          "model_context_window": 475000
+        }
+      },
+      {
+        "timestamp": "2026-11-16T07:34:23.185Z",
+        "info": {
+          "total_token_usage": {
+            "input_tokens": 23092,
+            "cached_input_tokens": 10112,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 177,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 23269
+          },
+          "last_token_usage": {
+            "input_tokens": 12721,
+            "cached_input_tokens": 10112,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 172,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 12893
+          },
+          "last_usage_includes_reasoning": true,
+          "model_context_window": 475000
+        }
+      }
+    ],
+    "base_instructions_hash": "cbe05f8770fb9460073e3c1ff39feb07397c8083daf893dbed27626a7f18f37c",
+    "rollout_sha256": "14ef39c7b22602dae27aed0dfcf5a42bf22d4a74ae0791e83a9aed5430f333d7"
+  }
+}

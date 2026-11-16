@@ -1,0 +1,8 @@
+error: unexpected argument '--ignore-user-config' found
+
+  tip: 'app-server --print-startup-config' exists
+
+Usage: codex [OPTIONS] [PROMPT]
+       codex [OPTIONS] <COMMAND> [ARGS]
+
+For more information, try '--help'.

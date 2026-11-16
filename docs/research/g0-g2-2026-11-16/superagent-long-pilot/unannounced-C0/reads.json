@@ -1,0 +1,19 @@
+[
+  {
+    "thread_id": "01a1e355-1eee-7843-828e-dd166605949b",
+    "call_id": "exec-247f0687-c1e4-4fb3-b4b7-e7ab3c6e0e60",
+    "ids": [
+      "E-A2"
+    ],
+    "result": {
+      "source_kind": "fixture_evidence",
+      "objects": [
+        {
+          "id": "E-A2",
+          "error": "unavailable"
+        }
+      ]
+    },
+    "chars": 82
+  }
+]

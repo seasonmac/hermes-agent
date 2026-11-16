@@ -1,0 +1,7 @@
+Both E17 deliveries passed the check at 10:00:01 and called `charge` before either inserted a processed marker. The unique constraint protected the marker after the side effect. The third delivery skipped charging because the marker already existed.
+
+Atomically create a durable claim keyed by `charge_intent_id` before calling the provider. Only the worker that creates the claim may submit the charge. Pass that same ID as the provider’s `Idempotency-Key`, disable automatic resubmission, and persist confirmed success before acknowledging. Retain intent records throughout the seven-day redelivery horizon. Distinct intents on the same order can each charge.
+
+The provider retains keys for 24 hours. We dropped automatic retries after an ambiguous submission because a stalled worker or delayed request could reach the provider after expiry. Route unresolved claims, including crashes after claiming, to durable reconciliation before acknowledging. Confirm the original outcome before authorizing any replacement charge.
+
+Test simultaneous E17 deliveries, redelivery after recorded success through day seven, a crash before submission, provider success followed by a crash before local persistence, and a timeout or paused worker spanning key expiry. Verify that redelivery never submits a second charge and that two distinct intents on one order each charge once.

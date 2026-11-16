@@ -1,0 +1,1104 @@
+[
+  {
+    "run": "market-B-1-persistent",
+    "role": "peer",
+    "calls": [
+      {
+        "n": 1,
+        "input_tokens": 21837,
+        "cached_input_tokens": 0,
+        "output_tokens": 39,
+        "reasoning_output_tokens": 16,
+        "total_tokens": 21876,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:45:24.131Z"
+      },
+      {
+        "n": 2,
+        "input_tokens": 22041,
+        "cached_input_tokens": 21632,
+        "output_tokens": 103,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22144,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:45:27.718Z"
+      },
+      {
+        "n": 3,
+        "input_tokens": 22156,
+        "cached_input_tokens": 21888,
+        "output_tokens": 21,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22177,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:45:30.549Z"
+      },
+      {
+        "n": 4,
+        "input_tokens": 22283,
+        "cached_input_tokens": 22144,
+        "output_tokens": 39,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22322,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:45:32.641Z"
+      }
+    ],
+    "metadata_shape": {
+      "keys": [
+        "account_scoped",
+        "creator_user_id",
+        "creator_account_id",
+        "session_id",
+        "id",
+        "parent_thread_id",
+        "timestamp",
+        "cwd",
+        "runtime_workspace_roots",
+        "originator",
+        "cli_version",
+        "source",
+        "thread_source",
+        "agent_nickname",
+        "agent_path",
+        "model_provider",
+        "base_instructions",
+        "history_mode",
+        "multi_agent_version",
+        "context_window"
+      ],
+      "base_instructions_chars": 26456
+    }
+  },
+  {
+    "run": "market-B-1-persistent",
+    "role": "root",
+    "calls": [
+      {
+        "n": 1,
+        "input_tokens": 16163,
+        "cached_input_tokens": 0,
+        "output_tokens": 372,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16535,
+        "functions_since_previous_usage": [
+          "collaboration.spawn_agent"
+        ],
+        "timestamp": "2026-11-15T17:45:17.231Z"
+      },
+      {
+        "n": 2,
+        "input_tokens": 16556,
+        "cached_input_tokens": 0,
+        "output_tokens": 62,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16618,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:45:19.990Z"
+      },
+      {
+        "n": 3,
+        "input_tokens": 16730,
+        "cached_input_tokens": 16000,
+        "output_tokens": 129,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16859,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:45:24.160Z"
+      },
+      {
+        "n": 4,
+        "input_tokens": 16871,
+        "cached_input_tokens": 16512,
+        "output_tokens": 21,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16892,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:45:27.676Z"
+      },
+      {
+        "n": 5,
+        "input_tokens": 17030,
+        "cached_input_tokens": 16768,
+        "output_tokens": 70,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 17100,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:45:30.595Z"
+      },
+      {
+        "n": 6,
+        "input_tokens": 17112,
+        "cached_input_tokens": 16768,
+        "output_tokens": 21,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 17133,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:45:32.650Z"
+      },
+      {
+        "n": 7,
+        "input_tokens": 17228,
+        "cached_input_tokens": 17024,
+        "output_tokens": 274,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 17502,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:45:40.463Z"
+      }
+    ],
+    "metadata_shape": {
+      "keys": [
+        "account_scoped",
+        "creator_user_id",
+        "creator_account_id",
+        "session_id",
+        "id",
+        "timestamp",
+        "cwd",
+        "runtime_workspace_roots",
+        "originator",
+        "cli_version",
+        "source",
+        "thread_source",
+        "model_provider",
+        "base_instructions",
+        "history_mode",
+        "multi_agent_version",
+        "context_window"
+      ],
+      "base_instructions_chars": 26456
+    }
+  },
+  {
+    "run": "market-B-2-persistent",
+    "role": "root",
+    "calls": [
+      {
+        "n": 1,
+        "input_tokens": 22514,
+        "cached_input_tokens": 0,
+        "output_tokens": 352,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22866,
+        "functions_since_previous_usage": [
+          "collaboration.spawn_agent"
+        ],
+        "timestamp": "2026-11-15T17:46:59.127Z"
+      },
+      {
+        "n": 2,
+        "input_tokens": 29402,
+        "cached_input_tokens": 22400,
+        "output_tokens": 68,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 29470,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:47:02.139Z"
+      },
+      {
+        "n": 3,
+        "input_tokens": 29582,
+        "cached_input_tokens": 29312,
+        "output_tokens": 105,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 29687,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:47:05.830Z"
+      },
+      {
+        "n": 4,
+        "input_tokens": 29699,
+        "cached_input_tokens": 29568,
+        "output_tokens": 21,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 29720,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:47:08.596Z"
+      },
+      {
+        "n": 5,
+        "input_tokens": 29822,
+        "cached_input_tokens": 29568,
+        "output_tokens": 66,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 29888,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:47:11.190Z"
+      },
+      {
+        "n": 6,
+        "input_tokens": 29900,
+        "cached_input_tokens": 29568,
+        "output_tokens": 260,
+        "reasoning_output_tokens": 17,
+        "total_tokens": 30160,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:47:18.779Z"
+      }
+    ],
+    "metadata_shape": {
+      "keys": [
+        "account_scoped",
+        "creator_user_id",
+        "creator_account_id",
+        "session_id",
+        "id",
+        "timestamp",
+        "cwd",
+        "runtime_workspace_roots",
+        "originator",
+        "cli_version",
+        "source",
+        "thread_source",
+        "model_provider",
+        "base_instructions",
+        "history_mode",
+        "multi_agent_version",
+        "context_window"
+      ],
+      "base_instructions_chars": 26456
+    }
+  },
+  {
+    "run": "market-B-2-persistent",
+    "role": "peer",
+    "calls": [
+      {
+        "n": 1,
+        "input_tokens": 21828,
+        "cached_input_tokens": 0,
+        "output_tokens": 42,
+        "reasoning_output_tokens": 19,
+        "total_tokens": 21870,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:47:05.898Z"
+      },
+      {
+        "n": 2,
+        "input_tokens": 22011,
+        "cached_input_tokens": 21632,
+        "output_tokens": 67,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22078,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:47:08.626Z"
+      },
+      {
+        "n": 3,
+        "input_tokens": 22090,
+        "cached_input_tokens": 21888,
+        "output_tokens": 32,
+        "reasoning_output_tokens": 9,
+        "total_tokens": 22122,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:47:11.152Z"
+      },
+      {
+        "n": 4,
+        "input_tokens": 22224,
+        "cached_input_tokens": 21888,
+        "output_tokens": 25,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22249,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:47:12.811Z"
+      }
+    ],
+    "metadata_shape": {
+      "keys": [
+        "account_scoped",
+        "creator_user_id",
+        "creator_account_id",
+        "session_id",
+        "id",
+        "parent_thread_id",
+        "timestamp",
+        "cwd",
+        "runtime_workspace_roots",
+        "originator",
+        "cli_version",
+        "source",
+        "thread_source",
+        "agent_nickname",
+        "agent_path",
+        "model_provider",
+        "base_instructions",
+        "history_mode",
+        "multi_agent_version",
+        "context_window"
+      ],
+      "base_instructions_chars": 26456
+    }
+  },
+  {
+    "run": "quant-B-1-persistent",
+    "role": "root",
+    "calls": [
+      {
+        "n": 1,
+        "input_tokens": 16165,
+        "cached_input_tokens": 13440,
+        "output_tokens": 371,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16536,
+        "functions_since_previous_usage": [
+          "collaboration.spawn_agent"
+        ],
+        "timestamp": "2026-11-15T17:45:18.253Z"
+      },
+      {
+        "n": 2,
+        "input_tokens": 16557,
+        "cached_input_tokens": 16000,
+        "output_tokens": 62,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16619,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:45:21.232Z"
+      },
+      {
+        "n": 3,
+        "input_tokens": 16723,
+        "cached_input_tokens": 16512,
+        "output_tokens": 120,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16843,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:45:25.275Z"
+      },
+      {
+        "n": 4,
+        "input_tokens": 16855,
+        "cached_input_tokens": 0,
+        "output_tokens": 21,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16876,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:45:30.067Z"
+      },
+      {
+        "n": 5,
+        "input_tokens": 16974,
+        "cached_input_tokens": 16512,
+        "output_tokens": 68,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 17042,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:45:32.852Z"
+      },
+      {
+        "n": 6,
+        "input_tokens": 17054,
+        "cached_input_tokens": 16768,
+        "output_tokens": 41,
+        "reasoning_output_tokens": 18,
+        "total_tokens": 17095,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:45:35.545Z"
+      },
+      {
+        "n": 7,
+        "input_tokens": 17208,
+        "cached_input_tokens": 17024,
+        "output_tokens": 260,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 17468,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:45:43.114Z"
+      }
+    ],
+    "metadata_shape": {
+      "keys": [
+        "account_scoped",
+        "creator_user_id",
+        "creator_account_id",
+        "session_id",
+        "id",
+        "timestamp",
+        "cwd",
+        "runtime_workspace_roots",
+        "originator",
+        "cli_version",
+        "source",
+        "thread_source",
+        "model_provider",
+        "base_instructions",
+        "history_mode",
+        "multi_agent_version",
+        "context_window"
+      ],
+      "base_instructions_chars": 26456
+    }
+  },
+  {
+    "run": "quant-B-1-persistent",
+    "role": "peer",
+    "calls": [
+      {
+        "n": 1,
+        "input_tokens": 21852,
+        "cached_input_tokens": 0,
+        "output_tokens": 23,
+        "reasoning_output_tokens": 10,
+        "total_tokens": 21875,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:45:27.364Z"
+      },
+      {
+        "n": 2,
+        "input_tokens": 21996,
+        "cached_input_tokens": 21632,
+        "output_tokens": 63,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22059,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:45:30.109Z"
+      },
+      {
+        "n": 3,
+        "input_tokens": 22071,
+        "cached_input_tokens": 21888,
+        "output_tokens": 21,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22092,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:45:32.814Z"
+      },
+      {
+        "n": 4,
+        "input_tokens": 22196,
+        "cached_input_tokens": 21888,
+        "output_tokens": 57,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22253,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:45:35.535Z"
+      }
+    ],
+    "metadata_shape": {
+      "keys": [
+        "account_scoped",
+        "creator_user_id",
+        "creator_account_id",
+        "session_id",
+        "id",
+        "parent_thread_id",
+        "timestamp",
+        "cwd",
+        "runtime_workspace_roots",
+        "originator",
+        "cli_version",
+        "source",
+        "thread_source",
+        "agent_nickname",
+        "agent_path",
+        "model_provider",
+        "base_instructions",
+        "history_mode",
+        "multi_agent_version",
+        "context_window"
+      ],
+      "base_instructions_chars": 26456
+    }
+  },
+  {
+    "run": "quant-B-2-persistent",
+    "role": "peer",
+    "calls": [
+      {
+        "n": 1,
+        "input_tokens": 21868,
+        "cached_input_tokens": 0,
+        "output_tokens": 21,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 21889,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:46:16.223Z"
+      },
+      {
+        "n": 2,
+        "input_tokens": 22060,
+        "cached_input_tokens": 21632,
+        "output_tokens": 63,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22123,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:46:18.784Z"
+      },
+      {
+        "n": 3,
+        "input_tokens": 22135,
+        "cached_input_tokens": 21888,
+        "output_tokens": 21,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22156,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:46:21.237Z"
+      },
+      {
+        "n": 4,
+        "input_tokens": 22260,
+        "cached_input_tokens": 21888,
+        "output_tokens": 7,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22267,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:46:22.279Z"
+      }
+    ],
+    "metadata_shape": {
+      "keys": [
+        "account_scoped",
+        "creator_user_id",
+        "creator_account_id",
+        "session_id",
+        "id",
+        "parent_thread_id",
+        "timestamp",
+        "cwd",
+        "runtime_workspace_roots",
+        "originator",
+        "cli_version",
+        "source",
+        "thread_source",
+        "agent_nickname",
+        "agent_path",
+        "model_provider",
+        "base_instructions",
+        "history_mode",
+        "multi_agent_version",
+        "context_window"
+      ],
+      "base_instructions_chars": 26456
+    }
+  },
+  {
+    "run": "quant-B-2-persistent",
+    "role": "root",
+    "calls": [
+      {
+        "n": 1,
+        "input_tokens": 16165,
+        "cached_input_tokens": 13440,
+        "output_tokens": 405,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16570,
+        "functions_since_previous_usage": [
+          "collaboration.spawn_agent"
+        ],
+        "timestamp": "2026-11-15T17:46:08.972Z"
+      },
+      {
+        "n": 2,
+        "input_tokens": 16591,
+        "cached_input_tokens": 16000,
+        "output_tokens": 68,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16659,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:46:11.867Z"
+      },
+      {
+        "n": 3,
+        "input_tokens": 16730,
+        "cached_input_tokens": 16512,
+        "output_tokens": 135,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16865,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:46:16.249Z"
+      },
+      {
+        "n": 4,
+        "input_tokens": 16877,
+        "cached_input_tokens": 16512,
+        "output_tokens": 21,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16898,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:46:18.748Z"
+      },
+      {
+        "n": 5,
+        "input_tokens": 16996,
+        "cached_input_tokens": 16768,
+        "output_tokens": 68,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 17064,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:46:21.272Z"
+      },
+      {
+        "n": 6,
+        "input_tokens": 17076,
+        "cached_input_tokens": 16768,
+        "output_tokens": 21,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 17097,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:46:22.720Z"
+      },
+      {
+        "n": 7,
+        "input_tokens": 17160,
+        "cached_input_tokens": 17024,
+        "output_tokens": 254,
+        "reasoning_output_tokens": 7,
+        "total_tokens": 17414,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:46:30.143Z"
+      }
+    ],
+    "metadata_shape": {
+      "keys": [
+        "account_scoped",
+        "creator_user_id",
+        "creator_account_id",
+        "session_id",
+        "id",
+        "timestamp",
+        "cwd",
+        "runtime_workspace_roots",
+        "originator",
+        "cli_version",
+        "source",
+        "thread_source",
+        "model_provider",
+        "base_instructions",
+        "history_mode",
+        "multi_agent_version",
+        "context_window"
+      ],
+      "base_instructions_chars": 26456
+    }
+  },
+  {
+    "run": "software-B-1-persistent",
+    "role": "peer",
+    "calls": [
+      {
+        "n": 1,
+        "input_tokens": 21863,
+        "cached_input_tokens": 0,
+        "output_tokens": 51,
+        "reasoning_output_tokens": 28,
+        "total_tokens": 21914,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:43:13.683Z"
+      },
+      {
+        "n": 2,
+        "input_tokens": 22094,
+        "cached_input_tokens": 21632,
+        "output_tokens": 99,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22193,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:43:17.431Z"
+      },
+      {
+        "n": 3,
+        "input_tokens": 22205,
+        "cached_input_tokens": 21888,
+        "output_tokens": 21,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22226,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:43:21.573Z"
+      },
+      {
+        "n": 4,
+        "input_tokens": 22343,
+        "cached_input_tokens": 22144,
+        "output_tokens": 97,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22440,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:43:25.075Z"
+      }
+    ],
+    "metadata_shape": {
+      "keys": [
+        "account_scoped",
+        "creator_user_id",
+        "creator_account_id",
+        "session_id",
+        "id",
+        "parent_thread_id",
+        "timestamp",
+        "cwd",
+        "runtime_workspace_roots",
+        "originator",
+        "cli_version",
+        "source",
+        "thread_source",
+        "agent_nickname",
+        "agent_path",
+        "model_provider",
+        "base_instructions",
+        "history_mode",
+        "multi_agent_version",
+        "context_window"
+      ],
+      "base_instructions_chars": 26456
+    }
+  },
+  {
+    "run": "software-B-1-persistent",
+    "role": "root",
+    "calls": [
+      {
+        "n": 1,
+        "input_tokens": 16162,
+        "cached_input_tokens": 15488,
+        "output_tokens": 392,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16554,
+        "functions_since_previous_usage": [
+          "collaboration.spawn_agent"
+        ],
+        "timestamp": "2026-11-15T17:43:05.165Z"
+      },
+      {
+        "n": 2,
+        "input_tokens": 16575,
+        "cached_input_tokens": 16000,
+        "output_tokens": 56,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16631,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:43:08.995Z"
+      },
+      {
+        "n": 3,
+        "input_tokens": 16751,
+        "cached_input_tokens": 16512,
+        "output_tokens": 144,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16895,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:43:13.731Z"
+      },
+      {
+        "n": 4,
+        "input_tokens": 16907,
+        "cached_input_tokens": 16512,
+        "output_tokens": 139,
+        "reasoning_output_tokens": 124,
+        "total_tokens": 17046,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:43:18.452Z"
+      },
+      {
+        "n": 5,
+        "input_tokens": 17143,
+        "cached_input_tokens": 16768,
+        "output_tokens": 81,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 17224,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:43:21.601Z"
+      },
+      {
+        "n": 6,
+        "input_tokens": 17236,
+        "cached_input_tokens": 17024,
+        "output_tokens": 21,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 17257,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:43:25.084Z"
+      },
+      {
+        "n": 7,
+        "input_tokens": 17410,
+        "cached_input_tokens": 17024,
+        "output_tokens": 251,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 17661,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:43:33.870Z"
+      }
+    ],
+    "metadata_shape": {
+      "keys": [
+        "account_scoped",
+        "creator_user_id",
+        "creator_account_id",
+        "session_id",
+        "id",
+        "timestamp",
+        "cwd",
+        "runtime_workspace_roots",
+        "originator",
+        "cli_version",
+        "source",
+        "thread_source",
+        "model_provider",
+        "base_instructions",
+        "history_mode",
+        "multi_agent_version",
+        "context_window"
+      ],
+      "base_instructions_chars": 26456
+    }
+  },
+  {
+    "run": "software-B-2-persistent",
+    "role": "root",
+    "calls": [
+      {
+        "n": 1,
+        "input_tokens": 16162,
+        "cached_input_tokens": 13440,
+        "output_tokens": 342,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16504,
+        "functions_since_previous_usage": [
+          "collaboration.spawn_agent"
+        ],
+        "timestamp": "2026-11-15T17:46:01.485Z"
+      },
+      {
+        "n": 2,
+        "input_tokens": 16525,
+        "cached_input_tokens": 16000,
+        "output_tokens": 54,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16579,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:46:04.061Z"
+      },
+      {
+        "n": 3,
+        "input_tokens": 16696,
+        "cached_input_tokens": 16512,
+        "output_tokens": 124,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16820,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:46:08.214Z"
+      },
+      {
+        "n": 4,
+        "input_tokens": 16872,
+        "cached_input_tokens": 0,
+        "output_tokens": 21,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 16893,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:46:12.942Z"
+      },
+      {
+        "n": 5,
+        "input_tokens": 17010,
+        "cached_input_tokens": 16768,
+        "output_tokens": 71,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 17081,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:46:15.853Z"
+      },
+      {
+        "n": 6,
+        "input_tokens": 17093,
+        "cached_input_tokens": 16512,
+        "output_tokens": 138,
+        "reasoning_output_tokens": 127,
+        "total_tokens": 17231,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:46:20.497Z"
+      },
+      {
+        "n": 7,
+        "input_tokens": 17296,
+        "cached_input_tokens": 17024,
+        "output_tokens": 262,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 17558,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:46:28.158Z"
+      }
+    ],
+    "metadata_shape": {
+      "keys": [
+        "account_scoped",
+        "creator_user_id",
+        "creator_account_id",
+        "session_id",
+        "id",
+        "timestamp",
+        "cwd",
+        "runtime_workspace_roots",
+        "originator",
+        "cli_version",
+        "source",
+        "thread_source",
+        "model_provider",
+        "base_instructions",
+        "history_mode",
+        "multi_agent_version",
+        "context_window"
+      ],
+      "base_instructions_chars": 26456
+    }
+  },
+  {
+    "run": "software-B-2-persistent",
+    "role": "peer",
+    "calls": [
+      {
+        "n": 1,
+        "input_tokens": 21809,
+        "cached_input_tokens": 0,
+        "output_tokens": 29,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 21838,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:46:07.250Z"
+      },
+      {
+        "n": 2,
+        "input_tokens": 21850,
+        "cached_input_tokens": 21632,
+        "output_tokens": 42,
+        "reasoning_output_tokens": 28,
+        "total_tokens": 21892,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:46:09.330Z"
+      },
+      {
+        "n": 3,
+        "input_tokens": 22016,
+        "cached_input_tokens": 21632,
+        "output_tokens": 82,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22098,
+        "functions_since_previous_usage": [
+          "collaboration.send_message"
+        ],
+        "timestamp": "2026-11-15T17:46:12.998Z"
+      },
+      {
+        "n": 4,
+        "input_tokens": 22110,
+        "cached_input_tokens": 21888,
+        "output_tokens": 31,
+        "reasoning_output_tokens": 8,
+        "total_tokens": 22141,
+        "functions_since_previous_usage": [
+          "collaboration.wait_agent"
+        ],
+        "timestamp": "2026-11-15T17:46:15.808Z"
+      },
+      {
+        "n": 5,
+        "input_tokens": 22248,
+        "cached_input_tokens": 21888,
+        "output_tokens": 42,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 22290,
+        "functions_since_previous_usage": [],
+        "timestamp": "2026-11-15T17:46:17.987Z"
+      }
+    ],
+    "metadata_shape": {
+      "keys": [
+        "account_scoped",
+        "creator_user_id",
+        "creator_account_id",
+        "session_id",
+        "id",
+        "parent_thread_id",
+        "timestamp",
+        "cwd",
+        "runtime_workspace_roots",
+        "originator",
+        "cli_version",
+        "source",
+        "thread_source",
+        "agent_nickname",
+        "agent_path",
+        "model_provider",
+        "base_instructions",
+        "history_mode",
+        "multi_agent_version",
+        "context_window"
+      ],
+      "base_instructions_chars": 26456
+    }
+  }
+]

@@ -1,0 +1,12 @@
+Both E17 deliveries passed the completion check and called `charge` before either inserted the processed row. The unique constraint protected the database row. The third delivery skipped the call because that row already existed.
+
+Use `charge_intent_id` as the provider’s `Idempotency-Key` and keep a durable record keyed by that intent. Persist the first-attempt timestamp before calling the provider and reuse the same key and charge parameters on every retry. Record confirmed success before acknowledging the message. Keep the record through the seven-day redelivery window and retain unresolved intents until reconciled.
+
+Allow automatic retries only while the request can reach the provider within its 24-hour retention window. After that, send unresolved intents to durable reconciliation before acknowledging. Confirm the provider outcome before authorizing any fresh charge. For E17, verify both calls’ outcomes against provider records.
+
+**Tests**
+
+- Concurrent E17 deliveries produce one provider charge.
+- A timeout after provider success or a crash before local completion can recover within 24 hours without another charge.
+- An unresolved intent redelivered at the cutoff or on day seven enters reconciliation without a charge call. A completed intent is skipped.
+- Two distinct intents for the same order each charge once.

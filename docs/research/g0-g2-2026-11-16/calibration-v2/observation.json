@@ -1,0 +1,173 @@
+{
+  "root_thread_id": "01a1e1b2-efd2-7602-8fdd-a067bcb72204",
+  "threads": [
+    {
+      "role": "root",
+      "thread_id": "01a1e1b2-efd2-7602-8fdd-a067bcb72204",
+      "rollout_file": "/Users/season/.codex/sessions/2026/11/16/rollout-2026-11-16T08-12-42-01a1e1b2-efd2-7602-8fdd-a067bcb72204.jsonl",
+      "base_instruction_sha256": "52c6b74cb2dd5202c0c300dbd3d3bd447a45dfe1ce232c1cb4d78c7fc99e2a8c",
+      "developer_prefix": [
+        {
+          "characters": 26155,
+          "sha256": "52c6b74cb2dd5202c0c300dbd3d3bd447a45dfe1ce232c1cb4d78c7fc99e2a8c",
+          "head": "You are Codex, an agent based on GPT-6. You and the use"
+        },
+        {
+          "characters": 341,
+          "sha256": "29dad5ed6993c5e717376e0a1c84d54ab60ee593510916ac6cee4295e803315d",
+          "head": "<permissions instructions>"
+        },
+        {
+          "characters": 1056,
+          "sha256": "7f45d7d6986a761101d46d185824ce65c321ca0f02cea7497fc46d60ffae417b",
+          "head": "<collaboration_mode># Collaboration Mode: Default"
+        },
+        {
+          "characters": 2160,
+          "sha256": "0494965ec0a2431ccb392585f866432750cd8b53a7bb3420d881421f841e7048",
+          "head": "<multi_agent_role>You are `/root`, the primary agent in"
+        },
+        {
+          "characters": 271,
+          "sha256": "6ded806e3cdbb35599ecaf8742574bc5274908472b1729090010c404c2151e8e",
+          "head": "<multi_agent_mode>Any earlier instruction enabling proa"
+        },
+        {
+          "characters": 106,
+          "sha256": "a7226c3423ff0ce7c43934d61aa16cfe511155e7935154b62d3382bf2f013d77",
+          "head": "<rollout_budget>"
+        }
+      ],
+      "skill_catalog_blocks": [],
+      "additional_tools": [
+        {
+          "sha256": "23b99c33b790485b2beab97dbf01357006ee9af6fa0d9435b4a009e5c3fb4c4b",
+          "serialized_chars": 28115
+        }
+      ],
+      "function_calls": [
+        {
+          "name": "spawn_agent",
+          "namespace": "collaboration",
+          "fork_turns": "none",
+          "model": "gpt-6.1-sol",
+          "reasoning_effort": "medium"
+        },
+        {
+          "name": "wait_agent",
+          "namespace": "collaboration",
+          "fork_turns": null,
+          "model": null,
+          "reasoning_effort": null
+        }
+      ],
+      "calls": [
+        {
+          "input_tokens": 11831,
+          "cached_input_tokens": 0,
+          "output_tokens": 75,
+          "total_tokens": 11906
+        },
+        {
+          "input_tokens": 11927,
+          "cached_input_tokens": 11648,
+          "output_tokens": 21,
+          "total_tokens": 11948
+        },
+        {
+          "input_tokens": 12011,
+          "cached_input_tokens": 11904,
+          "output_tokens": 6,
+          "total_tokens": 12017
+        }
+      ],
+      "usage": {
+        "input_tokens": 35769,
+        "cached_input_tokens": 23552,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 102,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 35871
+      },
+      "assistant_markers": [
+        "ROOT_OK"
+      ],
+      "budget_instruction_block_count": 1,
+      "configured_limit_literal_count": 1
+    },
+    {
+      "role": "peer",
+      "thread_id": "01a1e1b3-1d11-7880-83c5-f00899668ea1",
+      "rollout_file": "/Users/season/.codex/sessions/2026/11/16/rollout-2026-11-16T08-12-54-01a1e1b3-1d11-7880-83c5-f00899668ea1.jsonl",
+      "base_instruction_sha256": "52c6b74cb2dd5202c0c300dbd3d3bd447a45dfe1ce232c1cb4d78c7fc99e2a8c",
+      "developer_prefix": [
+        {
+          "characters": 26155,
+          "sha256": "52c6b74cb2dd5202c0c300dbd3d3bd447a45dfe1ce232c1cb4d78c7fc99e2a8c",
+          "head": "You are Codex, an agent based on GPT-6. You and the use"
+        },
+        {
+          "characters": 341,
+          "sha256": "29dad5ed6993c5e717376e0a1c84d54ab60ee593510916ac6cee4295e803315d",
+          "head": "<permissions instructions>"
+        },
+        {
+          "characters": 1056,
+          "sha256": "7f45d7d6986a761101d46d185824ce65c321ca0f02cea7497fc46d60ffae417b",
+          "head": "<collaboration_mode># Collaboration Mode: Default"
+        },
+        {
+          "characters": 2204,
+          "sha256": "fbf11600db5e2402a7ba9c18020566a508c9d651a29ac35d83e3d6341b61465a",
+          "head": "<multi_agent_role>You are an agent in a team of agents "
+        },
+        {
+          "characters": 271,
+          "sha256": "6ded806e3cdbb35599ecaf8742574bc5274908472b1729090010c404c2151e8e",
+          "head": "<multi_agent_mode>Any earlier instruction enabling proa"
+        },
+        {
+          "characters": 106,
+          "sha256": "88b9104e2f111042d22bd4b1b525b78289eaea081e795953052164cea199371c",
+          "head": "<rollout_budget>"
+        }
+      ],
+      "skill_catalog_blocks": [],
+      "additional_tools": [
+        {
+          "sha256": "c0762e050bcd87d33e0dcd04c51807c27fb4288009c1b1b3132cdba6e45335b1",
+          "serialized_chars": 25653
+        }
+      ],
+      "function_calls": [],
+      "calls": [
+        {
+          "input_tokens": 11380,
+          "cached_input_tokens": 0,
+          "output_tokens": 7,
+          "total_tokens": 11387
+        }
+      ],
+      "usage": {
+        "input_tokens": 11380,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 7,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 11387
+      },
+      "assistant_markers": [
+        "PEER_OK"
+      ],
+      "budget_instruction_block_count": 1,
+      "configured_limit_literal_count": 0
+    }
+  ],
+  "total": {
+    "input_tokens": 47149,
+    "cached_input_tokens": 23552,
+    "output_tokens": 109,
+    "total_tokens": 47258
+  },
+  "caveat": "Mechanism calibration only; skills catalogs removed. Tool schemas differ by role. Configured budget is an experimental weighted admission gate, not a verified hard cap on total_tokens."
+}

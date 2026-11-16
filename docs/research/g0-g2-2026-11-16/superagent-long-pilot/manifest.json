@@ -1,0 +1,19 @@
+{
+  "response-schema.json": "9f0f970cbc525fa6532c477be10ce8a0461a5d22d21d84d085e93776e0fcb74c",
+  "common-prompt.txt": "deabafcb55214e9aaf75ec998a66cfc937d81bf226aa12b9bfce4c0b0de8deab",
+  "settings.json": "ae1084fcfa0387527b89774ab54ddc8582ecb631a808577367b128c28848d037",
+  "PRE-REGISTERED.md": "e0fbe566cfaba3516caf0d7749da145c894c2e64d1aa46a4fdc2e28757b9959e",
+  "probe-source.py": "04016f129f3120372f5767334e986db34d0cf3f7109812f415315bef6365ad78",
+  "dynamic-tool.json": "7cbf3013a885aa5db2db3007ed22c9f1f2fcf0877cb59a8c7618fe054f6763f2",
+  "runtime-source.py": "d41f8b70a1d8c3b9b9fc65fa8f6aed3d9f94db3cf7053e716ecacb44a8e50061",
+  "fixtures/L96-C0.json": "4ab98273669613db435c7cc696bb1c26aed38c588d15bf08e610f2d5c1d8d18d",
+  "fixtures/L96-C1.json": "68f4ddd33026c7c13d159e4a58d271a88aa34025c30064161423da214878c515",
+  "fixtures/silent-C0.json": "313e66fffb1a1fe773f6b9cfe9209257eb8e84baf8bf8120a1d44973dc20b82f",
+  "fixtures/silent-C1.json": "f208813c3f25e4258556689742a57b0b6e2dee1962abd3a2348dba39240445c3",
+  "fixtures/unannounced-C0.json": "d7b9e26b1d8712416695842f1f807ac97c5558bf2b2ce5292124a5b97b26a35f",
+  "fixtures/L192-C1.json": "f74613eac688a2cf1bc32e78fa7843a045bb7f42326530e336d598c4f9ea2905",
+  "fixtures/L32-C0.json": "5566f859b2f5cd4d5218a30f4de773884f228dba0ae57f5bbb660a2bad69d648",
+  "fixtures/L32-C1.json": "6a4e82a72916e93dc42fff989467f4c4541f622561fe605e0cd2abae7ac04538",
+  "fixtures/L192-C0.json": "aab6237425a58cff8f27e02ad53454cdf14f99d962678edb8235a68f8ae7ffe1",
+  "fixtures/unannounced-C1.json": "78fae8a79984d91ce1a9ccbc9a211c3ed20c47fa88a0dc051c3d59c55dc21e30"
+}

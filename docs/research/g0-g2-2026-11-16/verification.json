@@ -1,0 +1,44 @@
+{
+  "verified_results": 12,
+  "single_agent": 6,
+  "two_agent": 6,
+  "total_tokens_A": 202694,
+  "total_tokens_B": 1317994,
+  "token_ratio": 6.502382902305939,
+  "excluded_attempts": 6,
+  "local_report_links": "exist",
+  "hermes_observations_checked": true,
+  "codex_fixture_observations_checked": true,
+  "peer_usage_checks": [
+    {
+      "run": "market-B-1-persistent",
+      "threads": 2,
+      "total_tokens": 207158
+    },
+    {
+      "run": "market-B-2-persistent",
+      "threads": 2,
+      "total_tokens": 260110
+    },
+    {
+      "run": "quant-B-1-persistent",
+      "threads": 2,
+      "total_tokens": 206758
+    },
+    {
+      "run": "quant-B-2-persistent",
+      "threads": 2,
+      "total_tokens": 207002
+    },
+    {
+      "run": "software-B-1-persistent",
+      "threads": 2,
+      "total_tokens": 208041
+    },
+    {
+      "run": "software-B-2-persistent",
+      "threads": 2,
+      "total_tokens": 228925
+    }
+  ]
+}

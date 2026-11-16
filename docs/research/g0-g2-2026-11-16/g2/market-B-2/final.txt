@@ -1,0 +1,7 @@
+**G2 decision memo**
+
+Remove the claims that paid users tripled, the market grew 30%, and 1.2 million accounts imply a $120 million monthly TAM. These claims provide no basis for approval. If the proposal has independent approval criteria, assess it against those criteria.
+
+- **Paid growth.** P’s October release reports 1.2 million cumulative registered accounts globally, including free and inactive accounts. Under C1, Q’s November note estimates 400,000 monthly active accounts in the EU from an unaudited sample with reported uncertainty of ±15%. Neither source measures paid users. Testing the tripling claim requires paid-user counts for two defined periods with consistent geography and counting rules. [Correction C1](/Users/season/workspace/github/dsh-superagent-prototype/docs/research/g0-g2-2026-11-16/g2/market-correction.txt)
+- **Market growth.** R cites only P, which supplies a single vendor account count. Substantiating 30% growth requires a defined market, metric, period, and comparable market-wide observations.
+- **TAM.** P’s registrations do not establish how many buyers or seats are addressable, and neither source validates the $100 monthly price. Size TAM from a defined customer population, eligible buying units, and supported pricing. Paid conversion is also unknown and would inform a separate revenue forecast.

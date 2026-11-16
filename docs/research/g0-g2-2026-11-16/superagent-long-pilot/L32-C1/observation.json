@@ -1,0 +1,29 @@
+{
+  "name": "L32-C1",
+  "context": 1,
+  "variant": "normal",
+  "status": "completed",
+  "known_suite_usage_before": 16689,
+  "planning_reserve": 40000,
+  "packet_bytes": 1768,
+  "score_passed": true,
+  "recall_errors": 0,
+  "factual_errors": 0,
+  "source_errors": 0,
+  "usage": {
+    "input_tokens": 22637,
+    "cached_input_tokens": 11136,
+    "output_tokens": 245,
+    "reasoning_output_tokens": 0,
+    "total_tokens": 22882,
+    "uncached_input_plus_output": 11746
+  },
+  "complete_thread_usage": true,
+  "threads": {
+    "worker": "01a1e352-8225-75b1-a60e-9f93f4a9834d"
+  },
+  "read_calls": 1,
+  "read_chars": 923,
+  "process_returncode": 0,
+  "wall_seconds": 13.92
+}

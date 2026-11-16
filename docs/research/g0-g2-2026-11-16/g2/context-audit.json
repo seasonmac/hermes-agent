@@ -1,0 +1,146 @@
+[
+  {
+    "run": "market-B-1-persistent",
+    "role": "peer",
+    "first_request_skill_catalogs": [
+      {
+        "characters": 29210,
+        "catalog_entries": 86
+      }
+    ],
+    "observed_usage_increments": 4,
+    "cumulative_deltas_match_last_usage": true
+  },
+  {
+    "run": "market-B-1-persistent",
+    "role": "root",
+    "first_request_skill_catalogs": [
+      {
+        "characters": 2123,
+        "catalog_entries": 4
+      }
+    ],
+    "observed_usage_increments": 7,
+    "cumulative_deltas_match_last_usage": true
+  },
+  {
+    "run": "market-B-2-persistent",
+    "role": "root",
+    "first_request_skill_catalogs": [
+      {
+        "characters": 29210,
+        "catalog_entries": 86
+      }
+    ],
+    "observed_usage_increments": 6,
+    "cumulative_deltas_match_last_usage": true
+  },
+  {
+    "run": "market-B-2-persistent",
+    "role": "peer",
+    "first_request_skill_catalogs": [
+      {
+        "characters": 29210,
+        "catalog_entries": 86
+      }
+    ],
+    "observed_usage_increments": 4,
+    "cumulative_deltas_match_last_usage": true
+  },
+  {
+    "run": "quant-B-1-persistent",
+    "role": "root",
+    "first_request_skill_catalogs": [
+      {
+        "characters": 2123,
+        "catalog_entries": 4
+      }
+    ],
+    "observed_usage_increments": 7,
+    "cumulative_deltas_match_last_usage": true
+  },
+  {
+    "run": "quant-B-1-persistent",
+    "role": "peer",
+    "first_request_skill_catalogs": [
+      {
+        "characters": 29210,
+        "catalog_entries": 86
+      }
+    ],
+    "observed_usage_increments": 4,
+    "cumulative_deltas_match_last_usage": true
+  },
+  {
+    "run": "quant-B-2-persistent",
+    "role": "peer",
+    "first_request_skill_catalogs": [
+      {
+        "characters": 29210,
+        "catalog_entries": 86
+      }
+    ],
+    "observed_usage_increments": 4,
+    "cumulative_deltas_match_last_usage": true
+  },
+  {
+    "run": "quant-B-2-persistent",
+    "role": "root",
+    "first_request_skill_catalogs": [
+      {
+        "characters": 2123,
+        "catalog_entries": 4
+      }
+    ],
+    "observed_usage_increments": 7,
+    "cumulative_deltas_match_last_usage": true
+  },
+  {
+    "run": "software-B-1-persistent",
+    "role": "peer",
+    "first_request_skill_catalogs": [
+      {
+        "characters": 29210,
+        "catalog_entries": 86
+      }
+    ],
+    "observed_usage_increments": 4,
+    "cumulative_deltas_match_last_usage": true
+  },
+  {
+    "run": "software-B-1-persistent",
+    "role": "root",
+    "first_request_skill_catalogs": [
+      {
+        "characters": 2123,
+        "catalog_entries": 4
+      }
+    ],
+    "observed_usage_increments": 7,
+    "cumulative_deltas_match_last_usage": true
+  },
+  {
+    "run": "software-B-2-persistent",
+    "role": "root",
+    "first_request_skill_catalogs": [
+      {
+        "characters": 2123,
+        "catalog_entries": 4
+      }
+    ],
+    "observed_usage_increments": 7,
+    "cumulative_deltas_match_last_usage": true
+  },
+  {
+    "run": "software-B-2-persistent",
+    "role": "peer",
+    "first_request_skill_catalogs": [
+      {
+        "characters": 29210,
+        "catalog_entries": 86
+      }
+    ],
+    "observed_usage_increments": 5,
+    "cumulative_deltas_match_last_usage": true
+  }
+]

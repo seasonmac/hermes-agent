@@ -1,0 +1,19 @@
+{
+  "id": "software-B-2",
+  "model_requested": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "returncode": 0,
+  "timeout": false,
+  "wall_seconds": 38.41,
+  "usage": [
+    {
+      "input_tokens": 65840,
+      "cached_input_tokens": 48768,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 773,
+      "reasoning_output_tokens": 71
+    }
+  ],
+  "event_count": 7,
+  "final_exists": true
+}

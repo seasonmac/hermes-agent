@@ -1,0 +1,19 @@
+{
+  "id": "market-B-2",
+  "model_requested": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "returncode": 0,
+  "timeout": false,
+  "wall_seconds": 64.52,
+  "usage": [
+    {
+      "input_tokens": 180749,
+      "cached_input_tokens": 132096,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1078,
+      "reasoning_output_tokens": 41
+    }
+  ],
+  "event_count": 9,
+  "final_exists": true
+}

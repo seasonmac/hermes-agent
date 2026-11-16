@@ -1,0 +1,9 @@
+**INVALID_PEER_CONDITION.** The native peer failed to start, so the required challenge and reply did not occur. The memo incorporates correction C1.
+
+The reported gross Sharpe of 2.1 has not been independently recomputed and does not establish deployable alpha. Joining fundamentals on fiscal period end can use values before publication or incorporate later revisions. Restricting the universe to stocks still listed today creates survivorship bias. Random row splitting mixes future and past observations, fitting the scaler on all rows leaks test information, and choosing the best of 200 variants on the test set turns it into a tuning set.
+
+1. Rebuild the dataset using the available publication and revision timestamps. At each trading decision, use only the version available then. Reconstruct the historical eligible universe using the available delisted price data.
+2. Use chronological walk-forward validation. Fit the scaler and select parameters within each training window, then evaluate the frozen strategy on a fresh, untouched period.
+3. Independently recompute gross Sharpe and estimate net performance across plausible fee, spread, slippage, and market-impact scenarios. Without fill-level data, execution costs remain assumptions.
+
+Treat the reported result as exploratory. Deployability remains unproven pending fresh out-of-sample results and execution evidence.

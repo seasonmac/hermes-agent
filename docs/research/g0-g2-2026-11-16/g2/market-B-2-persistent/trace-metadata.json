@@ -1,0 +1,96 @@
+[
+  {
+    "thread_id": "01a1e051-60f2-78f1-a64c-585f52d31f7a",
+    "parent_thread_id": null,
+    "rollout_file": "/Users/season/.codex/sessions/2026/11/16/rollout-2026-11-16T01-46-32-01a1e051-60f2-78f1-a64c-585f52d31f7a.jsonl",
+    "collaboration_calls": [
+      {
+        "name": "spawn_agent",
+        "target": null,
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "fork_turns": "none",
+        "message_encrypted_in_rollout": true
+      },
+      {
+        "name": "send_message",
+        "target": "peer",
+        "model": null,
+        "reasoning_effort": null,
+        "fork_turns": null,
+        "message_encrypted_in_rollout": true
+      },
+      {
+        "name": "wait_agent",
+        "target": null,
+        "model": null,
+        "reasoning_effort": null,
+        "fork_turns": null,
+        "message_encrypted_in_rollout": false
+      },
+      {
+        "name": "send_message",
+        "target": "peer",
+        "model": null,
+        "reasoning_effort": null,
+        "fork_turns": null,
+        "message_encrypted_in_rollout": true
+      }
+    ],
+    "usage": {
+      "input_tokens": 170919,
+      "cached_input_tokens": 140416,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 872,
+      "reasoning_output_tokens": 17,
+      "total_tokens": 171791
+    },
+    "lifecycle": [
+      "task_started",
+      "task_complete"
+    ]
+  },
+  {
+    "thread_id": "01a1e051-ca8d-70e1-a57f-f79eb589b0bc",
+    "parent_thread_id": "01a1e051-60f2-78f1-a64c-585f52d31f7a",
+    "rollout_file": "/Users/season/.codex/sessions/2026/11/16/rollout-2026-11-16T01-46-59-01a1e051-ca8d-70e1-a57f-f79eb589b0bc.jsonl",
+    "collaboration_calls": [
+      {
+        "name": "wait_agent",
+        "target": null,
+        "model": null,
+        "reasoning_effort": null,
+        "fork_turns": null,
+        "message_encrypted_in_rollout": false
+      },
+      {
+        "name": "send_message",
+        "target": "/root",
+        "model": null,
+        "reasoning_effort": null,
+        "fork_turns": null,
+        "message_encrypted_in_rollout": true
+      },
+      {
+        "name": "wait_agent",
+        "target": null,
+        "model": null,
+        "reasoning_effort": null,
+        "fork_turns": null,
+        "message_encrypted_in_rollout": false
+      }
+    ],
+    "usage": {
+      "input_tokens": 88153,
+      "cached_input_tokens": 65408,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 166,
+      "reasoning_output_tokens": 28,
+      "total_tokens": 88319
+    },
+    "lifecycle": [
+      "task_started",
+      "task_complete"
+    ]
+  }
+]

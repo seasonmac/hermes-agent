@@ -1,0 +1,19 @@
+{
+  "skills.include_instructions": false,
+  "skills.bundled.enabled": false,
+  "cloud.skills.enabled": false,
+  "features.plugins": false,
+  "features.apps": false,
+  "web_search": "disabled",
+  "features.multi_agent_v2.enabled": true,
+  "features.multi_agent_v2_dynamic_tools": true,
+  "features.multi_agent_v2.max_concurrent_threads_per_session": 2,
+  "agents.enabled": true,
+  "model_reasoning_effort": "medium",
+  "features.rollout_budget.enabled": true,
+  "features.rollout_budget.limit_tokens": 100000,
+  "features.rollout_budget.reminder_at_remaining_tokens": [
+    20000
+  ],
+  "features.rollout_budget.enforce_limit": true
+}

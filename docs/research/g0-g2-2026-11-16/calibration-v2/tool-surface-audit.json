@@ -1,0 +1,59 @@
+{
+  "threads": [
+    {
+      "role": "root",
+      "raw_sha256": "23b99c33b790485b2beab97dbf01357006ee9af6fa0d9435b4a009e5c3fb4c4b",
+      "normalized_sha256": "c0762e050bcd87d33e0dcd04c51807c27fb4288009c1b1b3132cdba6e45335b1",
+      "excluded_root_human_interface_tools": [
+        "request_user_input_async",
+        "send_message_to_user_async"
+      ],
+      "tool_inventory": {
+        "functions": [
+          "exec",
+          "wait",
+          "request_user_input",
+          "request_user_input_async",
+          "send_message_to_user_async"
+        ],
+        "clock": [
+          "sleep"
+        ],
+        "collaboration": [
+          "followup_task",
+          "interrupt_agent",
+          "list_agents",
+          "send_message",
+          "spawn_agent",
+          "wait_agent"
+        ]
+      }
+    },
+    {
+      "role": "peer",
+      "raw_sha256": "c0762e050bcd87d33e0dcd04c51807c27fb4288009c1b1b3132cdba6e45335b1",
+      "normalized_sha256": "c0762e050bcd87d33e0dcd04c51807c27fb4288009c1b1b3132cdba6e45335b1",
+      "excluded_root_human_interface_tools": [],
+      "tool_inventory": {
+        "functions": [
+          "exec",
+          "wait",
+          "request_user_input"
+        ],
+        "clock": [
+          "sleep"
+        ],
+        "collaboration": [
+          "followup_task",
+          "interrupt_agent",
+          "list_agents",
+          "send_message",
+          "spawn_agent",
+          "wait_agent"
+        ]
+      }
+    }
+  ],
+  "same_after_declared_role_exclusions": true,
+  "note": "Exclusions explain measurement only; no tool schema was changed. Human-interface tools were not called."
+}

@@ -1,0 +1,7 @@
+**INVALID_PEER_CONDITION** — Native peer spawning failed twice, so the challenge and reply could not occur.
+
+Both E17 deliveries passed the `processed` check before either inserted a row. By the time the unique constraint could reject a duplicate insert, both deliveries had already called `charge`.
+
+The corrected API contract supports an `Idempotency-Key` for 24 hours, while the queue can redeliver for seven days. Use `charge_intent_id` as the provider key, since one order can have multiple legitimate charges. Before calling the provider, durably record the intent and first-attempt time. Reuse the key only while the request is guaranteed to reach the provider within its retention window. Persist confirmed payment success before acknowledging, and retain it through the redelivery window. If the outcome is still unknown when safe retries end, route the intent to reconciliation and suppress automatic charges.
+
+Test simultaneous E17 deliveries, a crash after provider success but before the local write, a crash after the write but before acknowledgment, unresolved redelivery at the retry cutoff and on day seven, and distinct charge intents for the same order. Verify one charge per intent and no automatic charge after the cutoff.

@@ -1,0 +1,7 @@
+The reported gross Sharpe of 2.1 is unverified. It reflects a backtest with potential look-ahead bias, survivorship bias, test-set selection, and omitted trading costs. It does not establish deployable alpha.
+
+1. **Rebuild the point-in-time dataset.** The correction confirms that the raw source has `published_at` and revision timestamps. At each decision cutoff, use the latest vintage available at that time. Joining on fiscal period end can expose information before publication. Use the available delisted price history alongside dated listing and eligibility records. Verify identifier changes and the treatment of delisting returns or proceeds.
+2. **Rerun validation chronologically.** Replace the random row split with walk-forward validation. Fit the scaler only on each training window and select parameters within the development period. Picking the best of 200 variants used up the original test set. Freeze the strategy before independent evaluation on a fresh holdout.
+3. **Estimate net performance and test execution.** Report sensitivity to fees, spreads, slippage, and market impact at the intended trade sizes. The correction confirms that no fill-level data exists. Use prospective fills to assess execution feasibility.
+
+The result is hypothesis-generating. Whether the strategy earns positive returns after costs remains open.

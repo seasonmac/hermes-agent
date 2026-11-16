@@ -1,0 +1,13 @@
+{
+  "totals": {
+    "input_tokens": 22554,
+    "cached_input_tokens": 10880,
+    "output_tokens": 269,
+    "reasoning_output_tokens": 46,
+    "total_tokens": 22823,
+    "uncached_input_plus_output": 11943
+  },
+  "complete_thread_usage": true,
+  "usage_increments": 2,
+  "currency_cost": null
+}

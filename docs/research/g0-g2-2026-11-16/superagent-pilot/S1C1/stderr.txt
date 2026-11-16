@@ -1,0 +1,2 @@
+{"timestamp":"2026-11-16T07:31:58.279797Z","level":"WARN","fields":{"message":"Failed to delete shell snapshot at \"/Users/season/.codex/shell_snapshots/01a1e341-264d-71f0-bcdf-93bfa1e70bbb.1794814060111605000.sh\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }"},"target":"codex_core::shell_snapshot"}
+{"timestamp":"2026-11-16T07:32:09.885216Z","level":"WARN","fields":{"message":"failed to send events request: error sending request for url (https://chatgpt.com/backend-api/codex/analytics-events/events)"},"target":"codex_analytics::client"}

@@ -1,0 +1,2872 @@
+{
+  "case": "inflight",
+  "limit_tokens": 100,
+  "real_model_calls": 0,
+  "actual_model_cost": 0,
+  "strict_config": {
+    "exit": 0,
+    "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"/private/tmp\" (codex_home: AbsolutePathBuf(\"<isolated-temp>/codex-home\"))\n",
+    "stdout": "{\"appServerVersion\":\"0.169.0-alpha.11.1\",\"configRequirements\":{\"supportsIndependentSpeedModes\":true,\"requirements\":null}}\n"
+  },
+  "root_thread_id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+  "stages": [
+    {
+      "stage": 0,
+      "provider_requests_before": 0,
+      "provider_requests_after": 3,
+      "result": {
+        "rpc": {
+          "id": 3,
+          "result": {
+            "turn": {
+              "id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+              "rootTurnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+              "items": [],
+              "itemsView": "notLoaded",
+              "status": "inProgress",
+              "error": null,
+              "startedAt": null,
+              "completedAt": null,
+              "durationMs": null
+            }
+          }
+        },
+        "terminal": {
+          "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+          "turn": {
+            "id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+            "rootTurnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+            "items": [],
+            "itemsView": "notLoaded",
+            "status": "failed",
+            "error": {
+              "message": "budget reached",
+              "codexErrorInfo": "sessionBudgetExceeded",
+              "additionalDetails": null,
+              "misalignment": null
+            },
+            "startedAt": 1794791153,
+            "completedAt": 1794791154,
+            "durationMs": 636
+          }
+        }
+      }
+    },
+    {
+      "stage": 1,
+      "provider_requests_before": 3,
+      "provider_requests_after": 4,
+      "result": {
+        "rpc": {
+          "id": 4,
+          "result": {
+            "turn": {
+              "id": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+              "rootTurnId": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+              "items": [],
+              "itemsView": "notLoaded",
+              "status": "inProgress",
+              "error": null,
+              "startedAt": null,
+              "completedAt": null,
+              "durationMs": null
+            }
+          }
+        },
+        "terminal": {
+          "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+          "turn": {
+            "id": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+            "rootTurnId": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+            "items": [],
+            "itemsView": "notLoaded",
+            "status": "failed",
+            "error": {
+              "message": "budget reached",
+              "codexErrorInfo": "sessionBudgetExceeded",
+              "additionalDetails": null,
+              "misalignment": null
+            },
+            "startedAt": 1794791154,
+            "completedAt": 1794791155,
+            "durationMs": 629
+          }
+        }
+      }
+    },
+    {
+      "stage": 2,
+      "provider_requests_before": 4,
+      "provider_requests_after": 5,
+      "result": {
+        "rpc": {
+          "id": 5,
+          "result": {
+            "turn": {
+              "id": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+              "rootTurnId": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+              "items": [],
+              "itemsView": "notLoaded",
+              "status": "inProgress",
+              "error": null,
+              "startedAt": null,
+              "completedAt": null,
+              "durationMs": null
+            }
+          }
+        },
+        "terminal": {
+          "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+          "turn": {
+            "id": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+            "rootTurnId": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+            "items": [],
+            "itemsView": "notLoaded",
+            "status": "failed",
+            "error": {
+              "message": "budget reached",
+              "codexErrorInfo": "sessionBudgetExceeded",
+              "additionalDetails": null,
+              "misalignment": null
+            },
+            "startedAt": 1794791155,
+            "completedAt": 1794791156,
+            "durationMs": 622
+          }
+        }
+      }
+    }
+  ],
+  "tool_calls_received": 0,
+  "events": [
+    {
+      "method": "remoteControl/status/changed",
+      "params": {
+        "status": "disabled",
+        "serverName": "seasondeMac-Mini.local",
+        "installationId": "30fdf3c9-bf88-4a65-932f-7bcb0d8001a0",
+        "environmentId": null
+      },
+      "emittedAtMs": 1794791153765
+    },
+    {
+      "method": "thread/started",
+      "params": {
+        "thread": {
+          "id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+          "environments": [
+            {
+              "environmentId": "local",
+              "cwd": "<isolated-temp>/work",
+              "runtimeWorkspaceRoots": [
+                "<isolated-temp>/work"
+              ]
+            }
+          ],
+          "extra": null,
+          "sessionId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+          "forkedFromId": null,
+          "attachedToThreadId": null,
+          "parentThreadId": null,
+          "preview": "",
+          "ephemeral": false,
+          "section": null,
+          "sectionEnteredAt": null,
+          "projectId": null,
+          "historyMode": "paginated",
+          "modelProvider": "budget_fixture",
+          "model": "gpt-6.1-sol",
+          "reasoningEffort": null,
+          "createdAt": 1794791153,
+          "updatedAt": 1794791153,
+          "recencyAt": 1794791153,
+          "status": {
+            "type": "idle"
+          },
+          "path": "<isolated-temp>/codex-home/sessions/2026/11/16/rollout-2026-11-16T09-05-53-01a1e1e3-a066-7a40-a53f-d5aa397bee2f.jsonl",
+          "cwd": "<isolated-temp>/work",
+          "cliVersion": "0.169.0-alpha.11.1",
+          "originator": "budget_boundary_fixture",
+          "source": "vscode",
+          "canAcceptDirectInput": true,
+          "threadSource": null,
+          "agentNickname": null,
+          "agentRole": null,
+          "gitInfo": null,
+          "name": null,
+          "daybreakEnabled": null,
+          "turns": []
+        }
+      },
+      "emittedAtMs": 1794791153770
+    },
+    {
+      "method": "warning",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "message": "Under-development features enabled: rollout_budget. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in <isolated-temp>/codex-home/config.toml."
+      },
+      "emittedAtMs": 1794791153770
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1794791153775
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turn": {
+          "id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+          "rootTurnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": 1794791153,
+          "completedAt": null,
+          "durationMs": null
+        }
+      },
+      "emittedAtMs": 1794791153775
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a1e1e3-a072-77f1-8ca7-9d02e3e65a3a",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "ROOT_BUDGET",
+              "text_elements": []
+            }
+          ],
+          "startedAtMs": 1794791153778,
+          "completedAtMs": null
+        },
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+        "startedAtMs": 1794791153778
+      },
+      "emittedAtMs": 1794791153778
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a1e1e3-a072-77f1-8ca7-9d02e3e65a3a",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "ROOT_BUDGET",
+              "text_elements": []
+            }
+          ],
+          "startedAtMs": 1794791153778,
+          "completedAtMs": 1794791153778
+        },
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+        "contentTokenCount": null,
+        "completedAtMs": 1794791153778
+      },
+      "emittedAtMs": 1794791153779
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "subAgentActivity",
+          "model": "gpt-6.1-sol",
+          "reasoningEffort": "low",
+          "id": "call_spawn_agent",
+          "kind": "started",
+          "agentThreadId": "01a1e1e3-a077-7300-9b34-e001bd408add",
+          "agentPath": "/root/budget_worker",
+          "startedAtMs": 1794791153784,
+          "completedAtMs": null
+        },
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+        "startedAtMs": 1794791153784
+      },
+      "emittedAtMs": 1794791153784
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1e1e3-a077-7300-9b34-e001bd408add",
+        "status": {
+          "type": "idle"
+        }
+      },
+      "emittedAtMs": 1794791153784
+    },
+    {
+      "method": "warning",
+      "params": {
+        "threadId": "01a1e1e3-a077-7300-9b34-e001bd408add",
+        "message": "Under-development features enabled: rollout_budget. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in <isolated-temp>/codex-home/config.toml."
+      },
+      "emittedAtMs": 1794791153784
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "subAgentActivity",
+          "model": "gpt-6.1-sol",
+          "reasoningEffort": "low",
+          "id": "call_spawn_agent",
+          "kind": "started",
+          "agentThreadId": "01a1e1e3-a077-7300-9b34-e001bd408add",
+          "agentPath": "/root/budget_worker",
+          "startedAtMs": 1794791153784,
+          "completedAtMs": 1794791153784
+        },
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+        "contentTokenCount": null,
+        "completedAtMs": 1794791153784
+      },
+      "emittedAtMs": 1794791153784
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1e1e3-a077-7300-9b34-e001bd408add",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1794791153785
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a1e1e3-a077-7300-9b34-e001bd408add",
+        "turn": {
+          "id": "01a1e1e3-a078-7f72-91ad-cf8406323522",
+          "rootTurnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": 1794791153,
+          "completedAt": null,
+          "durationMs": null
+        }
+      },
+      "emittedAtMs": 1794791153785
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 10,
+            "inputTokens": 10,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 0,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 10,
+            "inputTokens": 10,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 0,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1794791153785
+    },
+    {
+      "method": "account/rateLimits/updated",
+      "params": {
+        "rateLimits": {
+          "limitId": "codex",
+          "limitName": null,
+          "normalModelSlug": null,
+          "primary": null,
+          "secondary": null,
+          "credits": null,
+          "individualLimit": null,
+          "spendControlReached": null,
+          "planType": null,
+          "rateLimitReachedType": null
+        }
+      },
+      "emittedAtMs": 1794791153785
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_fixture",
+          "text": "CHILD_INFLIGHT_OK",
+          "phase": null,
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794791153789,
+          "completedAtMs": null
+        },
+        "threadId": "01a1e1e3-a077-7300-9b34-e001bd408add",
+        "turnId": "01a1e1e3-a078-7f72-91ad-cf8406323522",
+        "startedAtMs": 1794791153789
+      },
+      "emittedAtMs": 1794791153789
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_fixture",
+          "text": "CHILD_INFLIGHT_OK",
+          "phase": null,
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794791153789,
+          "completedAtMs": 1794791153789
+        },
+        "threadId": "01a1e1e3-a077-7300-9b34-e001bd408add",
+        "turnId": "01a1e1e3-a078-7f72-91ad-cf8406323522",
+        "contentTokenCount": null,
+        "completedAtMs": 1794791153789
+      },
+      "emittedAtMs": 1794791153789
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a1e1e3-a077-7300-9b34-e001bd408add",
+        "turnId": "01a1e1e3-a078-7f72-91ad-cf8406323522",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 100,
+            "inputTokens": 100,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 0,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 100,
+            "inputTokens": 100,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 0,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1794791153790
+    },
+    {
+      "method": "account/rateLimits/updated",
+      "params": {
+        "rateLimits": {
+          "limitId": "codex",
+          "limitName": null,
+          "normalModelSlug": null,
+          "primary": null,
+          "secondary": null,
+          "credits": null,
+          "individualLimit": null,
+          "spendControlReached": null,
+          "planType": null,
+          "rateLimitReachedType": null
+        }
+      },
+      "emittedAtMs": 1794791153790
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1e1e3-a077-7300-9b34-e001bd408add",
+        "status": {
+          "type": "systemError"
+        }
+      },
+      "emittedAtMs": 1794791153790
+    },
+    {
+      "method": "error",
+      "params": {
+        "error": {
+          "message": "budget reached",
+          "codexErrorInfo": "sessionBudgetExceeded",
+          "additionalDetails": null,
+          "misalignment": null
+        },
+        "willRetry": false,
+        "threadId": "01a1e1e3-a077-7300-9b34-e001bd408add",
+        "turnId": "01a1e1e3-a078-7f72-91ad-cf8406323522"
+      },
+      "emittedAtMs": 1794791153790
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a1e1e3-a077-7300-9b34-e001bd408add",
+        "turn": {
+          "id": "01a1e1e3-a078-7f72-91ad-cf8406323522",
+          "rootTurnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          },
+          "startedAt": 1794791153,
+          "completedAt": 1794791153,
+          "durationMs": 6
+        }
+      },
+      "emittedAtMs": 1794791153790
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_fixture",
+          "text": "ROOT_INFLIGHT_OK",
+          "phase": null,
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794791154400,
+          "completedAtMs": null
+        },
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+        "startedAtMs": 1794791154400
+      },
+      "emittedAtMs": 1794791154400
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_fixture",
+          "text": "ROOT_INFLIGHT_OK",
+          "phase": null,
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794791154400,
+          "completedAtMs": 1794791154400
+        },
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+        "contentTokenCount": null,
+        "completedAtMs": 1794791154400
+      },
+      "emittedAtMs": 1794791154402
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 110,
+            "inputTokens": 110,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 0,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 100,
+            "inputTokens": 100,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 0,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1794791154406
+    },
+    {
+      "method": "account/rateLimits/updated",
+      "params": {
+        "rateLimits": {
+          "limitId": "codex",
+          "limitName": null,
+          "normalModelSlug": null,
+          "primary": null,
+          "secondary": null,
+          "credits": null,
+          "individualLimit": null,
+          "spendControlReached": null,
+          "planType": null,
+          "rateLimitReachedType": null
+        }
+      },
+      "emittedAtMs": 1794791154406
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "status": {
+          "type": "systemError"
+        }
+      },
+      "emittedAtMs": 1794791154406
+    },
+    {
+      "method": "error",
+      "params": {
+        "error": {
+          "message": "budget reached",
+          "codexErrorInfo": "sessionBudgetExceeded",
+          "additionalDetails": null,
+          "misalignment": null
+        },
+        "willRetry": false,
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda"
+      },
+      "emittedAtMs": 1794791154407
+    },
+    {
+      "method": "thread/readState/changed",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "readState": {
+          "firstUnread": {
+            "type": "turn",
+            "turnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda"
+          },
+          "revision": "fe0c1c21-e7a1-4a84-a059-825730563ca2"
+        }
+      },
+      "emittedAtMs": 1794791154410
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turn": {
+          "id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+          "rootTurnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          },
+          "startedAt": 1794791153,
+          "completedAt": 1794791154,
+          "durationMs": 636
+        }
+      },
+      "emittedAtMs": 1794791154410
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1794791154718
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turn": {
+          "id": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+          "rootTurnId": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": 1794791154,
+          "completedAt": null,
+          "durationMs": null
+        }
+      },
+      "emittedAtMs": 1794791154718
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a1e1e3-a421-7ad2-8cbd-017fedc924b7",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "FOLLOWUP_1",
+              "text_elements": []
+            }
+          ],
+          "startedAtMs": 1794791154721,
+          "completedAtMs": null
+        },
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+        "startedAtMs": 1794791154721
+      },
+      "emittedAtMs": 1794791154721
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a1e1e3-a421-7ad2-8cbd-017fedc924b7",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "FOLLOWUP_1",
+              "text_elements": []
+            }
+          ],
+          "startedAtMs": 1794791154721,
+          "completedAtMs": 1794791154721
+        },
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+        "contentTokenCount": null,
+        "completedAtMs": 1794791154721
+      },
+      "emittedAtMs": 1794791154722
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_fixture",
+          "text": "ROOT_INFLIGHT_OK",
+          "phase": null,
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794791155337,
+          "completedAtMs": null
+        },
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+        "startedAtMs": 1794791155337
+      },
+      "emittedAtMs": 1794791155337
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_fixture",
+          "text": "ROOT_INFLIGHT_OK",
+          "phase": null,
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794791155337,
+          "completedAtMs": 1794791155337
+        },
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+        "contentTokenCount": null,
+        "completedAtMs": 1794791155337
+      },
+      "emittedAtMs": 1794791155339
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 210,
+            "inputTokens": 210,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 0,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 100,
+            "inputTokens": 100,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 0,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1794791155342
+    },
+    {
+      "method": "account/rateLimits/updated",
+      "params": {
+        "rateLimits": {
+          "limitId": "codex",
+          "limitName": null,
+          "normalModelSlug": null,
+          "primary": null,
+          "secondary": null,
+          "credits": null,
+          "individualLimit": null,
+          "spendControlReached": null,
+          "planType": null,
+          "rateLimitReachedType": null
+        }
+      },
+      "emittedAtMs": 1794791155342
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "status": {
+          "type": "systemError"
+        }
+      },
+      "emittedAtMs": 1794791155342
+    },
+    {
+      "method": "error",
+      "params": {
+        "error": {
+          "message": "budget reached",
+          "codexErrorInfo": "sessionBudgetExceeded",
+          "additionalDetails": null,
+          "misalignment": null
+        },
+        "willRetry": false,
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a419-78f2-856f-c680db3404f8"
+      },
+      "emittedAtMs": 1794791155342
+    },
+    {
+      "method": "thread/readState/changed",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "readState": {
+          "firstUnread": {
+            "type": "turn",
+            "turnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda"
+          },
+          "revision": "0d20842a-e0cf-4715-873e-9484d215802f"
+        }
+      },
+      "emittedAtMs": 1794791155348
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turn": {
+          "id": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+          "rootTurnId": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          },
+          "startedAt": 1794791154,
+          "completedAt": 1794791155,
+          "durationMs": 629
+        }
+      },
+      "emittedAtMs": 1794791155348
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1794791155661
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turn": {
+          "id": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+          "rootTurnId": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": 1794791155,
+          "completedAt": null,
+          "durationMs": null
+        }
+      },
+      "emittedAtMs": 1794791155661
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a1e1e3-a7ce-70d2-a53d-c88ba470c3f8",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "FOLLOWUP_2",
+              "text_elements": []
+            }
+          ],
+          "startedAtMs": 1794791155662,
+          "completedAtMs": null
+        },
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+        "startedAtMs": 1794791155662
+      },
+      "emittedAtMs": 1794791155662
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a1e1e3-a7ce-70d2-a53d-c88ba470c3f8",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "FOLLOWUP_2",
+              "text_elements": []
+            }
+          ],
+          "startedAtMs": 1794791155662,
+          "completedAtMs": 1794791155662
+        },
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+        "contentTokenCount": null,
+        "completedAtMs": 1794791155662
+      },
+      "emittedAtMs": 1794791155663
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_fixture",
+          "text": "ROOT_INFLIGHT_OK",
+          "phase": null,
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794791156275,
+          "completedAtMs": null
+        },
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+        "startedAtMs": 1794791156275
+      },
+      "emittedAtMs": 1794791156275
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_fixture",
+          "text": "ROOT_INFLIGHT_OK",
+          "phase": null,
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794791156275,
+          "completedAtMs": 1794791156275
+        },
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+        "contentTokenCount": null,
+        "completedAtMs": 1794791156275
+      },
+      "emittedAtMs": 1794791156277
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 310,
+            "inputTokens": 310,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 0,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 100,
+            "inputTokens": 100,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 0,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1794791156281
+    },
+    {
+      "method": "account/rateLimits/updated",
+      "params": {
+        "rateLimits": {
+          "limitId": "codex",
+          "limitName": null,
+          "normalModelSlug": null,
+          "primary": null,
+          "secondary": null,
+          "credits": null,
+          "individualLimit": null,
+          "spendControlReached": null,
+          "planType": null,
+          "rateLimitReachedType": null
+        }
+      },
+      "emittedAtMs": 1794791156281
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "status": {
+          "type": "systemError"
+        }
+      },
+      "emittedAtMs": 1794791156281
+    },
+    {
+      "method": "error",
+      "params": {
+        "error": {
+          "message": "budget reached",
+          "codexErrorInfo": "sessionBudgetExceeded",
+          "additionalDetails": null,
+          "misalignment": null
+        },
+        "willRetry": false,
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turnId": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8"
+      },
+      "emittedAtMs": 1794791156281
+    },
+    {
+      "method": "thread/readState/changed",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "readState": {
+          "firstUnread": {
+            "type": "turn",
+            "turnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda"
+          },
+          "revision": "e5022653-617f-4beb-8345-082f3f0ae109"
+        }
+      },
+      "emittedAtMs": 1794791156286
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turn": {
+          "id": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+          "rootTurnId": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          },
+          "startedAt": 1794791155,
+          "completedAt": 1794791156,
+          "durationMs": 622
+        }
+      },
+      "emittedAtMs": 1794791156286
+    },
+    {
+      "method": "deprecationNotice",
+      "params": {
+        "summary": "Full-history hydration is deprecated for paginated threads; omit `includeTurns` or set it to `false`, then page with `thread/turns/list` and `thread/items/list`.",
+        "details": null
+      },
+      "emittedAtMs": 1794791156600
+    }
+  ],
+  "rollout_evidence": [
+    {
+      "file": "rollout-2026-11-16T09-05-53-01a1e1e3-a066-7a40-a53f-d5aa397bee2f.jsonl",
+      "records": [
+        {
+          "timestamp": "2026-11-16T01:05:53.772Z",
+          "ordinal": 0,
+          "type": "session_meta",
+          "payload": {
+            "account_scoped": true,
+            "session_id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+            "id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+            "timestamp": "2026-11-16T01:05:53.767Z",
+            "cwd": "<isolated-temp>/work",
+            "runtime_workspace_roots": [
+              "<isolated-temp>/work"
+            ],
+            "originator": "budget_boundary_fixture",
+            "cli_version": "0.169.0-alpha.11.1",
+            "source": "vscode",
+            "model_provider": "budget_fixture",
+            "base_instructions": {
+              "text": "Follow fixture instructions.",
+              "provenance": {
+                "type": "custom"
+              }
+            },
+            "dynamic_tools": [
+              {
+                "type": "function",
+                "name": "budget_probe",
+                "description": "Synthetic fixture tool",
+                "inputSchema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            ],
+            "history_mode": "paginated",
+            "multi_agent_version": "v2",
+            "context_window": {
+              "window_id": "01a1e1e3-a066-7a40-a53f-d5d630e4f0e0"
+            }
+          }
+        },
+        {
+          "timestamp": "2026-11-16T01:05:53.772Z",
+          "ordinal": 1,
+          "type": "event_msg",
+          "payload": {
+            "type": "task_started",
+            "turn_attribution": {
+              "turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+              "turn_trigger": null,
+              "parent_turn_id": null,
+              "initiating_agent_path": null,
+              "root_turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda"
+            },
+            "turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+            "root_turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+            "started_at": 1794791153,
+            "model_context_window": 258400,
+            "collaboration_mode_kind": "default"
+          }
+        },
+        {
+          "timestamp": "2026-11-16T01:05:53.776Z",
+          "ordinal": 2,
+          "type": "response_item",
+          "payload": {
+            "type": "additional_tools",
+            "id": "at_01a1e1e3-a070-74d1-9394-14d21adac8b6",
+            "role": "developer",
+            "tools": [
+              {
+                "type": "namespace",
+                "name": "functions",
+                "description": "",
+                "tools": [
+                  {
+                    "type": "custom",
+                    "name": "exec",
+                    "description": "Run JavaScript code to orchestrate/compose tool calls\n- Evaluates the provided JavaScript code in a fresh V8 isolate as an async module.\n- All nested tools are available on the global `tools` object, for example `await tools.exec_command(...)`. Tool names are exposed as normalized JavaScript identifiers, for example `await tools.mcp__ologs__get_profile(...)`.\n- Nested tool methods take either a string or an object as their input argument.\n- Nested tools return either an object or a string, based on the description.\n- Runs raw JavaScript -- no Node, no file system, no network access, no console.\n- Accepts raw JavaScript source text, not JSON, quoted strings, or markdown code fences.\n- You may optionally start the tool input with a first-line pragma like `// @exec: {\"yield_time_ms\": 10000, \"max_output_tokens\": 1000}`.\n- `yield_time_ms` asks `exec` to yield early if the script is still running. Defaults to 30000 ms.\n- `max_output_tokens` sets the token budget for direct `exec` results. Defaults to 10000 tokens.\n- When the JS code is fully evaluated, the isolate's lifetime ends and unawaited promises are silently discarded.\n\n- Global helpers:\n- `exit()`: Immediately ends the current script successfully (like an early return from the top level).\n- `text(value: string | number | boolean | undefined | null)`: Appends a text item. Non-string values are stringified with `JSON.stringify(...)` when possible.\n- `image(imageUrlOrItem: string | { image_url: string } | ImageContent)`: Appends an image item. `image_url` should be a base64-encoded `data:` URL. To forward an MCP tool image, pass an individual `ImageContent` block from `result.content`, for example `image(result.content[0])`.\n- `audio(audioUrlOrItem: string | { audio_url: string } | AudioContent)`: Appends an audio item. `audio_url` should be a base64-encoded `data:` URL. To forward an MCP tool audio block, pass an individual `AudioContent` block from `result.content`, for example `audio(result.content[0])`.\n- `generatedImage(result: { image_url: string; output_hint?: string })`: Appends an image-generation result and its optional output hint. HTTP(S) URLs are not supported.\n- `store(key: string, value: any)`: stores a serializable value under a string key for later `exec` calls in the same session.\n- `load(key: string)`: returns the stored value for a string key, or `undefined` if it is missing.\n- `notify(value: string | number | boolean | undefined | null)`: immediately injects an extra `custom_tool_call_output` for the current `exec` call. Values are stringified like `text(...)`.\n- `setTimeout(callback: () => void, delayMs?: number)`: schedules a callback to run later and returns a timeout id. Pending timeouts do not keep `exec` alive by themselves; await an explicit promise if you need to wait for one.\n- `clearTimeout(timeoutId?: number)`: cancels a timeout created by `setTimeout`.\n- `ALL_TOOLS`: metadata for the enabled nested tools as `{ name, description }` entries.\n- `yield_control()`: yields the accumulated output to the model immediately while the script keeps running.\n\nSome deferred nested tools may be omitted from this description. They are still available on the global `tools` object and listed in `ALL_TOOLS`.\nTo find one, filter `ALL_TOOLS` by `name` and `description`.\n\nTool availability can change between calls.\n\nShared MCP Types:\n```ts\ntype Role = \"user\" | \"assistant\";\ntype MetaObject = Record<string, unknown>;\ntype Annotations = {\n  audience?: Role[];\n  priority?: number;\n  lastModified?: string;\n};\ntype Icon = {\n  src: string;\n  mimeType?: string;\n  sizes?: string[];\n  theme?: \"light\" | \"dark\";\n};\ntype TextResourceContents = {\n  uri: string;\n  mimeType?: string;\n  _meta?: MetaObject;\n  text: string;\n};\ntype BlobResourceContents = {\n  uri: string;\n  mimeType?: string;\n  _meta?: MetaObject;\n  blob: string;\n};\ntype TextContent = {\n  type: \"text\";\n  text: string;\n  annotations?: Annotations;\n  _meta?: MetaObject;\n};\ntype ImageContent = {\n  type: \"image\";\n  data: string;\n  mimeType: string;\n  annotations?: Annotations;\n  _meta?: MetaObject;\n};\ntype AudioContent = {\n  type: \"audio\";\n  data: string;\n  mimeType: string;\n  annotations?: Annotations;\n  _meta?: MetaObject;\n};\ntype ResourceLink = {\n  icons?: Icon[];\n  name: string;\n  title?: string;\n  uri: string;\n  description?: string;\n  mimeType?: string;\n  annotations?: Annotations;\n  size?: number;\n  _meta?: MetaObject;\n  type: \"resource_link\";\n};\ntype EmbeddedResource = {\n  type: \"resource\";\n  resource: TextResourceContents | BlobResourceContents;\n  annotations?: Annotations;\n  _meta?: MetaObject;\n};\ntype ContentBlock =\n  | TextContent\n  | ImageContent\n  | AudioContent\n  | ResourceLink\n  | EmbeddedResource;\ntype CallToolResult<TStructured = { [key: string]: unknown }> = {\n  _meta?: MetaObject;\n  content: ContentBlock[];\n  isError?: boolean;\n  structuredContent?: TStructured;\n  [key: string]: unknown;\n};\n```\n\n### `apply_patch`\nThe `apply_patch` tool can be used to edit files. This is a FREEFORM tool, so do not wrap the patch in JSON.\n\nexec tool declaration:\n```ts\ndeclare const tools: { apply_patch(input: string): Promise<unknown>; };\n```\n\n### `budget_probe`\nSynthetic fixture tool\n\nexec tool declaration:\n```ts\ndeclare const tools: { budget_probe(args: { [key: string]: unknown; }): Promise<unknown>; };\n```\n\n### `create_goal`\nCreate a goal only when explicitly requested by the user or system/developer instructions; do not infer goals from ordinary tasks.\nSet token_budget only when an explicit token budget is requested. Fails if an unfinished goal exists; use update_goal only for status.\n\nexec tool declaration:\n```ts\ndeclare const tools: { create_goal(args: {\n  // Required. The concrete objective to start pursuing. This starts a new active goal when no goal exists or replaces the current goal when it is complete.\n  objective: string;\n  // Positive token budget for the new goal. Omit unless explicitly requested.\n  token_budget?: number;\n}): Promise<unknown>; };\n```\n\n### `exec_command`\nRuns a command in a PTY, returning output or a session ID for ongoing interaction.\n\nexec tool declaration:\n```ts\ndeclare const tools: { exec_command(args: {\n  // Shell command to execute.\n  cmd: string;\n  // User-facing approval question for `require_escalated`; omit otherwise.\n  justification?: string;\n  // True runs the shell with -l/-i semantics; false disables them. Defaults to true.\n  login?: boolean;\n  // Output token budget. Defaults to 10000 tokens; larger requests may be capped by policy.\n  max_output_tokens?: number;\n  // Reusable approval prefix for `cmd`, only with `sandbox_permissions: \"require_escalated\"`; for example [\"git\", \"pull\"].\n  prefix_rule?: Array<string>;\n  // Per-command sandbox override. Defaults to `use_default`; use `require_escalated` for unsandboxed execution.\n  sandbox_permissions?: \"use_default\" | \"require_escalated\";\n  // Shell binary to launch. Defaults to the user's default shell.\n  shell?: string;\n  // True allocates a PTY for the command; false or omitted uses plain pipes.\n  tty?: boolean;\n  // Working directory for the command. Defaults to the turn cwd.\n  workdir?: string;\n  // Wait before yielding output. Defaults to 10000 ms; effective range is 250-30000 ms.\n  yield_time_ms?: number;\n}): Promise<{\n  // Chunk identifier included when the response reports one.\n  chunk_id?: string;\n  // Process exit code when the command finished during this call.\n  exit_code?: number;\n  // Approximate token count before output truncation.\n  original_token_count?: number;\n  // Command output text, possibly truncated.\n  output: string;\n  // Session identifier to pass to write_stdin when the process is still running.\n  session_id?: number;\n  // Elapsed wall time spent waiting for output in seconds.\n  wall_time_seconds: number;\n}>; };\n```\n\n### `get_goal`\nGet the current goal for this thread, including status, budgets, token and elapsed-time usage, and remaining token budget.\n\nexec tool declaration:\n```ts\ndeclare const tools: { get_goal(args: {}): Promise<unknown>; };\n```\n\n### `list_mcp_resource_templates`\nLists resource templates provided by MCP servers. Parameterized resource templates allow servers to share data that takes parameters and provides context to language models, such as files, database schemas, or application-specific information. Prefer resource templates over web search when possible.\n\nexec tool declaration:\n```ts\ndeclare const tools: { list_mcp_resource_templates(args: {\n  // Opaque cursor from a previous list_mcp_resource_templates call; omit for the first page.\n  cursor?: string;\n  // MCP server name. Omit to list resource templates from every configured server.\n  server?: string;\n}): Promise<unknown>; };\n```\n\n### `list_mcp_resources`\nLists resources provided by MCP servers. Resources allow servers to share data that provides context to language models, such as files, database schemas, or application-specific information. Prefer resources over web search when possible.\n\nexec tool declaration:\n```ts\ndeclare const tools: { list_mcp_resources(args: {\n  // Opaque cursor from a previous list_mcp_resources call; omit for the first page.\n  cursor?: string;\n  // MCP server name. Omit to list resources from every configured server.\n  server?: string;\n}): Promise<unknown>; };\n```\n\n### `read_mcp_resource`\nRead a specific resource from an MCP server given the server name and resource URI.\n\nexec tool declaration:\n```ts\ndeclare const tools: { read_mcp_resource(args: {\n  // MCP server name exactly as configured. Must match the 'server' field returned by list_mcp_resources.\n  server: string;\n  // Resource URI to read. Must be one of the URIs returned by list_mcp_resources.\n  uri: string;\n}): Promise<unknown>; };\n```\n\n### `update_goal`\nUpdate the existing goal.\nSet status to `paused` only at the user's explicit request to pause this goal, never on your own initiative. Ask if unclear; a later resume revokes that request. Report the returned status and stop goal work. Budget limits take precedence over pausing.\nSet status to `complete` only when the objective has actually been achieved and no required work remains.\nSet status to `blocked` only when the same blocking condition has repeated for at least three consecutive goal turns, counting the original/user-triggered turn and any automatic continuations, and the agent cannot make meaningful progress without user input or an external-state change.\nIf the user resumes a goal that was previously marked `blocked`, treat the resumed run as a fresh blocked audit. If the same blocking condition then repeats for at least three consecutive resumed goal turns, set status to `blocked` again.\nOnce the blocked threshold is satisfied, do not keep reporting that you are still blocked while leaving the goal active; set status to `blocked`.\nDo not use `blocked` merely because the work is hard, slow, uncertain, incomplete, or would benefit from clarification.\nDo not mark a goal complete merely because its budget is nearly exhausted or because you are stopping work.\nYou cannot use this tool to resume, budget-limit, or usage-limit a goal; those status changes are controlled by the user or system.\nWhen marking a budgeted goal achieved with status `complete`, report the final token usage from the tool result to the user.\n\nexec tool declaration:\n```ts\ndeclare const tools: { update_goal(args: {\n  // Required. `paused` requires an explicit user request. Set to `complete` only when the objective is achieved and no required work remains. Set to `blocked` only after the same blocking condition has recurred for at least three consecutive goal turns and the agent is at an impasse. After a previously blocked goal is resumed, the resumed run starts a fresh blocked audit.\n  status: \"complete\" | \"blocked\" | \"paused\";\n}): Promise<unknown>; };\n```\n\n### `view_image`\nView a local image file from the filesystem when visual inspection is needed. Use this for images already available on disk.\n\nexec tool declaration:\n```ts\ndeclare const tools: { view_image(args: {\n  // Local filesystem path to an image file.\n  path: string;\n}): Promise<{\n  // Data URL for the loaded image.\n  image_url: string;\n}>; };\n```\n\n### `write_stdin`\nWrites characters to an existing unified exec session and returns recent output.\n\nexec tool declaration:\n```ts\ndeclare const tools: { write_stdin(args: {\n  // Bytes to write to stdin. Defaults to empty, which polls without writing.\n  chars?: string;\n  // Output token budget. Defaults to 10000 tokens; larger requests may be capped by policy.\n  max_output_tokens?: number;\n  // Identifier of the running unified exec session.\n  session_id: number;\n  // Wait before yielding output. Non-empty writes default to 250 ms and cap at 30000 ms; empty polls wait 5000-300000 ms by default.\n  yield_time_ms?: number;\n}): Promise<{\n  // Chunk identifier included when the response reports one.\n  chunk_id?: string;\n  // Process exit code when the command finished during this call.\n  exit_code?: number;\n  // Approximate token count before output truncation.\n  original_token_count?: number;\n  // Command output text, possibly truncated.\n  output: string;\n  // Session identifier to pass to write_stdin when the process is still running.\n  session_id?: number;\n  // Elapsed wall time spent waiting for output in seconds.\n  wall_time_seconds: number;\n}>; };\n```\n\n## clock\nTools for reading and waiting on time.\n\n### `clock__curr_time`\nReturn the current time in UTC.\n\nexec tool declaration:\n```ts\ndeclare const tools: { clock__curr_time(args: {}): Promise<{\n  // Current UTC time formatted as YYYY-MM-DD HH:MM:SS UTC.\n  current_time: string;\n}>; };\n```",
+                    "format": {
+                      "type": "grammar",
+                      "syntax": "lark",
+                      "definition": "\nstart: pragma_source | plain_source\npragma_source: PRAGMA_LINE NEWLINE SOURCE\nplain_source: SOURCE\n\nPRAGMA_LINE: /[ \\t]*\\/\\/ @exec:[^\\r\\n]*/\nNEWLINE: /\\r?\\n/\nSOURCE: /[\\s\\S]+/\n"
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "name": "wait",
+                    "description": "Waits on a yielded `exec` cell and returns new output or completion.\n- Use `wait` only after `exec` returns `Script running with cell ID ...`.\n- `cell_id` identifies the running `exec` cell to resume.\n- `yield_time_ms` controls how long to wait for more output before yielding again. Defaults to 10000 ms.\n- `max_tokens` limits how much new output this wait call returns. Defaults to 10000 tokens.\n- `terminate: true` stops the running cell; false or omitted waits for output.\n- `wait` returns only the new output since the last yield, or the final completion or termination result for that cell.\n- If the cell is still running, `wait` may yield again with the same `cell_id`.\n- If the cell has already finished, `wait` returns the completed result and closes the cell.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "cell_id": {
+                          "type": "string",
+                          "description": "Identifier of the running exec cell."
+                        },
+                        "max_tokens": {
+                          "type": "number",
+                          "description": "Output token budget for this wait call. Defaults to 10000 tokens."
+                        },
+                        "terminate": {
+                          "type": "boolean",
+                          "description": "True stops the running exec cell; false or omitted waits for output."
+                        },
+                        "yield_time_ms": {
+                          "type": "number",
+                          "description": "Wait before yielding more output. Defaults to 10000 ms."
+                        }
+                      },
+                      "required": [
+                        "cell_id"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "name": "request_user_input",
+                    "description": "Request user input for one to three short questions and wait for the response. This tool is only available in Plan mode.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "questions": {
+                          "type": "array",
+                          "description": "Questions to show the user. Prefer 1 and do not exceed 3",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "header": {
+                                "type": "string",
+                                "description": "Short header label shown in the UI (12 or fewer chars)."
+                              },
+                              "id": {
+                                "type": "string",
+                                "description": "Stable identifier for mapping answers (snake_case)."
+                              },
+                              "options": {
+                                "type": "array",
+                                "description": "Provide 2-3 mutually exclusive choices. Put the recommended option first and suffix its label with \"(Recommended)\". Do not include an \"Other\" option in this list; the client will add a free-form \"Other\" option automatically.",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "description": {
+                                      "type": "string",
+                                      "description": "One short sentence explaining impact/tradeoff if selected."
+                                    },
+                                    "label": {
+                                      "type": "string",
+                                      "description": "User-facing label (1-5 words)."
+                                    }
+                                  },
+                                  "required": [
+                                    "label",
+                                    "description"
+                                  ],
+                                  "additionalProperties": false
+                                }
+                              },
+                              "question": {
+                                "type": "string",
+                                "description": "Single-sentence prompt shown to the user."
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "header",
+                              "question",
+                              "options"
+                            ],
+                            "additionalProperties": false
+                          }
+                        }
+                      },
+                      "required": [
+                        "questions"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "name": "request_user_input_async",
+                    "description": "Ask the user one or more questions during ongoing work. Use this tool only to request missing information, preferences, constraints, clarification, or approval. The tool returns immediately without ending the turn or waiting for a reply; any reply arrives asynchronously as a new user message. Keep questions concise, self-contained, and easy to understand, using a level of detail appropriate to the user and task. The UI always allows a free-text answer, including when suggested options are provided. A preselected option is not submitted automatically.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "questions": {
+                          "type": "array",
+                          "description": "One or more self-contained questions to present together, in display order.",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "options": {
+                                "type": "array",
+                                "description": "Suggested answers, in display order. Put the recommended answer first; the first option is preselected by default. The user can select one option or enter a free-text answer. Do not include an Other option or a free-text placeholder; the UI provides free-text input automatically. Omit options for a free-text-only question.",
+                                "items": {
+                                  "type": "string"
+                                },
+                                "minItems": 1
+                              },
+                              "title": {
+                                "type": "string",
+                                "description": "The complete question shown to the user, including any context needed to answer it."
+                              }
+                            },
+                            "required": [
+                              "title"
+                            ],
+                            "additionalProperties": false
+                          },
+                          "minItems": 1
+                        }
+                      },
+                      "required": [
+                        "questions"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "namespace",
+                "name": "clock",
+                "description": "Tools for reading and waiting on time.",
+                "tools": [
+                  {
+                    "type": "function",
+                    "name": "sleep",
+                    "description": "Pause execution for a specified duration. The sleep ends early when new input arrives for the active turn. Returns the elapsed wall-clock time.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "duration_ms": {
+                          "type": "number",
+                          "description": "How long to sleep in milliseconds. Must be between 1 and 43200000."
+                        }
+                      },
+                      "required": [
+                        "duration_ms"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "namespace",
+                "name": "collaboration",
+                "description": "Tools for spawning and managing sub-agents.",
+                "tools": [
+                  {
+                    "type": "function",
+                    "name": "followup_task",
+                    "description": "Send a follow-up task to an existing non-root target agent and trigger a turn if it is idle. If the target is already running, deliver the task promptly at message boundaries while sampling, or after the pending tool call completes.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string",
+                          "description": "Message text to send to the target agent.",
+                          "encrypted": true
+                        },
+                        "target": {
+                          "type": "string",
+                          "description": "Agent id or canonical task name to send a follow-up task to (from spawn_agent)."
+                        }
+                      },
+                      "required": [
+                        "target",
+                        "message"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "name": "interrupt_agent",
+                    "description": "Interrupt an agent's current turn, if any, and return its previous status. The agent remains available for messages and follow-up tasks.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "string",
+                          "description": "Agent id or canonical task name to interrupt (from spawn_agent)."
+                        }
+                      },
+                      "required": [
+                        "target"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "name": "list_agents",
+                    "description": "List live agents in the current root thread tree. Optionally filter by task-path prefix.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "path_prefix": {
+                          "type": "string",
+                          "description": "Task-path prefix filter without a trailing slash. Omit to list all live agents."
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "name": "send_message",
+                    "description": "Send a message to an existing agent. The message will be delivered promptly. Does not trigger a new turn.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string",
+                          "description": "Message text to queue on the target agent.",
+                          "encrypted": true
+                        },
+                        "target": {
+                          "type": "string",
+                          "description": "Relative or canonical task name to message (from spawn_agent)."
+                        }
+                      },
+                      "required": [
+                        "target",
+                        "message"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "name": "spawn_agent",
+                    "description": "\n        Available model overrides (optional; inherited parent model is preferred):\n- `gpt-6.1-sol`: Latest workhorse model for coding and everyday work. Reasoning efforts: low (default), medium, high, xhigh, max, ultra. Service tiers: priority.\n- `gpt-6-astra`: Frontier intelligence for the most demanding work. Reasoning efforts: low (default), medium, high, xhigh, max, ultra. Service tiers: priority.\n- `gpt-6-sol`: Previous generation workhorse model. Reasoning efforts: low, medium (default), high, xhigh, max, ultra. Service tiers: priority.\n- `gpt-6-luna`: Fast and affordable model for easier tasks. Reasoning efforts: low, medium (default), high, xhigh, max. Service tiers: priority.\n- `gpt-5.6-sol`: Older generation workhorse model. Reasoning efforts: low (default), medium, high, xhigh, max, ultra. Service tiers: priority.\n        Spawns an agent to work on the specified task. If your current task is `/root/task1` and you spawn_agent with task_name \"task_3\" the agent will have canonical task name `/root/task1/task_3`.\nYou are then able to refer to this agent as `task_3` or `/root/task1/task_3` interchangeably. However an agent `/root/task2/task_3` would only be able to communicate with this agent via its canonical name `/root/task1/task_3`.\nThe spawned agent will have the same tools as you and the ability to spawn its own subagents.\n\nIt will be able to send you and other running agents messages, and its final answer will be provided to you when it finishes.\nThe new agent's canonical task name will be provided to it along with the message.\n\nNote that passing `fork_turns=\"none\"` will not pass any surrounding context to the spawned subagent, which may cause the agent to lack the context it needs to complete its task, whereas `fork_turns=\"all\"` will provide the subagent with all surrounding context.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "fork_turns": {
+                          "type": "string",
+                          "description": "Parent history to inherit. Defaults to `all`; use `none` to start without parent history. Only `all` and `none` are supported."
+                        },
+                        "message": {
+                          "type": "string",
+                          "description": "Initial plain-text task for the new agent.",
+                          "encrypted": true
+                        },
+                        "model": {
+                          "type": "string",
+                          "description": "Model override for the new agent. Omit unless an explicit override is needed."
+                        },
+                        "reasoning_effort": {
+                          "type": "string",
+                          "description": "Reasoning effort override for the new agent. Omit to inherit the parent effort."
+                        },
+                        "task_name": {
+                          "type": "string",
+                          "description": "Task name for the new agent. Use lowercase letters, digits, and underscores."
+                        }
+                      },
+                      "required": [
+                        "task_name",
+                        "message"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "name": "wait_agent",
+                    "description": "Wait for a mailbox update from any live agent, including queued messages and final-status notifications. The wait also ends early when new user input is steered into the active turn. Does not return the content; returns either a summary of which agents have updates (if any), an interruption summary for steered input, or a timeout summary if no activity arrives before the deadline.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "timeout_ms": {
+                          "type": "number",
+                          "description": "Timeout in milliseconds. Defaults to 30000, min 10000, max 3600000."
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "metadata": {
+            "history_sequence": 1,
+            "sampled_through_sequence": 0,
+            "client_authored": false,
+            "mcp_attribution": {
+              "status": "none"
+            }
+          }
+        },
+        {
+          "timestamp": "2026-11-16T01:05:53.785Z",
+          "ordinal": 18,
+          "type": "event_msg",
+          "payload": {
+            "type": "token_count",
+            "info": {
+              "total_token_usage": {
+                "input_tokens": 10,
+                "cached_input_tokens": 0,
+                "cache_write_input_tokens": 0,
+                "output_tokens": 0,
+                "reasoning_output_tokens": 0,
+                "total_tokens": 10
+              },
+              "last_token_usage": {
+                "input_tokens": 10,
+                "cached_input_tokens": 0,
+                "cache_write_input_tokens": 0,
+                "output_tokens": 0,
+                "reasoning_output_tokens": 0,
+                "total_tokens": 10
+              },
+              "last_usage_includes_reasoning": true,
+              "model_context_window": 258400
+            },
+            "rate_limits": {
+              "limit_id": "codex",
+              "limit_name": null,
+              "primary": null,
+              "secondary": null,
+              "credits": null,
+              "individual_limit": null,
+              "spend_control_reached": null,
+              "plan_type": null,
+              "rate_limit_reached_type": null
+            }
+          }
+        },
+        {
+          "timestamp": "2026-11-16T01:05:54.405Z",
+          "ordinal": 24,
+          "type": "event_msg",
+          "payload": {
+            "type": "token_count",
+            "info": {
+              "total_token_usage": {
+                "input_tokens": 110,
+                "cached_input_tokens": 0,
+                "cache_write_input_tokens": 0,
+                "output_tokens": 0,
+                "reasoning_output_tokens": 0,
+                "total_tokens": 110
+              },
+              "last_token_usage": {
+                "input_tokens": 100,
+                "cached_input_tokens": 0,
+                "cache_write_input_tokens": 0,
+                "output_tokens": 0,
+                "reasoning_output_tokens": 0,
+                "total_tokens": 100
+              },
+              "last_usage_includes_reasoning": true,
+              "model_context_window": 258400
+            },
+            "rate_limits": {
+              "limit_id": "codex",
+              "limit_name": null,
+              "primary": null,
+              "secondary": null,
+              "credits": null,
+              "individual_limit": null,
+              "spend_control_reached": null,
+              "plan_type": null,
+              "rate_limit_reached_type": null
+            }
+          }
+        },
+        {
+          "timestamp": "2026-11-16T01:05:54.407Z",
+          "ordinal": 25,
+          "type": "event_msg",
+          "payload": {
+            "type": "task_complete",
+            "root_turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+            "turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+            "last_agent_message": null,
+            "error": {
+              "message": "budget reached",
+              "codex_error_info": "session_budget_exceeded"
+            },
+            "started_at": 1794791153,
+            "completed_at": 1794791154,
+            "duration_ms": 636,
+            "time_to_first_token_ms": 10
+          }
+        },
+        {
+          "timestamp": "2026-11-16T01:05:54.715Z",
+          "ordinal": 26,
+          "type": "event_msg",
+          "payload": {
+            "type": "task_started",
+            "turn_attribution": {
+              "turn_id": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+              "turn_trigger": null,
+              "parent_turn_id": null,
+              "initiating_agent_path": null,
+              "root_turn_id": "01a1e1e3-a419-78f2-856f-c680db3404f8"
+            },
+            "turn_id": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+            "root_turn_id": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+            "started_at": 1794791154,
+            "model_context_window": 258400,
+            "collaboration_mode_kind": "default"
+          }
+        },
+        {
+          "timestamp": "2026-11-16T01:05:55.341Z",
+          "ordinal": 34,
+          "type": "event_msg",
+          "payload": {
+            "type": "token_count",
+            "info": {
+              "total_token_usage": {
+                "input_tokens": 210,
+                "cached_input_tokens": 0,
+                "cache_write_input_tokens": 0,
+                "output_tokens": 0,
+                "reasoning_output_tokens": 0,
+                "total_tokens": 210
+              },
+              "last_token_usage": {
+                "input_tokens": 100,
+                "cached_input_tokens": 0,
+                "cache_write_input_tokens": 0,
+                "output_tokens": 0,
+                "reasoning_output_tokens": 0,
+                "total_tokens": 100
+              },
+              "last_usage_includes_reasoning": true,
+              "model_context_window": 258400
+            },
+            "rate_limits": {
+              "limit_id": "codex",
+              "limit_name": null,
+              "primary": null,
+              "secondary": null,
+              "credits": null,
+              "individual_limit": null,
+              "spend_control_reached": null,
+              "plan_type": null,
+              "rate_limit_reached_type": null
+            }
+          }
+        },
+        {
+          "timestamp": "2026-11-16T01:05:55.345Z",
+          "ordinal": 37,
+          "type": "event_msg",
+          "payload": {
+            "type": "task_complete",
+            "root_turn_id": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+            "turn_id": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+            "last_agent_message": null,
+            "error": {
+              "message": "budget reached",
+              "codex_error_info": "session_budget_exceeded"
+            },
+            "started_at": 1794791154,
+            "completed_at": 1794791155,
+            "duration_ms": 629,
+            "time_to_first_token_ms": 621
+          }
+        },
+        {
+          "timestamp": "2026-11-16T01:05:55.660Z",
+          "ordinal": 38,
+          "type": "event_msg",
+          "payload": {
+            "type": "task_started",
+            "turn_attribution": {
+              "turn_id": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+              "turn_trigger": null,
+              "parent_turn_id": null,
+              "initiating_agent_path": null,
+              "root_turn_id": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8"
+            },
+            "turn_id": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+            "root_turn_id": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+            "started_at": 1794791155,
+            "model_context_window": 258400,
+            "collaboration_mode_kind": "default"
+          }
+        },
+        {
+          "timestamp": "2026-11-16T01:05:56.279Z",
+          "ordinal": 45,
+          "type": "event_msg",
+          "payload": {
+            "type": "token_count",
+            "info": {
+              "total_token_usage": {
+                "input_tokens": 310,
+                "cached_input_tokens": 0,
+                "cache_write_input_tokens": 0,
+                "output_tokens": 0,
+                "reasoning_output_tokens": 0,
+                "total_tokens": 310
+              },
+              "last_token_usage": {
+                "input_tokens": 100,
+                "cached_input_tokens": 0,
+                "cache_write_input_tokens": 0,
+                "output_tokens": 0,
+                "reasoning_output_tokens": 0,
+                "total_tokens": 100
+              },
+              "last_usage_includes_reasoning": true,
+              "model_context_window": 258400
+            },
+            "rate_limits": {
+              "limit_id": "codex",
+              "limit_name": null,
+              "primary": null,
+              "secondary": null,
+              "credits": null,
+              "individual_limit": null,
+              "spend_control_reached": null,
+              "plan_type": null,
+              "rate_limit_reached_type": null
+            }
+          }
+        },
+        {
+          "timestamp": "2026-11-16T01:05:56.282Z",
+          "ordinal": 46,
+          "type": "event_msg",
+          "payload": {
+            "type": "task_complete",
+            "root_turn_id": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+            "turn_id": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+            "last_agent_message": null,
+            "error": {
+              "message": "budget reached",
+              "codex_error_info": "session_budget_exceeded"
+            },
+            "started_at": 1794791155,
+            "completed_at": 1794791156,
+            "duration_ms": 622,
+            "time_to_first_token_ms": 615
+          }
+        }
+      ]
+    },
+    {
+      "file": "rollout-2026-11-16T09-05-53-01a1e1e3-a077-7300-9b34-e001bd408add.jsonl",
+      "records": [
+        {
+          "timestamp": "2026-11-16T01:05:53.784Z",
+          "ordinal": 0,
+          "type": "session_meta",
+          "payload": {
+            "account_scoped": true,
+            "session_id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+            "id": "01a1e1e3-a077-7300-9b34-e001bd408add",
+            "parent_thread_id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+            "timestamp": "2026-11-16T01:05:53.783Z",
+            "cwd": "<isolated-temp>/work",
+            "runtime_workspace_roots": [
+              "<isolated-temp>/work"
+            ],
+            "originator": "budget_boundary_fixture",
+            "cli_version": "0.169.0-alpha.11.1",
+            "source": {
+              "subagent": {
+                "thread_spawn": {
+                  "parent_thread_id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+                  "depth": 1,
+                  "agent_path": "/root/budget_worker",
+                  "agent_nickname": "Huygens",
+                  "agent_role": null
+                }
+              }
+            },
+            "thread_source": "subagent",
+            "agent_nickname": "Huygens",
+            "agent_path": "/root/budget_worker",
+            "model_provider": "budget_fixture",
+            "base_instructions": {
+              "text": "Follow fixture instructions.",
+              "provenance": {
+                "type": "custom"
+              }
+            },
+            "history_mode": "paginated",
+            "multi_agent_version": "v2",
+            "context_window": {
+              "window_id": "01a1e1e3-a077-7300-9b34-e01ee1faa406"
+            }
+          }
+        },
+        {
+          "timestamp": "2026-11-16T01:05:53.784Z",
+          "ordinal": 1,
+          "type": "event_msg",
+          "payload": {
+            "type": "task_started",
+            "turn_attribution": {
+              "turn_id": "01a1e1e3-a078-7f72-91ad-cf8406323522",
+              "turn_trigger": null,
+              "parent_turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+              "initiating_agent_path": "/root",
+              "root_turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda"
+            },
+            "turn_id": "01a1e1e3-a078-7f72-91ad-cf8406323522",
+            "root_turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+            "started_at": 1794791153,
+            "model_context_window": 258400,
+            "collaboration_mode_kind": "default"
+          }
+        },
+        {
+          "timestamp": "2026-11-16T01:05:53.786Z",
+          "ordinal": 2,
+          "type": "response_item",
+          "payload": {
+            "type": "additional_tools",
+            "id": "at_01a1e1e3-a079-71b1-bd9e-872e03ffabd4",
+            "role": "developer",
+            "tools": [
+              {
+                "type": "namespace",
+                "name": "functions",
+                "description": "",
+                "tools": [
+                  {
+                    "type": "custom",
+                    "name": "exec",
+                    "description": "Run JavaScript code to orchestrate/compose tool calls\n- Evaluates the provided JavaScript code in a fresh V8 isolate as an async module.\n- All nested tools are available on the global `tools` object, for example `await tools.exec_command(...)`. Tool names are exposed as normalized JavaScript identifiers, for example `await tools.mcp__ologs__get_profile(...)`.\n- Nested tool methods take either a string or an object as their input argument.\n- Nested tools return either an object or a string, based on the description.\n- Runs raw JavaScript -- no Node, no file system, no network access, no console.\n- Accepts raw JavaScript source text, not JSON, quoted strings, or markdown code fences.\n- You may optionally start the tool input with a first-line pragma like `// @exec: {\"yield_time_ms\": 10000, \"max_output_tokens\": 1000}`.\n- `yield_time_ms` asks `exec` to yield early if the script is still running. Defaults to 30000 ms.\n- `max_output_tokens` sets the token budget for direct `exec` results. Defaults to 10000 tokens.\n- When the JS code is fully evaluated, the isolate's lifetime ends and unawaited promises are silently discarded.\n\n- Global helpers:\n- `exit()`: Immediately ends the current script successfully (like an early return from the top level).\n- `text(value: string | number | boolean | undefined | null)`: Appends a text item. Non-string values are stringified with `JSON.stringify(...)` when possible.\n- `image(imageUrlOrItem: string | { image_url: string } | ImageContent)`: Appends an image item. `image_url` should be a base64-encoded `data:` URL. To forward an MCP tool image, pass an individual `ImageContent` block from `result.content`, for example `image(result.content[0])`.\n- `audio(audioUrlOrItem: string | { audio_url: string } | AudioContent)`: Appends an audio item. `audio_url` should be a base64-encoded `data:` URL. To forward an MCP tool audio block, pass an individual `AudioContent` block from `result.content`, for example `audio(result.content[0])`.\n- `generatedImage(result: { image_url: string; output_hint?: string })`: Appends an image-generation result and its optional output hint. HTTP(S) URLs are not supported.\n- `store(key: string, value: any)`: stores a serializable value under a string key for later `exec` calls in the same session.\n- `load(key: string)`: returns the stored value for a string key, or `undefined` if it is missing.\n- `notify(value: string | number | boolean | undefined | null)`: immediately injects an extra `custom_tool_call_output` for the current `exec` call. Values are stringified like `text(...)`.\n- `setTimeout(callback: () => void, delayMs?: number)`: schedules a callback to run later and returns a timeout id. Pending timeouts do not keep `exec` alive by themselves; await an explicit promise if you need to wait for one.\n- `clearTimeout(timeoutId?: number)`: cancels a timeout created by `setTimeout`.\n- `ALL_TOOLS`: metadata for the enabled nested tools as `{ name, description }` entries.\n- `yield_control()`: yields the accumulated output to the model immediately while the script keeps running.\n\nSome deferred nested tools may be omitted from this description. They are still available on the global `tools` object and listed in `ALL_TOOLS`.\nTo find one, filter `ALL_TOOLS` by `name` and `description`.\n\nTool availability can change between calls.\n\nShared MCP Types:\n```ts\ntype Role = \"user\" | \"assistant\";\ntype MetaObject = Record<string, unknown>;\ntype Annotations = {\n  audience?: Role[];\n  priority?: number;\n  lastModified?: string;\n};\ntype Icon = {\n  src: string;\n  mimeType?: string;\n  sizes?: string[];\n  theme?: \"light\" | \"dark\";\n};\ntype TextResourceContents = {\n  uri: string;\n  mimeType?: string;\n  _meta?: MetaObject;\n  text: string;\n};\ntype BlobResourceContents = {\n  uri: string;\n  mimeType?: string;\n  _meta?: MetaObject;\n  blob: string;\n};\ntype TextContent = {\n  type: \"text\";\n  text: string;\n  annotations?: Annotations;\n  _meta?: MetaObject;\n};\ntype ImageContent = {\n  type: \"image\";\n  data: string;\n  mimeType: string;\n  annotations?: Annotations;\n  _meta?: MetaObject;\n};\ntype AudioContent = {\n  type: \"audio\";\n  data: string;\n  mimeType: string;\n  annotations?: Annotations;\n  _meta?: MetaObject;\n};\ntype ResourceLink = {\n  icons?: Icon[];\n  name: string;\n  title?: string;\n  uri: string;\n  description?: string;\n  mimeType?: string;\n  annotations?: Annotations;\n  size?: number;\n  _meta?: MetaObject;\n  type: \"resource_link\";\n};\ntype EmbeddedResource = {\n  type: \"resource\";\n  resource: TextResourceContents | BlobResourceContents;\n  annotations?: Annotations;\n  _meta?: MetaObject;\n};\ntype ContentBlock =\n  | TextContent\n  | ImageContent\n  | AudioContent\n  | ResourceLink\n  | EmbeddedResource;\ntype CallToolResult<TStructured = { [key: string]: unknown }> = {\n  _meta?: MetaObject;\n  content: ContentBlock[];\n  isError?: boolean;\n  structuredContent?: TStructured;\n  [key: string]: unknown;\n};\n```\n\n### `apply_patch`\nThe `apply_patch` tool can be used to edit files. This is a FREEFORM tool, so do not wrap the patch in JSON.\n\nexec tool declaration:\n```ts\ndeclare const tools: { apply_patch(input: string): Promise<unknown>; };\n```\n\n### `create_goal`\nCreate a goal only when explicitly requested by the user or system/developer instructions; do not infer goals from ordinary tasks.\nSet token_budget only when an explicit token budget is requested. Fails if an unfinished goal exists; use update_goal only for status.\n\nexec tool declaration:\n```ts\ndeclare const tools: { create_goal(args: {\n  // Required. The concrete objective to start pursuing. This starts a new active goal when no goal exists or replaces the current goal when it is complete.\n  objective: string;\n  // Positive token budget for the new goal. Omit unless explicitly requested.\n  token_budget?: number;\n}): Promise<unknown>; };\n```\n\n### `exec_command`\nRuns a command in a PTY, returning output or a session ID for ongoing interaction.\n\nexec tool declaration:\n```ts\ndeclare const tools: { exec_command(args: {\n  // Shell command to execute.\n  cmd: string;\n  // User-facing approval question for `require_escalated`; omit otherwise.\n  justification?: string;\n  // True runs the shell with -l/-i semantics; false disables them. Defaults to true.\n  login?: boolean;\n  // Output token budget. Defaults to 10000 tokens; larger requests may be capped by policy.\n  max_output_tokens?: number;\n  // Reusable approval prefix for `cmd`, only with `sandbox_permissions: \"require_escalated\"`; for example [\"git\", \"pull\"].\n  prefix_rule?: Array<string>;\n  // Per-command sandbox override. Defaults to `use_default`; use `require_escalated` for unsandboxed execution.\n  sandbox_permissions?: \"use_default\" | \"require_escalated\";\n  // Shell binary to launch. Defaults to the user's default shell.\n  shell?: string;\n  // True allocates a PTY for the command; false or omitted uses plain pipes.\n  tty?: boolean;\n  // Working directory for the command. Defaults to the turn cwd.\n  workdir?: string;\n  // Wait before yielding output. Defaults to 10000 ms; effective range is 250-30000 ms.\n  yield_time_ms?: number;\n}): Promise<{\n  // Chunk identifier included when the response reports one.\n  chunk_id?: string;\n  // Process exit code when the command finished during this call.\n  exit_code?: number;\n  // Approximate token count before output truncation.\n  original_token_count?: number;\n  // Command output text, possibly truncated.\n  output: string;\n  // Session identifier to pass to write_stdin when the process is still running.\n  session_id?: number;\n  // Elapsed wall time spent waiting for output in seconds.\n  wall_time_seconds: number;\n}>; };\n```\n\n### `get_goal`\nGet the current goal for this thread, including status, budgets, token and elapsed-time usage, and remaining token budget.\n\nexec tool declaration:\n```ts\ndeclare const tools: { get_goal(args: {}): Promise<unknown>; };\n```\n\n### `list_mcp_resource_templates`\nLists resource templates provided by MCP servers. Parameterized resource templates allow servers to share data that takes parameters and provides context to language models, such as files, database schemas, or application-specific information. Prefer resource templates over web search when possible.\n\nexec tool declaration:\n```ts\ndeclare const tools: { list_mcp_resource_templates(args: {\n  // Opaque cursor from a previous list_mcp_resource_templates call; omit for the first page.\n  cursor?: string;\n  // MCP server name. Omit to list resource templates from every configured server.\n  server?: string;\n}): Promise<unknown>; };\n```\n\n### `list_mcp_resources`\nLists resources provided by MCP servers. Resources allow servers to share data that provides context to language models, such as files, database schemas, or application-specific information. Prefer resources over web search when possible.\n\nexec tool declaration:\n```ts\ndeclare const tools: { list_mcp_resources(args: {\n  // Opaque cursor from a previous list_mcp_resources call; omit for the first page.\n  cursor?: string;\n  // MCP server name. Omit to list resources from every configured server.\n  server?: string;\n}): Promise<unknown>; };\n```\n\n### `read_mcp_resource`\nRead a specific resource from an MCP server given the server name and resource URI.\n\nexec tool declaration:\n```ts\ndeclare const tools: { read_mcp_resource(args: {\n  // MCP server name exactly as configured. Must match the 'server' field returned by list_mcp_resources.\n  server: string;\n  // Resource URI to read. Must be one of the URIs returned by list_mcp_resources.\n  uri: string;\n}): Promise<unknown>; };\n```\n\n### `update_goal`\nUpdate the existing goal.\nSet status to `paused` only at the user's explicit request to pause this goal, never on your own initiative. Ask if unclear; a later resume revokes that request. Report the returned status and stop goal work. Budget limits take precedence over pausing.\nSet status to `complete` only when the objective has actually been achieved and no required work remains.\nSet status to `blocked` only when the same blocking condition has repeated for at least three consecutive goal turns, counting the original/user-triggered turn and any automatic continuations, and the agent cannot make meaningful progress without user input or an external-state change.\nIf the user resumes a goal that was previously marked `blocked`, treat the resumed run as a fresh blocked audit. If the same blocking condition then repeats for at least three consecutive resumed goal turns, set status to `blocked` again.\nOnce the blocked threshold is satisfied, do not keep reporting that you are still blocked while leaving the goal active; set status to `blocked`.\nDo not use `blocked` merely because the work is hard, slow, uncertain, incomplete, or would benefit from clarification.\nDo not mark a goal complete merely because its budget is nearly exhausted or because you are stopping work.\nYou cannot use this tool to resume, budget-limit, or usage-limit a goal; those status changes are controlled by the user or system.\nWhen marking a budgeted goal achieved with status `complete`, report the final token usage from the tool result to the user.\n\nexec tool declaration:\n```ts\ndeclare const tools: { update_goal(args: {\n  // Required. `paused` requires an explicit user request. Set to `complete` only when the objective is achieved and no required work remains. Set to `blocked` only after the same blocking condition has recurred for at least three consecutive goal turns and the agent is at an impasse. After a previously blocked goal is resumed, the resumed run starts a fresh blocked audit.\n  status: \"complete\" | \"blocked\" | \"paused\";\n}): Promise<unknown>; };\n```\n\n### `view_image`\nView a local image file from the filesystem when visual inspection is needed. Use this for images already available on disk.\n\nexec tool declaration:\n```ts\ndeclare const tools: { view_image(args: {\n  // Local filesystem path to an image file.\n  path: string;\n}): Promise<{\n  // Data URL for the loaded image.\n  image_url: string;\n}>; };\n```\n\n### `write_stdin`\nWrites characters to an existing unified exec session and returns recent output.\n\nexec tool declaration:\n```ts\ndeclare const tools: { write_stdin(args: {\n  // Bytes to write to stdin. Defaults to empty, which polls without writing.\n  chars?: string;\n  // Output token budget. Defaults to 10000 tokens; larger requests may be capped by policy.\n  max_output_tokens?: number;\n  // Identifier of the running unified exec session.\n  session_id: number;\n  // Wait before yielding output. Non-empty writes default to 250 ms and cap at 30000 ms; empty polls wait 5000-300000 ms by default.\n  yield_time_ms?: number;\n}): Promise<{\n  // Chunk identifier included when the response reports one.\n  chunk_id?: string;\n  // Process exit code when the command finished during this call.\n  exit_code?: number;\n  // Approximate token count before output truncation.\n  original_token_count?: number;\n  // Command output text, possibly truncated.\n  output: string;\n  // Session identifier to pass to write_stdin when the process is still running.\n  session_id?: number;\n  // Elapsed wall time spent waiting for output in seconds.\n  wall_time_seconds: number;\n}>; };\n```\n\n## clock\nTools for reading and waiting on time.\n\n### `clock__curr_time`\nReturn the current time in UTC.\n\nexec tool declaration:\n```ts\ndeclare const tools: { clock__curr_time(args: {}): Promise<{\n  // Current UTC time formatted as YYYY-MM-DD HH:MM:SS UTC.\n  current_time: string;\n}>; };\n```",
+                    "format": {
+                      "type": "grammar",
+                      "syntax": "lark",
+                      "definition": "\nstart: pragma_source | plain_source\npragma_source: PRAGMA_LINE NEWLINE SOURCE\nplain_source: SOURCE\n\nPRAGMA_LINE: /[ \\t]*\\/\\/ @exec:[^\\r\\n]*/\nNEWLINE: /\\r?\\n/\nSOURCE: /[\\s\\S]+/\n"
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "name": "wait",
+                    "description": "Waits on a yielded `exec` cell and returns new output or completion.\n- Use `wait` only after `exec` returns `Script running with cell ID ...`.\n- `cell_id` identifies the running `exec` cell to resume.\n- `yield_time_ms` controls how long to wait for more output before yielding again. Defaults to 10000 ms.\n- `max_tokens` limits how much new output this wait call returns. Defaults to 10000 tokens.\n- `terminate: true` stops the running cell; false or omitted waits for output.\n- `wait` returns only the new output since the last yield, or the final completion or termination result for that cell.\n- If the cell is still running, `wait` may yield again with the same `cell_id`.\n- If the cell has already finished, `wait` returns the completed result and closes the cell.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "cell_id": {
+                          "type": "string",
+                          "description": "Identifier of the running exec cell."
+                        },
+                        "max_tokens": {
+                          "type": "number",
+                          "description": "Output token budget for this wait call. Defaults to 10000 tokens."
+                        },
+                        "terminate": {
+                          "type": "boolean",
+                          "description": "True stops the running exec cell; false or omitted waits for output."
+                        },
+                        "yield_time_ms": {
+                          "type": "number",
+                          "description": "Wait before yielding more output. Defaults to 10000 ms."
+                        }
+                      },
+                      "required": [
+                        "cell_id"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "name": "request_user_input",
+                    "description": "Request user input for one to three short questions and wait for the response. This tool is only available in Plan mode.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "questions": {
+                          "type": "array",
+                          "description": "Questions to show the user. Prefer 1 and do not exceed 3",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "header": {
+                                "type": "string",
+                                "description": "Short header label shown in the UI (12 or fewer chars)."
+                              },
+                              "id": {
+                                "type": "string",
+                                "description": "Stable identifier for mapping answers (snake_case)."
+                              },
+                              "options": {
+                                "type": "array",
+                                "description": "Provide 2-3 mutually exclusive choices. Put the recommended option first and suffix its label with \"(Recommended)\". Do not include an \"Other\" option in this list; the client will add a free-form \"Other\" option automatically.",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "description": {
+                                      "type": "string",
+                                      "description": "One short sentence explaining impact/tradeoff if selected."
+                                    },
+                                    "label": {
+                                      "type": "string",
+                                      "description": "User-facing label (1-5 words)."
+                                    }
+                                  },
+                                  "required": [
+                                    "label",
+                                    "description"
+                                  ],
+                                  "additionalProperties": false
+                                }
+                              },
+                              "question": {
+                                "type": "string",
+                                "description": "Single-sentence prompt shown to the user."
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "header",
+                              "question",
+                              "options"
+                            ],
+                            "additionalProperties": false
+                          }
+                        }
+                      },
+                      "required": [
+                        "questions"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "namespace",
+                "name": "clock",
+                "description": "Tools for reading and waiting on time.",
+                "tools": [
+                  {
+                    "type": "function",
+                    "name": "sleep",
+                    "description": "Pause execution for a specified duration. The sleep ends early when new input arrives for the active turn. Returns the elapsed wall-clock time.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "duration_ms": {
+                          "type": "number",
+                          "description": "How long to sleep in milliseconds. Must be between 1 and 43200000."
+                        }
+                      },
+                      "required": [
+                        "duration_ms"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "namespace",
+                "name": "collaboration",
+                "description": "Tools for spawning and managing sub-agents.",
+                "tools": [
+                  {
+                    "type": "function",
+                    "name": "followup_task",
+                    "description": "Send a follow-up task to an existing non-root target agent and trigger a turn if it is idle. If the target is already running, deliver the task promptly at message boundaries while sampling, or after the pending tool call completes.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string",
+                          "description": "Message text to send to the target agent.",
+                          "encrypted": true
+                        },
+                        "target": {
+                          "type": "string",
+                          "description": "Agent id or canonical task name to send a follow-up task to (from spawn_agent)."
+                        }
+                      },
+                      "required": [
+                        "target",
+                        "message"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "name": "interrupt_agent",
+                    "description": "Interrupt an agent's current turn, if any, and return its previous status. The agent remains available for messages and follow-up tasks.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "target": {
+                          "type": "string",
+                          "description": "Agent id or canonical task name to interrupt (from spawn_agent)."
+                        }
+                      },
+                      "required": [
+                        "target"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "name": "list_agents",
+                    "description": "List live agents in the current root thread tree. Optionally filter by task-path prefix.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "path_prefix": {
+                          "type": "string",
+                          "description": "Task-path prefix filter without a trailing slash. Omit to list all live agents."
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "name": "send_message",
+                    "description": "Send a message to an existing agent. The message will be delivered promptly. Does not trigger a new turn.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string",
+                          "description": "Message text to queue on the target agent.",
+                          "encrypted": true
+                        },
+                        "target": {
+                          "type": "string",
+                          "description": "Relative or canonical task name to message (from spawn_agent)."
+                        }
+                      },
+                      "required": [
+                        "target",
+                        "message"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "name": "spawn_agent",
+                    "description": "\n        Available model overrides (optional; inherited parent model is preferred):\n- `gpt-6.1-sol`: Latest workhorse model for coding and everyday work. Reasoning efforts: low (default), medium, high, xhigh, max, ultra. Service tiers: priority.\n- `gpt-6-astra`: Frontier intelligence for the most demanding work. Reasoning efforts: low (default), medium, high, xhigh, max, ultra. Service tiers: priority.\n- `gpt-6-sol`: Previous generation workhorse model. Reasoning efforts: low, medium (default), high, xhigh, max, ultra. Service tiers: priority.\n- `gpt-6-luna`: Fast and affordable model for easier tasks. Reasoning efforts: low, medium (default), high, xhigh, max. Service tiers: priority.\n- `gpt-5.6-sol`: Older generation workhorse model. Reasoning efforts: low (default), medium, high, xhigh, max, ultra. Service tiers: priority.\n        Spawns an agent to work on the specified task. If your current task is `/root/task1` and you spawn_agent with task_name \"task_3\" the agent will have canonical task name `/root/task1/task_3`.\nYou are then able to refer to this agent as `task_3` or `/root/task1/task_3` interchangeably. However an agent `/root/task2/task_3` would only be able to communicate with this agent via its canonical name `/root/task1/task_3`.\nThe spawned agent will have the same tools as you and the ability to spawn its own subagents.\n\nIt will be able to send you and other running agents messages, and its final answer will be provided to you when it finishes.\nThe new agent's canonical task name will be provided to it along with the message.\n\nNote that passing `fork_turns=\"none\"` will not pass any surrounding context to the spawned subagent, which may cause the agent to lack the context it needs to complete its task, whereas `fork_turns=\"all\"` will provide the subagent with all surrounding context.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "fork_turns": {
+                          "type": "string",
+                          "description": "Parent history to inherit. Defaults to `all`; use `none` to start without parent history. Only `all` and `none` are supported."
+                        },
+                        "message": {
+                          "type": "string",
+                          "description": "Initial plain-text task for the new agent.",
+                          "encrypted": true
+                        },
+                        "model": {
+                          "type": "string",
+                          "description": "Model override for the new agent. Omit unless an explicit override is needed."
+                        },
+                        "reasoning_effort": {
+                          "type": "string",
+                          "description": "Reasoning effort override for the new agent. Omit to inherit the parent effort."
+                        },
+                        "task_name": {
+                          "type": "string",
+                          "description": "Task name for the new agent. Use lowercase letters, digits, and underscores."
+                        }
+                      },
+                      "required": [
+                        "task_name",
+                        "message"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "name": "wait_agent",
+                    "description": "Wait for a mailbox update from any live agent, including queued messages and final-status notifications. The wait also ends early when new user input is steered into the active turn. Does not return the content; returns either a summary of which agents have updates (if any), an interruption summary for steered input, or a timeout summary if no activity arrives before the deadline.",
+                    "strict": false,
+                    "parameters": {
+                      "type": "object",
+                      "properties": {
+                        "timeout_ms": {
+                          "type": "number",
+                          "description": "Timeout in milliseconds. Defaults to 30000, min 10000, max 3600000."
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "metadata": {
+            "history_sequence": 1,
+            "sampled_through_sequence": 0,
+            "client_authored": false,
+            "mcp_attribution": {
+              "status": "none"
+            }
+          }
+        },
+        {
+          "timestamp": "2026-11-16T01:05:53.790Z",
+          "ordinal": 17,
+          "type": "event_msg",
+          "payload": {
+            "type": "token_count",
+            "info": {
+              "total_token_usage": {
+                "input_tokens": 100,
+                "cached_input_tokens": 0,
+                "cache_write_input_tokens": 0,
+                "output_tokens": 0,
+                "reasoning_output_tokens": 0,
+                "total_tokens": 100
+              },
+              "last_token_usage": {
+                "input_tokens": 100,
+                "cached_input_tokens": 0,
+                "cache_write_input_tokens": 0,
+                "output_tokens": 0,
+                "reasoning_output_tokens": 0,
+                "total_tokens": 100
+              },
+              "last_usage_includes_reasoning": true,
+              "model_context_window": 258400
+            },
+            "rate_limits": {
+              "limit_id": "codex",
+              "limit_name": null,
+              "primary": null,
+              "secondary": null,
+              "credits": null,
+              "individual_limit": null,
+              "spend_control_reached": null,
+              "plan_type": null,
+              "rate_limit_reached_type": null
+            }
+          }
+        },
+        {
+          "timestamp": "2026-11-16T01:05:53.790Z",
+          "ordinal": 18,
+          "type": "event_msg",
+          "payload": {
+            "type": "task_complete",
+            "root_turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+            "turn_id": "01a1e1e3-a078-7f72-91ad-cf8406323522",
+            "last_agent_message": null,
+            "error": {
+              "message": "budget reached",
+              "codex_error_info": "session_budget_exceeded"
+            },
+            "started_at": 1794791153,
+            "completed_at": 1794791153,
+            "duration_ms": 6,
+            "time_to_first_token_ms": 5
+          }
+        }
+      ]
+    }
+  ],
+  "root_read": {
+    "id": 6,
+    "result": {
+      "thread": {
+        "id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "environments": [
+          {
+            "environmentId": "local",
+            "cwd": "<isolated-temp>/work",
+            "runtimeWorkspaceRoots": [
+              "<isolated-temp>/work"
+            ]
+          }
+        ],
+        "extra": null,
+        "sessionId": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "forkedFromId": null,
+        "attachedToThreadId": null,
+        "parentThreadId": null,
+        "preview": "ROOT_BUDGET",
+        "ephemeral": false,
+        "section": null,
+        "sectionEnteredAt": null,
+        "projectId": null,
+        "historyMode": "paginated",
+        "modelProvider": "budget_fixture",
+        "model": "gpt-6.1-sol",
+        "reasoningEffort": null,
+        "createdAt": 1794791153,
+        "updatedAt": 1794791156,
+        "recencyAt": 1794791155,
+        "status": {
+          "type": "systemError"
+        },
+        "path": "<isolated-temp>/codex-home/sessions/2026/11/16/rollout-2026-11-16T09-05-53-01a1e1e3-a066-7a40-a53f-d5aa397bee2f.jsonl",
+        "cwd": "<isolated-temp>/work",
+        "cliVersion": "0.169.0-alpha.11.1",
+        "originator": "budget_boundary_fixture",
+        "source": "vscode",
+        "canAcceptDirectInput": true,
+        "threadSource": null,
+        "agentNickname": null,
+        "agentRole": null,
+        "gitInfo": null,
+        "name": null,
+        "daybreakEnabled": null,
+        "turns": [
+          {
+            "id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+            "rootTurnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+            "items": [
+              {
+                "type": "userMessage",
+                "id": "01a1e1e3-a072-77f1-8ca7-9d02e3e65a3a",
+                "clientId": null,
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "ROOT_BUDGET",
+                    "text_elements": []
+                  }
+                ],
+                "startedAtMs": 1794791153778,
+                "completedAtMs": 1794791153778
+              },
+              {
+                "type": "subAgentActivity",
+                "model": "gpt-6.1-sol",
+                "reasoningEffort": "low",
+                "id": "call_spawn_agent",
+                "kind": "started",
+                "agentThreadId": "01a1e1e3-a077-7300-9b34-e001bd408add",
+                "agentPath": "/root/budget_worker",
+                "startedAtMs": 1794791153784,
+                "completedAtMs": 1794791153784
+              },
+              {
+                "type": "agentMessage",
+                "moderation": null,
+                "id": "msg_fixture",
+                "text": "ROOT_INFLIGHT_OK",
+                "phase": null,
+                "memoryCitation": null,
+                "delivery": null,
+                "questions": null,
+                "startedAtMs": 1794791154400,
+                "completedAtMs": 1794791154400
+              }
+            ],
+            "itemsView": "full",
+            "status": "failed",
+            "error": {
+              "message": "budget reached",
+              "codexErrorInfo": "sessionBudgetExceeded",
+              "additionalDetails": null,
+              "misalignment": null
+            },
+            "startedAt": 1794791153,
+            "completedAt": 1794791154,
+            "durationMs": 636
+          },
+          {
+            "id": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+            "rootTurnId": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+            "items": [
+              {
+                "type": "userMessage",
+                "id": "01a1e1e3-a421-7ad2-8cbd-017fedc924b7",
+                "clientId": null,
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "FOLLOWUP_1",
+                    "text_elements": []
+                  }
+                ],
+                "startedAtMs": 1794791154721,
+                "completedAtMs": 1794791154721
+              },
+              {
+                "type": "agentMessage",
+                "moderation": null,
+                "id": "msg_fixture",
+                "text": "ROOT_INFLIGHT_OK",
+                "phase": null,
+                "memoryCitation": null,
+                "delivery": null,
+                "questions": null,
+                "startedAtMs": 1794791155337,
+                "completedAtMs": 1794791155337
+              }
+            ],
+            "itemsView": "full",
+            "status": "failed",
+            "error": {
+              "message": "budget reached",
+              "codexErrorInfo": "sessionBudgetExceeded",
+              "additionalDetails": null,
+              "misalignment": null
+            },
+            "startedAt": 1794791154,
+            "completedAt": 1794791155,
+            "durationMs": 629
+          },
+          {
+            "id": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+            "rootTurnId": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+            "items": [
+              {
+                "type": "userMessage",
+                "id": "01a1e1e3-a7ce-70d2-a53d-c88ba470c3f8",
+                "clientId": null,
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "FOLLOWUP_2",
+                    "text_elements": []
+                  }
+                ],
+                "startedAtMs": 1794791155662,
+                "completedAtMs": 1794791155662
+              },
+              {
+                "type": "agentMessage",
+                "moderation": null,
+                "id": "msg_fixture",
+                "text": "ROOT_INFLIGHT_OK",
+                "phase": null,
+                "memoryCitation": null,
+                "delivery": null,
+                "questions": null,
+                "startedAtMs": 1794791156275,
+                "completedAtMs": 1794791156275
+              }
+            ],
+            "itemsView": "full",
+            "status": "failed",
+            "error": {
+              "message": "budget reached",
+              "codexErrorInfo": "sessionBudgetExceeded",
+              "additionalDetails": null,
+              "misalignment": null
+            },
+            "startedAt": 1794791155,
+            "completedAt": 1794791156,
+            "durationMs": 622
+          }
+        ]
+      },
+      "readState": {
+        "firstUnread": {
+          "type": "turn",
+          "turnId": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda"
+        },
+        "revision": "e5022653-617f-4beb-8345-082f3f0ae109"
+      }
+    }
+  },
+  "server_exit": 0,
+  "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"/private/tmp\" (codex_home: AbsolutePathBuf(\"<isolated-temp>/codex-home\"))\n",
+  "requests": [
+    {
+      "index": 1,
+      "role": "root",
+      "role_request": 1,
+      "arrived": 297545.0835905,
+      "route": "/v1/responses",
+      "authorization_present": false,
+      "user_inputs": [
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a070-74d1-9394-152353b81f53",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<environment_context>\n  <cwd><isolated-temp>/work</cwd>\n  <shell>zsh</shell>\n  <current_date>2026-11-16</current_date>\n  <timezone>Asia/Shanghai</timezone>\n  <filesystem><workspace_roots><root><isolated-temp>/work</root></workspace_roots><permission_profile type=\"managed\"><file_system type=\"restricted\"><entry access=\"read\"><special>:root</special></entry></file_system></permission_profile></filesystem>\n</environment_context>"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a072-77f1-8ca7-9cf323f862ac",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "ROOT_BUDGET"
+            }
+          ]
+        }
+      ],
+      "request_metadata": {
+        "session_id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "x-codex-installation-id": "30fdf3c9-bf88-4a65-932f-7bcb0d8001a0",
+        "turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+        "x-codex-window-id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f:0",
+        "root_turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+        "x-codex-turn-metadata": "{\"installation_id\":\"30fdf3c9-bf88-4a65-932f-7bcb0d8001a0\",\"session_id\":\"01a1e1e3-a066-7a40-a53f-d5aa397bee2f\",\"thread_id\":\"01a1e1e3-a066-7a40-a53f-d5aa397bee2f\",\"agent_name\":\"/root\",\"turn_id\":\"01a1e1e3-a06a-7bc0-8d2c-efb809941dda\",\"window_id\":\"01a1e1e3-a066-7a40-a53f-d5aa397bee2f:0\",\"window_number\":0,\"context_window_id\":\"01a1e1e3-a066-7a40-a53f-d5d630e4f0e0\",\"request_kind\":\"turn\",\"history_initialization\":\"new\",\"root_turn_id\":\"01a1e1e3-a06a-7bc0-8d2c-efb809941dda\",\"sandbox\":\"seatbelt\",\"sandbox_mode\":\"read-only\",\"auto_review_enabled\":false,\"node_repl_auto_review_required\":true,\"node_repl_disabled\":false,\"turn_started_at_unix_ms\":1794791153771,\"analytics_enabled\":false,\"model\":\"gpt-6.1-sol\",\"reasoning_effort\":\"low\"}",
+        "thread_id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f"
+      },
+      "budget_messages": [
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a073-78d3-886d-bd382882d151",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 100 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        }
+      ],
+      "tools": [],
+      "usage": {
+        "input_tokens": 10,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 0,
+        "total_tokens": 10
+      },
+      "sent": true,
+      "completed": 297545.083717208
+    },
+    {
+      "index": 2,
+      "role": "root",
+      "role_request": 2,
+      "arrived": 297545.089026916,
+      "route": "/v1/responses",
+      "authorization_present": false,
+      "user_inputs": [
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a070-74d1-9394-152353b81f53",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<environment_context>\n  <cwd><isolated-temp>/work</cwd>\n  <shell>zsh</shell>\n  <current_date>2026-11-16</current_date>\n  <timezone>Asia/Shanghai</timezone>\n  <filesystem><workspace_roots><root><isolated-temp>/work</root></workspace_roots><permission_profile type=\"managed\"><file_system type=\"restricted\"><entry access=\"read\"><special>:root</special></entry></file_system></permission_profile></filesystem>\n</environment_context>"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a072-77f1-8ca7-9cf323f862ac",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "ROOT_BUDGET"
+            }
+          ]
+        }
+      ],
+      "request_metadata": {
+        "root_turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+        "x-codex-turn-metadata": "{\"installation_id\":\"30fdf3c9-bf88-4a65-932f-7bcb0d8001a0\",\"session_id\":\"01a1e1e3-a066-7a40-a53f-d5aa397bee2f\",\"thread_id\":\"01a1e1e3-a066-7a40-a53f-d5aa397bee2f\",\"agent_name\":\"/root\",\"turn_id\":\"01a1e1e3-a06a-7bc0-8d2c-efb809941dda\",\"window_id\":\"01a1e1e3-a066-7a40-a53f-d5aa397bee2f:0\",\"window_number\":0,\"context_window_id\":\"01a1e1e3-a066-7a40-a53f-d5d630e4f0e0\",\"request_kind\":\"turn\",\"history_initialization\":\"new\",\"root_turn_id\":\"01a1e1e3-a06a-7bc0-8d2c-efb809941dda\",\"sandbox\":\"seatbelt\",\"sandbox_mode\":\"read-only\",\"auto_review_enabled\":false,\"node_repl_auto_review_required\":true,\"node_repl_disabled\":false,\"turn_started_at_unix_ms\":1794791153771,\"analytics_enabled\":false,\"model\":\"gpt-6.1-sol\",\"reasoning_effort\":\"low\"}",
+        "x-codex-window-id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f:0",
+        "x-codex-installation-id": "30fdf3c9-bf88-4a65-932f-7bcb0d8001a0",
+        "thread_id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+        "session_id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f"
+      },
+      "budget_messages": [
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a073-78d3-886d-bd382882d151",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 100 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a079-71b1-bd9e-87159366e9b0",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 90 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        }
+      ],
+      "tools": [],
+      "usage": {
+        "input_tokens": 100,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 0,
+        "total_tokens": 100
+      },
+      "sent": true,
+      "completed": 297545.70129
+    },
+    {
+      "index": 3,
+      "role": "child",
+      "role_request": 1,
+      "arrived": 297545.090830875,
+      "route": "/v1/responses",
+      "authorization_present": false,
+      "user_inputs": [
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a079-71b1-bd9e-877f65d15fd4",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<environment_context>\n  <cwd><isolated-temp>/work</cwd>\n  <shell>zsh</shell>\n  <current_date>2026-11-16</current_date>\n  <timezone>Asia/Shanghai</timezone>\n  <filesystem><workspace_roots><root><isolated-temp>/work</root></workspace_roots><permission_profile type=\"managed\"><file_system type=\"restricted\"><entry access=\"read\"><special>:root</special></entry></file_system></permission_profile></filesystem>\n</environment_context>"
+            }
+          ]
+        }
+      ],
+      "request_metadata": {
+        "parent_turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+        "x-codex-window-id": "01a1e1e3-a077-7300-9b34-e001bd408add:0",
+        "turn_id": "01a1e1e3-a078-7f72-91ad-cf8406323522",
+        "x-openai-subagent": "collab_spawn",
+        "x-codex-turn-metadata": "{\"installation_id\":\"30fdf3c9-bf88-4a65-932f-7bcb0d8001a0\",\"session_id\":\"01a1e1e3-a066-7a40-a53f-d5aa397bee2f\",\"thread_id\":\"01a1e1e3-a077-7300-9b34-e001bd408add\",\"agent_name\":\"/root/budget_worker\",\"turn_id\":\"01a1e1e3-a078-7f72-91ad-cf8406323522\",\"window_id\":\"01a1e1e3-a077-7300-9b34-e001bd408add:0\",\"window_number\":0,\"context_window_id\":\"01a1e1e3-a077-7300-9b34-e01ee1faa406\",\"request_kind\":\"turn\",\"history_initialization\":\"new\",\"parent_thread_id\":\"01a1e1e3-a066-7a40-a53f-d5aa397bee2f\",\"parent_turn_id\":\"01a1e1e3-a06a-7bc0-8d2c-efb809941dda\",\"root_turn_id\":\"01a1e1e3-a06a-7bc0-8d2c-efb809941dda\",\"subagent_kind\":\"thread_spawn\",\"thread_source\":\"subagent\",\"sandbox\":\"seatbelt\",\"sandbox_mode\":\"read-only\",\"auto_review_enabled\":false,\"node_repl_auto_review_required\":true,\"node_repl_disabled\":false,\"turn_started_at_unix_ms\":1794791153784,\"analytics_enabled\":false,\"model\":\"gpt-6.1-sol\",\"reasoning_effort\":\"low\"}",
+        "x-codex-parent-thread-id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "x-codex-installation-id": "30fdf3c9-bf88-4a65-932f-7bcb0d8001a0",
+        "thread_id": "01a1e1e3-a077-7300-9b34-e001bd408add",
+        "root_turn_id": "01a1e1e3-a06a-7bc0-8d2c-efb809941dda",
+        "session_id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f"
+      },
+      "budget_messages": [
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a07c-7092-b2c4-b40156d90617",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 90 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        }
+      ],
+      "tools": [],
+      "usage": {
+        "input_tokens": 100,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 0,
+        "total_tokens": 100
+      },
+      "sent": true,
+      "completed": 297545.090921083
+    },
+    {
+      "index": 4,
+      "role": "root",
+      "role_request": 3,
+      "arrived": 297546.027693041,
+      "route": "/v1/responses",
+      "authorization_present": false,
+      "user_inputs": [
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a070-74d1-9394-152353b81f53",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<environment_context>\n  <cwd><isolated-temp>/work</cwd>\n  <shell>zsh</shell>\n  <current_date>2026-11-16</current_date>\n  <timezone>Asia/Shanghai</timezone>\n  <filesystem><workspace_roots><root><isolated-temp>/work</root></workspace_roots><permission_profile type=\"managed\"><file_system type=\"restricted\"><entry access=\"read\"><special>:root</special></entry></file_system></permission_profile></filesystem>\n</environment_context>"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a072-77f1-8ca7-9cf323f862ac",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "ROOT_BUDGET"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a421-7ad2-8cbd-01683d0bf142",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "FOLLOWUP_1"
+            }
+          ]
+        }
+      ],
+      "request_metadata": {
+        "thread_id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "session_id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "x-codex-window-id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f:0",
+        "turn_id": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+        "x-codex-turn-metadata": "{\"installation_id\":\"30fdf3c9-bf88-4a65-932f-7bcb0d8001a0\",\"session_id\":\"01a1e1e3-a066-7a40-a53f-d5aa397bee2f\",\"thread_id\":\"01a1e1e3-a066-7a40-a53f-d5aa397bee2f\",\"agent_name\":\"/root\",\"turn_id\":\"01a1e1e3-a419-78f2-856f-c680db3404f8\",\"window_id\":\"01a1e1e3-a066-7a40-a53f-d5aa397bee2f:0\",\"window_number\":0,\"context_window_id\":\"01a1e1e3-a066-7a40-a53f-d5d630e4f0e0\",\"request_kind\":\"turn\",\"history_initialization\":\"new\",\"root_turn_id\":\"01a1e1e3-a419-78f2-856f-c680db3404f8\",\"sandbox\":\"seatbelt\",\"sandbox_mode\":\"read-only\",\"auto_review_enabled\":false,\"node_repl_auto_review_required\":true,\"node_repl_disabled\":false,\"turn_started_at_unix_ms\":1794791154715,\"analytics_enabled\":false,\"model\":\"gpt-6.1-sol\",\"reasoning_effort\":\"low\"}",
+        "root_turn_id": "01a1e1e3-a419-78f2-856f-c680db3404f8",
+        "x-codex-installation-id": "30fdf3c9-bf88-4a65-932f-7bcb0d8001a0"
+      },
+      "budget_messages": [
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a073-78d3-886d-bd382882d151",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 100 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a079-71b1-bd9e-87159366e9b0",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 90 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a423-7250-9795-18d7667f0817",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 0 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        }
+      ],
+      "tools": [],
+      "usage": {
+        "input_tokens": 100,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 0,
+        "total_tokens": 100
+      },
+      "sent": true,
+      "completed": 297546.637609125
+    },
+    {
+      "index": 5,
+      "role": "root",
+      "role_request": 4,
+      "arrived": 297546.965834916,
+      "route": "/v1/responses",
+      "authorization_present": false,
+      "user_inputs": [
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a070-74d1-9394-152353b81f53",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<environment_context>\n  <cwd><isolated-temp>/work</cwd>\n  <shell>zsh</shell>\n  <current_date>2026-11-16</current_date>\n  <timezone>Asia/Shanghai</timezone>\n  <filesystem><workspace_roots><root><isolated-temp>/work</root></workspace_roots><permission_profile type=\"managed\"><file_system type=\"restricted\"><entry access=\"read\"><special>:root</special></entry></file_system></permission_profile></filesystem>\n</environment_context>"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a072-77f1-8ca7-9cf323f862ac",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "ROOT_BUDGET"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a421-7ad2-8cbd-01683d0bf142",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "FOLLOWUP_1"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a7ce-70d2-a53d-c87ac403a3d5",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "FOLLOWUP_2"
+            }
+          ]
+        }
+      ],
+      "request_metadata": {
+        "x-codex-turn-metadata": "{\"installation_id\":\"30fdf3c9-bf88-4a65-932f-7bcb0d8001a0\",\"session_id\":\"01a1e1e3-a066-7a40-a53f-d5aa397bee2f\",\"thread_id\":\"01a1e1e3-a066-7a40-a53f-d5aa397bee2f\",\"agent_name\":\"/root\",\"turn_id\":\"01a1e1e3-a7cb-7231-b180-2ee452ef55c8\",\"window_id\":\"01a1e1e3-a066-7a40-a53f-d5aa397bee2f:0\",\"window_number\":0,\"context_window_id\":\"01a1e1e3-a066-7a40-a53f-d5d630e4f0e0\",\"request_kind\":\"turn\",\"history_initialization\":\"new\",\"root_turn_id\":\"01a1e1e3-a7cb-7231-b180-2ee452ef55c8\",\"sandbox\":\"seatbelt\",\"sandbox_mode\":\"read-only\",\"auto_review_enabled\":false,\"node_repl_auto_review_required\":true,\"node_repl_disabled\":false,\"turn_started_at_unix_ms\":1794791155659,\"analytics_enabled\":false,\"model\":\"gpt-6.1-sol\",\"reasoning_effort\":\"low\"}",
+        "turn_id": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8",
+        "session_id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "x-codex-window-id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f:0",
+        "thread_id": "01a1e1e3-a066-7a40-a53f-d5aa397bee2f",
+        "x-codex-installation-id": "30fdf3c9-bf88-4a65-932f-7bcb0d8001a0",
+        "root_turn_id": "01a1e1e3-a7cb-7231-b180-2ee452ef55c8"
+      },
+      "budget_messages": [
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a073-78d3-886d-bd382882d151",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 100 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a079-71b1-bd9e-87159366e9b0",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 90 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "msg_01a1e1e3-a423-7250-9795-18d7667f0817",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 0 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        }
+      ],
+      "tools": [],
+      "usage": {
+        "input_tokens": 100,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 0,
+        "total_tokens": 100
+      },
+      "sent": true,
+      "completed": 297547.576236458
+    }
+  ],
+  "max_simultaneous_fixture_requests": 2
+}

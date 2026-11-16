@@ -1,0 +1,29 @@
+{
+  "name": "silent-C1",
+  "context": 1,
+  "variant": "silent",
+  "status": "completed",
+  "known_suite_usage_before": 115606,
+  "planning_reserve": 40000,
+  "packet_bytes": 1914,
+  "score_passed": true,
+  "recall_errors": 0,
+  "factual_errors": 0,
+  "source_errors": 0,
+  "usage": {
+    "input_tokens": 22603,
+    "cached_input_tokens": 0,
+    "output_tokens": 321,
+    "reasoning_output_tokens": 92,
+    "total_tokens": 22924,
+    "uncached_input_plus_output": 22924
+  },
+  "complete_thread_usage": true,
+  "threads": {
+    "worker": "01a1e354-a395-7810-9112-ba2e3f191bf6"
+  },
+  "read_calls": 1,
+  "read_chars": 745,
+  "process_returncode": 0,
+  "wall_seconds": 19.0
+}

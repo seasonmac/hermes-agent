@@ -1,0 +1,24 @@
+{
+  "name": "replacement-C0",
+  "status": "completed",
+  "variant": "normal",
+  "context": 0,
+  "score_passed": true,
+  "recall_errors": 0,
+  "usage": {
+    "input_tokens": 12673,
+    "cached_input_tokens": 10112,
+    "output_tokens": 172,
+    "reasoning_output_tokens": 0,
+    "total_tokens": 12845,
+    "uncached_input_plus_output": 2733
+  },
+  "complete_thread_usage": true,
+  "threads": {
+    "worker": "01a1e347-7c05-7001-9949-d71fcbd6fb4b"
+  },
+  "read_calls": 0,
+  "read_chars": 0,
+  "process_returncode": 0,
+  "wall_seconds": 15.62
+}

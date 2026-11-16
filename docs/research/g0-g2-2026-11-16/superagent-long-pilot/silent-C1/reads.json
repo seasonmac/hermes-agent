@@ -1,0 +1,52 @@
+[
+  {
+    "thread_id": "01a1e354-a395-7810-9112-ba2e3f191bf6",
+    "call_id": "exec-d057b549-b880-450b-a431-e987b58e06de",
+    "ids": [
+      "E-A1",
+      "E-A2",
+      "E-A4",
+      "DATA-A"
+    ],
+    "result": {
+      "source_kind": "fixture_evidence",
+      "objects": [
+        {
+          "id": "E-A1",
+          "actor": "worker",
+          "text": "Candidate plan for T-A: use the latest constituent list for the entire historical sample. This is a proposal, not an accepted requirement.",
+          "refs": [
+            "T-A"
+          ]
+        },
+        {
+          "id": "E-A2",
+          "actor": "human",
+          "text": "For T-A I reject E-A1 because using the latest constituent list introduces survivorship bias. Use historical point-in-time constituent lists instead.",
+          "refs": [
+            "T-A",
+            "E-A1"
+          ]
+        },
+        {
+          "id": "E-A4",
+          "actor": "bot",
+          "text": "Data is ready for T-A. I suggest starting the backtest immediately.",
+          "refs": [
+            "T-A",
+            "E-A3"
+          ]
+        },
+        {
+          "id": "DATA-A",
+          "actor": "dataset_record",
+          "text": "Data coverage for T-A runs through 2022. This dataset record does not authorize executing a backtest.",
+          "refs": [
+            "T-A"
+          ]
+        }
+      ]
+    },
+    "chars": 745
+  }
+]

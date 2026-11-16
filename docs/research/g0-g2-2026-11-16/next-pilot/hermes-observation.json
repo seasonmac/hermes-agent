@@ -1,0 +1,107 @@
+{
+  "attach": {
+    "client_sha": "e7b9eb6c7d89f1df2b63ef4bbf68e986e88ac786",
+    "code": 0,
+    "gateway_sha": "18e659dfc93ef319771d51441573e3fa31b8f5b7",
+    "reason": null,
+    "state": "ready"
+  },
+  "connection_proxy_disabled_on_retry": true,
+  "create_conflict": "invalid_params",
+  "create_exact_retry_same_id": true,
+  "event_types": {
+    "agent.step": 2,
+    "message.complete": 2,
+    "message.delta": 2,
+    "message.start": 1,
+    "session.info": 8,
+    "session.usage": 2,
+    "thinking.delta": 8,
+    "tool.complete": 1,
+    "tool.generating": 1,
+    "tool.start": 1
+  },
+  "first_after_reconnect": {
+    "error_classification": null,
+    "execution_generation": 1,
+    "outcome": "completed",
+    "response_contains_marker": true,
+    "result_flags": {
+      "api_calls": 2,
+      "failed": false
+    },
+    "status": "terminal",
+    "usage": {
+      "input_tokens": 12219,
+      "output_tokens": 238,
+      "total_tokens": 12457
+    }
+  },
+  "first_at_queued_cancel": {
+    "execution_generation": 1,
+    "outcome": null,
+    "status": "started"
+  },
+  "first_before_second": {
+    "execution_generation": 1,
+    "outcome": null,
+    "status": "started"
+  },
+  "gateway_version": "0.23.1",
+  "initial_handshake": {
+    "failure": "InvalidMessage",
+    "rpc_sent": false,
+    "seconds": 1.73
+  },
+  "observed_date": "2026-11-16",
+  "prompt_conflict": "admission_conflict",
+  "prompt_exact_retry_same_admission": true,
+  "prompt_first": {
+    "execution_generation": null,
+    "outcome": null,
+    "status": "queued"
+  },
+  "provenance": "Transcribed from the completed probe stdout. Session ID hashed and profile path removed.",
+  "record_type": "redacted_observation",
+  "replay_before_resume": {
+    "events": 10,
+    "snapshot_required": false
+  },
+  "same_session_after_reconnect": true,
+  "second_before_cancel": {
+    "execution_generation": null,
+    "outcome": null,
+    "status": "queued"
+  },
+  "second_cancel": {
+    "execution_generation": null,
+    "outcome": "cancelled",
+    "status": "terminal"
+  },
+  "second_receipt": {
+    "execution_generation": null,
+    "outcome": null,
+    "status": "queued"
+  },
+  "seconds": 28.47,
+  "session_id_sha256": "bb98dd3651b99b0ff28c75fdc49ed25485e158ac1253bb7d2502d35e76387e5a",
+  "source": "tool",
+  "stable_logical_id": true,
+  "stage": "finished",
+  "third_before_cancel": {
+    "execution_generation": 2,
+    "outcome": null,
+    "status": "started"
+  },
+  "third_cancel": {
+    "execution_generation": 2,
+    "outcome": null,
+    "status": "started"
+  },
+  "third_terminal": {
+    "execution_generation": 2,
+    "outcome": "interrupted",
+    "status": "terminal"
+  },
+  "viewer_disconnected_with_first_last_observed_started": true
+}

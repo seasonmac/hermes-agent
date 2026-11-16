@@ -1,0 +1,62 @@
+{
+  "run_id": "software-B-2-persistent",
+  "usage_method": "Latest cumulative total_token_usage in each exact root/peer rollout. Sum one total per thread. Cached input and reasoning output are breakdown fields.",
+  "threads": [
+    {
+      "role": "root",
+      "thread_id": "01a1e050-abe3-71c1-a092-4b0e30f41c0b",
+      "turn_statuses": [
+        {
+          "id": "01a1e050-b2bf-7380-87cf-3dbc75332952",
+          "status": "completed"
+        }
+      ],
+      "rollout_usage": {
+        "outcome": "observed",
+        "token_count_event_count": 7,
+        "latest_total": {
+          "total_tokens": 118666,
+          "input_tokens": 117654,
+          "cached_input_tokens": 96256,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1012,
+          "reasoning_output_tokens": 127
+        }
+      }
+    },
+    {
+      "role": "peer",
+      "thread_id": "01a1e050-e957-70f2-873b-35dca6773dc1",
+      "turn_statuses": [
+        {
+          "id": "01a1e050-e965-71b2-aa1e-cbc12672c917",
+          "status": "completed"
+        }
+      ],
+      "rollout_usage": {
+        "outcome": "observed",
+        "token_count_event_count": 5,
+        "latest_total": {
+          "total_tokens": 110259,
+          "input_tokens": 110033,
+          "cached_input_tokens": 87040,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 226,
+          "reasoning_output_tokens": 36
+        }
+      }
+    }
+  ],
+  "peer_count": 1,
+  "root_to_peer_interactions": 2,
+  "peer_to_root_interactions": 2,
+  "all_session_usage_available": true,
+  "sum_observed_thread_totals": {
+    "total_tokens": 228925,
+    "input_tokens": 227687,
+    "cached_input_tokens": 183296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1238,
+    "reasoning_output_tokens": 163
+  }
+}

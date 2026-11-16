@@ -1,0 +1,35 @@
+[
+  {
+    "thread_id": "01a1e354-5221-79b0-b959-d0ff1805111e",
+    "call_id": "exec-22c80808-8513-4664-b38b-37dac64203ef",
+    "ids": [
+      "DATA-A",
+      "SUMMARY-A"
+    ],
+    "result": {
+      "source_kind": "fixture_evidence",
+      "objects": [
+        {
+          "id": "DATA-A",
+          "actor": "dataset_record",
+          "text": "Data coverage for T-A runs through 2022. This dataset record does not authorize executing a backtest.",
+          "refs": [
+            "T-A"
+          ]
+        },
+        {
+          "id": "SUMMARY-A",
+          "actor": "worker",
+          "text": "Current status summary for T-A: data coverage runs through 2020. The data-gap checklist is complete. Execution is paused.",
+          "refs": [
+            "T-A",
+            "DATA-A",
+            "R-A",
+            "E-A3"
+          ]
+        }
+      ]
+    },
+    "chars": 417
+  }
+]

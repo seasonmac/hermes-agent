@@ -1,0 +1,29 @@
+{
+  "name": "L32-C0",
+  "context": 0,
+  "variant": "normal",
+  "status": "completed",
+  "known_suite_usage_before": 0,
+  "planning_reserve": 40000,
+  "packet_bytes": 32768,
+  "score_passed": true,
+  "recall_errors": 0,
+  "factual_errors": 0,
+  "source_errors": 0,
+  "usage": {
+    "input_tokens": 16522,
+    "cached_input_tokens": 0,
+    "output_tokens": 167,
+    "reasoning_output_tokens": 0,
+    "total_tokens": 16689,
+    "uncached_input_plus_output": 16689
+  },
+  "complete_thread_usage": true,
+  "threads": {
+    "worker": "01a1e352-3508-7f41-8f55-4ed906525a5f"
+  },
+  "read_calls": 0,
+  "read_chars": 0,
+  "process_returncode": 0,
+  "wall_seconds": 19.73
+}

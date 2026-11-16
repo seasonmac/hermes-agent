@@ -1,0 +1,131 @@
+{
+  "router": {
+    "thread_id": "01a1e346-83d0-79d1-907f-55a230c0affa",
+    "usage_events": [
+      {
+        "timestamp": "2026-11-16T07:33:42.031Z",
+        "info": {
+          "total_token_usage": {
+            "input_tokens": 10418,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 10,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 10428
+          },
+          "last_token_usage": {
+            "input_tokens": 10418,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 10,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 10428
+          },
+          "last_usage_includes_reasoning": true,
+          "model_context_window": 475000
+        }
+      },
+      {
+        "timestamp": "2026-11-16T07:33:47.554Z",
+        "info": {
+          "total_token_usage": {
+            "input_tokens": 20965,
+            "cached_input_tokens": 10368,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 20,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 20985
+          },
+          "last_token_usage": {
+            "input_tokens": 10547,
+            "cached_input_tokens": 10368,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 10,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 10557
+          },
+          "last_usage_includes_reasoning": true,
+          "model_context_window": 475000
+        }
+      }
+    ],
+    "base_instructions_hash": "cbe05f8770fb9460073e3c1ff39feb07397c8083daf893dbed27626a7f18f37c",
+    "rollout_sha256": "4d61783d156e794e49c98e019269f3016ae92cdf0d488b939468c7f3afac9bb1"
+  },
+  "worker": {
+    "thread_id": "01a1e346-83d6-7b42-84d0-1adee291813f",
+    "usage_events": [
+      {
+        "timestamp": "2026-11-16T07:33:45.922Z",
+        "info": {
+          "total_token_usage": {
+            "input_tokens": 10371,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 5,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 10376
+          },
+          "last_token_usage": {
+            "input_tokens": 10371,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 5,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 10376
+          },
+          "last_usage_includes_reasoning": true,
+          "model_context_window": 475000
+        }
+      },
+      {
+        "timestamp": "2026-11-16T07:33:50.639Z",
+        "info": {
+          "total_token_usage": {
+            "input_tokens": 21546,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 71,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 21617
+          },
+          "last_token_usage": {
+            "input_tokens": 11175,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 66,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 11241
+          },
+          "last_usage_includes_reasoning": true,
+          "model_context_window": 475000
+        }
+      },
+      {
+        "timestamp": "2026-11-16T07:33:56.784Z",
+        "info": {
+          "total_token_usage": {
+            "input_tokens": 33057,
+            "cached_input_tokens": 11136,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 243,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 33300
+          },
+          "last_token_usage": {
+            "input_tokens": 11511,
+            "cached_input_tokens": 11136,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 172,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 11683
+          },
+          "last_usage_includes_reasoning": true,
+          "model_context_window": 475000
+        }
+      }
+    ],
+    "base_instructions_hash": "cbe05f8770fb9460073e3c1ff39feb07397c8083daf893dbed27626a7f18f37c",
+    "rollout_sha256": "54018013bc733dfd7b5311f0abaf9a435473f583030d9ac20b4bcabccb5d782b"
+  }
+}

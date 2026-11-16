@@ -1,0 +1,110 @@
+[
+  {
+    "threadId": "01a1e346-83d0-79d1-907f-55a230c0affa",
+    "turn": {
+      "id": "01a1e346-83d8-7162-a1c7-4a27b4a6231d",
+      "rootTurnId": "01a1e346-83d8-7162-a1c7-4a27b4a6231d",
+      "items": [
+        {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_070efdd000866fe4016afab1d5cba087d0bda5030292160861",
+          "text": "{\"target\":\"T-A\"}",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794814421922,
+          "completedAtMs": 1794814422026
+        }
+      ],
+      "itemsView": "summary",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1794814411,
+      "completedAt": 1794814422,
+      "durationMs": 10298
+    }
+  },
+  {
+    "threadId": "01a1e346-83d6-7b42-84d0-1adee291813f",
+    "turn": {
+      "id": "01a1e346-ac1c-75e0-ab8b-e37d068b2bfd",
+      "rootTurnId": "01a1e346-ac1c-75e0-ab8b-e37d068b2bfd",
+      "items": [
+        {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_0e327e6d9856ca47016afab1d92e1487d09f154ad5ef0a692d",
+          "text": "READY",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794814425516,
+          "completedAtMs": 1794814425917
+        }
+      ],
+      "itemsView": "summary",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1794814422,
+      "completedAt": 1794814425,
+      "durationMs": 3882
+    }
+  },
+  {
+    "threadId": "01a1e346-83d0-79d1-907f-55a230c0affa",
+    "turn": {
+      "id": "01a1e346-bb4e-7723-8aab-672168f179b6",
+      "rootTurnId": "01a1e346-bb4e-7723-8aab-672168f179b6",
+      "items": [
+        {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_070efdd000866fe4016afab1db522087d0b64446486d7a4ca2",
+          "text": "{\"target\":\"T-A\"}",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794814427485,
+          "completedAtMs": 1794814427548
+        }
+      ],
+      "itemsView": "summary",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1794814425,
+      "completedAt": 1794814427,
+      "durationMs": 1622
+    }
+  },
+  {
+    "threadId": "01a1e346-83d6-7b42-84d0-1adee291813f",
+    "turn": {
+      "id": "01a1e346-c1af-72c2-b54b-b55fe0bd4fc1",
+      "rootTurnId": "01a1e346-c1af-72c2-b54b-b55fe0bd4fc1",
+      "items": [
+        {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_0e327e6d9856ca47016afab1e05cc487d0b57dbc5374faf8ad",
+          "text": "{\n  \"task_id\": \"T-A\",\n  \"deliverable\": \"research_report\",\n  \"trading_allowed\": false,\n  \"list_policy\": \"historical_point_in_time\",\n  \"coverage_year\": 2022,\n  \"execution_allowed\": false,\n  \"progress\": \"gap_checklist_done_backtest_not_run\",\n  \"rejection_reason\": \"survivorship_bias\",\n  \"sources\": {\n    \"deliverable\": [\"T-A\"],\n    \"trading_allowed\": [\"T-A\"],\n    \"list_policy\": [\"E-A2\"],\n    \"coverage_year\": [\"D-A-v2\"],\n    \"execution_allowed\": [\"E-A3\", \"E-A5\"],\n    \"progress\": [\"R-A\"],\n    \"rejection_reason\": [\"E-A1\", \"E-A2\"]\n  }\n}",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794814432519,
+          "completedAtMs": 1794814436744
+        }
+      ],
+      "itemsView": "summary",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1794814427,
+      "completedAt": 1794814436,
+      "durationMs": 9220
+    }
+  }
+]

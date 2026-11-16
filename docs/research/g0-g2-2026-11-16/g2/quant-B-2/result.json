@@ -1,0 +1,19 @@
+{
+  "id": "quant-B-2",
+  "model_requested": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "returncode": 0,
+  "timeout": false,
+  "wall_seconds": 26.12,
+  "usage": [
+    {
+      "input_tokens": 32540,
+      "cached_input_tokens": 16000,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 373,
+      "reasoning_output_tokens": 95
+    }
+  ],
+  "event_count": 5,
+  "final_exists": true
+}

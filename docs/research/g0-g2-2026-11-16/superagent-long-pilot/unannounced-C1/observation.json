@@ -1,0 +1,29 @@
+{
+  "name": "unannounced-C1",
+  "context": 1,
+  "variant": "unannounced",
+  "status": "completed",
+  "known_suite_usage_before": 164062,
+  "planning_reserve": 40000,
+  "packet_bytes": 1705,
+  "score_passed": true,
+  "recall_errors": 0,
+  "factual_errors": 0,
+  "source_errors": 0,
+  "usage": {
+    "input_tokens": 22554,
+    "cached_input_tokens": 10880,
+    "output_tokens": 269,
+    "reasoning_output_tokens": 46,
+    "total_tokens": 22823,
+    "uncached_input_plus_output": 11943
+  },
+  "complete_thread_usage": true,
+  "threads": {
+    "worker": "01a1e355-6431-7ec0-996c-9275fb25a7ff"
+  },
+  "read_calls": 1,
+  "read_chars": 748,
+  "process_returncode": 0,
+  "wall_seconds": 16.63
+}

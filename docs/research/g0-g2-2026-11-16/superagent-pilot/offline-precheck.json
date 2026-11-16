@@ -1,0 +1,4 @@
+{
+  "passed": true,
+  "scope": "source references, packet availability, mock route selection, frozen hashes; no App Server or model exercised"
+}

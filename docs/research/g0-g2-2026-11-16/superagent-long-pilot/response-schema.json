@@ -1,0 +1,19 @@
+{
+  "task_id": "T-A",
+  "deliverable": "research_report|unknown",
+  "trading_allowed": "boolean|null",
+  "list_policy": "historical_point_in_time|latest|unknown",
+  "coverage_year": "integer|null",
+  "execution_allowed": "boolean|null",
+  "progress": "gap_checklist_done_backtest_not_run|unknown",
+  "rejection_reason": "survivorship_bias|unknown",
+  "sources": {
+    "deliverable": [],
+    "trading_allowed": [],
+    "list_policy": [],
+    "coverage_year": [],
+    "execution_allowed": [],
+    "progress": [],
+    "rejection_reason": []
+  }
+}

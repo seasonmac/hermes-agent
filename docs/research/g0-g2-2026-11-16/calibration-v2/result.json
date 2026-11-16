@@ -1,0 +1,8 @@
+{
+  "returncode": 0,
+  "timeout": false,
+  "wall_seconds": 35.62,
+  "purpose": "single native root+peer context-freeze calibration; not a quality comparison",
+  "budget_semantics": "Configured limit_tokens=80000; source uses weighted/provider budget units and post-response gating, not a hard total-token cap. Exhaustion and overshoot not exercised.",
+  "config_isolation": "per invocation overrides; no user configuration edits"
+}

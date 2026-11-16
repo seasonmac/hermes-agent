@@ -1,0 +1,1 @@
+Correction C1 from data steward: raw source also has published_at and revision timestamps, previously omitted by analyst; historical delisted price data is licensed and available. Sharpe is not independently recomputed. No fill-level trading data exists yet.

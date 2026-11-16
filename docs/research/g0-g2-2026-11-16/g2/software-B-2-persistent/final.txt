@@ -1,0 +1,7 @@
+Both E17 deliveries passed the check before either recorded completion. The unique constraint prevented a duplicate `processed` row after both deliveries had already called `charge`. The third delivery skipped because it saw the committed row.
+
+Use the stable `charge_intent_id` as the provider’s `Idempotency-Key`. Distinct legitimate charges on the same order must have distinct keys. Before calling the provider, atomically create or load a durable record keyed by intent and record the earliest possible submission time. Persist success before acknowledging and retain it through the seven-day redelivery window. A redelivery of a completed intent skips charging and acknowledges.
+
+For an unresolved intent, retry with the same key only if the request can reach the provider within 24 hours of the earliest possible submission. Use a conservative cutoff to allow for transit time. After the cutoff, hold the intent for reconciliation before issuing another charge. This cutoff is a design choice based on the provider’s retention window.
+
+Test concurrent E17 deliveries, two distinct intents for one order, and a crash after provider success but before the local success write. In the crash case, verify that a retry inside the window produces one charge and a redelivery after the cutoff makes no charge call. Verify that a completed intent skips and acknowledges a day-seven redelivery.

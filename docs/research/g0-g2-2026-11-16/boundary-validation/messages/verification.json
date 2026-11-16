@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "message_id": "m1",
+      "sender_arguments_match": true,
+      "journal_hash_valid": true,
+      "recipient_result_exact_match": true
+    },
+    {
+      "message_id": "m2",
+      "sender_arguments_match": true,
+      "journal_hash_valid": true,
+      "recipient_result_exact_match": true
+    },
+    {
+      "message_id": "m3",
+      "sender_arguments_match": true,
+      "journal_hash_valid": true,
+      "recipient_result_exact_match": true
+    }
+  ],
+  "both_turns_completed": true,
+  "native_peer_parent_verified": true,
+  "peer_final_contains_m3_hash_and_explicit_yes": true,
+  "scope": "Exact content delivery and expressed acceptance in a fixed three-message probe; not general semantic correctness or crash durability."
+}

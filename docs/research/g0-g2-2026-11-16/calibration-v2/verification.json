@@ -1,0 +1,9 @@
+{
+  "calibration": "passed skills/catalog and declared tool-surface checks",
+  "actual_total_tokens": 47258,
+  "model_usage_increments": 4,
+  "frozen_evidence_files": 5,
+  "quality_comparison": "not_run",
+  "budget_exhaustion": "not_tested",
+  "product_code_changes": "none by this task"
+}

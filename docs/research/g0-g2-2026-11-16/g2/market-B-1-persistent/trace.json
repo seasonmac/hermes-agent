@@ -1,0 +1,185 @@
+{
+  "run_id": "market-B-1-persistent",
+  "root_thread_id": "01a1e050-0121-7683-9cf6-26c103283cd4",
+  "model_requests_by_this_probe": 0,
+  "methods": [
+    "initialize",
+    "thread/read",
+    "thread/list (ancestor filter), if available",
+    "thread/items/list if needed"
+  ],
+  "primary_thread_usage_from_original_exec_ended_events": [
+    {
+      "input_tokens": 117690,
+      "cached_input_tokens": 83072,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 949,
+      "reasoning_output_tokens": 0
+    }
+  ],
+  "root": {
+    "thread_id": "01a1e050-0121-7683-9cf6-26c103283cd4",
+    "methods": [
+      "thread/read(includeTurns=true)"
+    ],
+    "turn_statuses": [
+      {
+        "id": "01a1e050-06d4-73d3-930d-e2bc7cf2c51b",
+        "status": "completed"
+      }
+    ],
+    "visible_item_types": {
+      "userMessage": 1,
+      "agentMessage": 2,
+      "subAgentActivity": 4,
+      "commandExecution": 1,
+      "collabAgentToolCall": 2
+    },
+    "sanitized_collaboration_projection": [
+      {
+        "turnId": "01a1e050-06d4-73d3-930d-e2bc7cf2c51b",
+        "id": "call_6e7f030e22254cecbfddf1602e20ae8a",
+        "type": "subAgentActivity",
+        "kind": "started",
+        "agentThreadId": "01a1e050-3c84-7052-a344-f5fe3b51d817",
+        "agentPath": "/root/peer",
+        "model": "gpt-6.1-sol",
+        "reasoningEffort": "medium"
+      },
+      {
+        "turnId": "01a1e050-06d4-73d3-930d-e2bc7cf2c51b",
+        "id": "call_402e978a61b849c4a61e81189861a6b8",
+        "type": "subAgentActivity",
+        "kind": "interacted",
+        "agentThreadId": "01a1e050-3c84-7052-a344-f5fe3b51d817",
+        "agentPath": "/root/peer",
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e050-06d4-73d3-930d-e2bc7cf2c51b",
+        "id": "call_63ca4a8fd9bc40b99463c99964791c04",
+        "type": "collabAgentToolCall",
+        "tool": "wait",
+        "status": "completed",
+        "senderThreadId": "01a1e050-0121-7683-9cf6-26c103283cd4",
+        "receiverThreadIds": [],
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e050-06d4-73d3-930d-e2bc7cf2c51b",
+        "id": "call_1fa69c6d3ac84c9d9a64cd5c1a9ad9f2",
+        "type": "subAgentActivity",
+        "kind": "interacted",
+        "agentThreadId": "01a1e050-3c84-7052-a344-f5fe3b51d817",
+        "agentPath": "/root/peer",
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e050-06d4-73d3-930d-e2bc7cf2c51b",
+        "id": "subagent-completed-01a1e050-3c95-7de3-8c61-06931fc3fff3",
+        "type": "subAgentActivity",
+        "kind": "completed",
+        "agentThreadId": "01a1e050-3c84-7052-a344-f5fe3b51d817",
+        "agentPath": "/root/peer",
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e050-06d4-73d3-930d-e2bc7cf2c51b",
+        "id": "call_9e5154cb4e1c47ee998f7d9ad7e3631a",
+        "type": "collabAgentToolCall",
+        "tool": "wait",
+        "status": "completed",
+        "senderThreadId": "01a1e050-0121-7683-9cf6-26c103283cd4",
+        "receiverThreadIds": [],
+        "model": null,
+        "reasoningEffort": null
+      }
+    ],
+    "rollout_usage": {
+      "outcome": "observed",
+      "token_count_event_count": 7,
+      "latest_total": {
+        "total_tokens": 118639,
+        "input_tokens": 117690,
+        "cached_input_tokens": 83072,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 949,
+        "reasoning_output_tokens": 0
+      }
+    }
+  },
+  "descendant_lookup": "succeeded",
+  "children": [
+    {
+      "thread_id": "01a1e050-3c84-7052-a344-f5fe3b51d817",
+      "methods": [
+        "thread/read(includeTurns=true)"
+      ],
+      "turn_statuses": [
+        {
+          "id": "01a1e050-3c95-7de3-8c61-06931fc3fff3",
+          "status": "completed"
+        }
+      ],
+      "visible_item_types": {
+        "reasoning": 1,
+        "collabAgentToolCall": 2,
+        "subAgentActivity": 1,
+        "agentMessage": 1
+      },
+      "sanitized_collaboration_projection": [
+        {
+          "turnId": "01a1e050-3c95-7de3-8c61-06931fc3fff3",
+          "id": "call_5aabc855d3634066bc6f322b3cbc43d4",
+          "type": "collabAgentToolCall",
+          "tool": "wait",
+          "status": "completed",
+          "senderThreadId": "01a1e050-3c84-7052-a344-f5fe3b51d817",
+          "receiverThreadIds": [],
+          "model": null,
+          "reasoningEffort": null
+        },
+        {
+          "turnId": "01a1e050-3c95-7de3-8c61-06931fc3fff3",
+          "id": "call_c616d145683a4e30b2352f8cfa4c09c1",
+          "type": "subAgentActivity",
+          "kind": "interacted",
+          "agentThreadId": "01a1e050-0121-7683-9cf6-26c103283cd4",
+          "agentPath": "/root",
+          "model": null,
+          "reasoningEffort": null
+        },
+        {
+          "turnId": "01a1e050-3c95-7de3-8c61-06931fc3fff3",
+          "id": "call_bb22e99c1f164da2b65e4e7a9fca4b3b",
+          "type": "collabAgentToolCall",
+          "tool": "wait",
+          "status": "completed",
+          "senderThreadId": "01a1e050-3c84-7052-a344-f5fe3b51d817",
+          "receiverThreadIds": [],
+          "model": null,
+          "reasoningEffort": null
+        }
+      ],
+      "rollout_usage": {
+        "outcome": "observed",
+        "token_count_event_count": 4,
+        "latest_total": {
+          "total_tokens": 88519,
+          "input_tokens": 88317,
+          "cached_input_tokens": 65664,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 202,
+          "reasoning_output_tokens": 16
+        }
+      }
+    }
+  ],
+  "projected_native_tool_message_payload_count": 0,
+  "verification_boundary": "No readable peer-addressed native tool argument payload from this App Server history projection. Agent text and spawn metadata alone do not independently prove a directly addressed challenge/reply exchange.",
+  "outcome": "read_completed"
+}

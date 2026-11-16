@@ -1,0 +1,195 @@
+{
+  "run_id": "quant-B-2-persistent",
+  "root_thread_id": "01a1e050-b669-7f83-8d41-9f9cde1b8e83",
+  "model_requests_by_this_probe": 0,
+  "methods": [
+    "initialize",
+    "thread/read",
+    "thread/list (ancestor filter), if available",
+    "thread/items/list if needed"
+  ],
+  "primary_thread_usage_from_original_exec_ended_events": [
+    {
+      "input_tokens": 117595,
+      "cached_input_tokens": 113024,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 972,
+      "reasoning_output_tokens": 7
+    }
+  ],
+  "root": {
+    "thread_id": "01a1e050-b669-7f83-8d41-9f9cde1b8e83",
+    "methods": [
+      "thread/read(includeTurns=true)"
+    ],
+    "turn_statuses": [
+      {
+        "id": "01a1e050-bd52-7cb0-91cf-917982bea7d6",
+        "status": "completed"
+      }
+    ],
+    "visible_item_types": {
+      "userMessage": 1,
+      "agentMessage": 2,
+      "subAgentActivity": 4,
+      "commandExecution": 1,
+      "collabAgentToolCall": 2,
+      "reasoning": 1
+    },
+    "sanitized_collaboration_projection": [
+      {
+        "turnId": "01a1e050-bd52-7cb0-91cf-917982bea7d6",
+        "id": "call_38b2b7be3bde4dae9f6e6e872c689a77",
+        "type": "subAgentActivity",
+        "kind": "started",
+        "agentThreadId": "01a1e051-06a2-7dd3-917c-bc8742920080",
+        "agentPath": "/root/peer",
+        "model": "gpt-6.1-sol",
+        "reasoningEffort": "medium"
+      },
+      {
+        "turnId": "01a1e050-bd52-7cb0-91cf-917982bea7d6",
+        "id": "call_cf1d2984b38b4e809d671870ca0d9b59",
+        "type": "subAgentActivity",
+        "kind": "interacted",
+        "agentThreadId": "01a1e051-06a2-7dd3-917c-bc8742920080",
+        "agentPath": "/root/peer",
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e050-bd52-7cb0-91cf-917982bea7d6",
+        "id": "call_820e5aaac54c40f885bc119b1d299157",
+        "type": "collabAgentToolCall",
+        "tool": "wait",
+        "status": "completed",
+        "senderThreadId": "01a1e050-b669-7f83-8d41-9f9cde1b8e83",
+        "receiverThreadIds": [],
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e050-bd52-7cb0-91cf-917982bea7d6",
+        "id": "call_fe5e5a0a1b9f4045aae58d5c1789e99f",
+        "type": "subAgentActivity",
+        "kind": "interacted",
+        "agentThreadId": "01a1e051-06a2-7dd3-917c-bc8742920080",
+        "agentPath": "/root/peer",
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e050-bd52-7cb0-91cf-917982bea7d6",
+        "id": "subagent-completed-01a1e051-06af-7f30-a76d-3db036cbb905",
+        "type": "subAgentActivity",
+        "kind": "completed",
+        "agentThreadId": "01a1e051-06a2-7dd3-917c-bc8742920080",
+        "agentPath": "/root/peer",
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e050-bd52-7cb0-91cf-917982bea7d6",
+        "id": "call_251b0b994c0d4b94980554102169f744",
+        "type": "collabAgentToolCall",
+        "tool": "wait",
+        "status": "completed",
+        "senderThreadId": "01a1e050-b669-7f83-8d41-9f9cde1b8e83",
+        "receiverThreadIds": [],
+        "model": null,
+        "reasoningEffort": null
+      },
+      {
+        "turnId": "01a1e050-bd52-7cb0-91cf-917982bea7d6",
+        "type": "agentMessage",
+        "id": "msg_0e7bb2f3565b5d92016af9efefe56087d2aa7700b6777b914f",
+        "text_excerpts": [
+          "The correction confirms that delisted price histories are available.",
+          "The peer review identified a separate gap: reconstructing membership still requires verifying dated listing, eligibility, and trading-status records and accounting for delisting outcomes."
+        ],
+        "text_role": "model_statement_only"
+      }
+    ],
+    "rollout_usage": {
+      "outcome": "observed",
+      "token_count_event_count": 7,
+      "latest_total": {
+        "total_tokens": 118567,
+        "input_tokens": 117595,
+        "cached_input_tokens": 113024,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 972,
+        "reasoning_output_tokens": 7
+      }
+    }
+  },
+  "descendant_lookup": "succeeded",
+  "children": [
+    {
+      "thread_id": "01a1e051-06a2-7dd3-917c-bc8742920080",
+      "methods": [
+        "thread/read(includeTurns=true)"
+      ],
+      "turn_statuses": [
+        {
+          "id": "01a1e051-06af-7f30-a76d-3db036cbb905",
+          "status": "completed"
+        }
+      ],
+      "visible_item_types": {
+        "collabAgentToolCall": 2,
+        "subAgentActivity": 1,
+        "agentMessage": 1
+      },
+      "sanitized_collaboration_projection": [
+        {
+          "turnId": "01a1e051-06af-7f30-a76d-3db036cbb905",
+          "id": "call_2f3eb727117c46ed8b8ee452412b98aa",
+          "type": "collabAgentToolCall",
+          "tool": "wait",
+          "status": "completed",
+          "senderThreadId": "01a1e051-06a2-7dd3-917c-bc8742920080",
+          "receiverThreadIds": [],
+          "model": null,
+          "reasoningEffort": null
+        },
+        {
+          "turnId": "01a1e051-06af-7f30-a76d-3db036cbb905",
+          "id": "call_956986b663e14042b7a4c7aaa248cbe0",
+          "type": "subAgentActivity",
+          "kind": "interacted",
+          "agentThreadId": "01a1e050-b669-7f83-8d41-9f9cde1b8e83",
+          "agentPath": "/root",
+          "model": null,
+          "reasoningEffort": null
+        },
+        {
+          "turnId": "01a1e051-06af-7f30-a76d-3db036cbb905",
+          "id": "call_e252590ab73a4b2b879b2d31a0ae49b1",
+          "type": "collabAgentToolCall",
+          "tool": "wait",
+          "status": "completed",
+          "senderThreadId": "01a1e051-06a2-7dd3-917c-bc8742920080",
+          "receiverThreadIds": [],
+          "model": null,
+          "reasoningEffort": null
+        }
+      ],
+      "rollout_usage": {
+        "outcome": "observed",
+        "token_count_event_count": 4,
+        "latest_total": {
+          "total_tokens": 88435,
+          "input_tokens": 88323,
+          "cached_input_tokens": 65408,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 112,
+          "reasoning_output_tokens": 0
+        }
+      }
+    }
+  ],
+  "projected_native_tool_message_payload_count": 0,
+  "verification_boundary": "No readable peer-addressed native tool argument payload from this App Server history projection. Agent text and spawn metadata alone do not independently prove a directly addressed challenge/reply exchange.",
+  "outcome": "read_completed"
+}

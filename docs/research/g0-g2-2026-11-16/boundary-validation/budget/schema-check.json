@@ -1,0 +1,119 @@
+{
+  "binary": "codex-cli 0.169.0-alpha.11.1",
+  "command": "codex app-server generate-json-schema --experimental --out <isolated-temp>",
+  "exit": 0,
+  "validated_before_rpc": true,
+  "schemas": [
+    {
+      "file": "ThreadStartParams.json",
+      "sha256": "80a40a7fac15b4bf70efb7f893fb353acc0a0d30c68f54aee4f01923deca85de",
+      "required": [],
+      "properties": [
+        "allowProviderModelFallback",
+        "approvalPolicy",
+        "approvalsReviewer",
+        "baseInstructions",
+        "config",
+        "cwd",
+        "daybreakEnabled",
+        "developerInstructions",
+        "dynamicTools",
+        "environments",
+        "ephemeral",
+        "experimentalRawEvents",
+        "historyMode",
+        "mockExperimentalField",
+        "model",
+        "modelProvider",
+        "multiAgentMode",
+        "permissions",
+        "personality",
+        "projectId",
+        "runtimeWorkspaceRoots",
+        "sandbox",
+        "selectedCapabilityRoots",
+        "serviceName",
+        "serviceTier",
+        "sessionStartSource",
+        "threadSource"
+      ]
+    },
+    {
+      "file": "TurnStartParams.json",
+      "sha256": "b64078d4310cb1fa591c7f63344bed6b8c08d216f9f81d86c00045136187a2b6",
+      "required": [
+        "input",
+        "threadId"
+      ],
+      "properties": [
+        "additionalContext",
+        "approvalPolicy",
+        "approvalsReviewer",
+        "clientUserMessageId",
+        "collaborationMode",
+        "cwd",
+        "cyberAccessProgram",
+        "disabledPluginIds",
+        "effort",
+        "environments",
+        "input",
+        "model",
+        "multiAgentMode",
+        "outputSchema",
+        "parentTurnId",
+        "permissions",
+        "personality",
+        "responsesapiClientMetadata",
+        "responsesapiClientMetadataPatch",
+        "rootTurnId",
+        "runtimeWorkspaceRoots",
+        "sandboxPolicy",
+        "serviceTier",
+        "serviceTierForTurn",
+        "summary",
+        "threadId",
+        "toolOutput",
+        "turnTrigger"
+      ]
+    },
+    {
+      "file": "ThreadReadParams.json",
+      "sha256": "dfe040c6ac71d30795b8be3f3ff232e66f362a37f883b491e5d1ea367f470db4",
+      "required": [
+        "threadId"
+      ],
+      "properties": [
+        "includeTurns",
+        "threadId"
+      ]
+    },
+    {
+      "file": "ThreadResumeParams.json",
+      "sha256": "462e7749c0ba1d3355850f495d9a7fb7763edae624ab185dbc9bc59aaf799655",
+      "required": [
+        "threadId"
+      ],
+      "properties": [
+        "approvalPolicy",
+        "approvalsReviewer",
+        "baseInstructions",
+        "config",
+        "cwd",
+        "developerInstructions",
+        "excludeTurns",
+        "history",
+        "initialTurnsPage",
+        "model",
+        "modelProvider",
+        "path",
+        "permissions",
+        "personality",
+        "runtimeWorkspaceRoots",
+        "sandbox",
+        "serviceTier",
+        "threadId"
+      ]
+    }
+  ],
+  "note": "Actual binary protocol schema; config separately checked by --strict-config --print-startup-config for each fixture. No source HEAD compatibility assumption."
+}

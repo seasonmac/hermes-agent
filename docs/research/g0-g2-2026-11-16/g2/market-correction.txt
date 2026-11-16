@@ -1,0 +1,1 @@
+Correction C1 with source definitions: P counts cumulative registered accounts globally, including free and inactive. Q actually reports 400,000 monthly active accounts, NOT paid seats; region EU only; sampled estimate ±15%, not audited. No common baseline period or paid conversion rate is provided.

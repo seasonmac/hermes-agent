@@ -1,0 +1,9 @@
+**Decision memo**
+
+Hold the proposal’s claims that paid users tripled, the market grew 30%, and TAM is $120 million per month. The supplied evidence supports none of these estimates.
+
+P’s October press release reports 1.2 million cumulative registered accounts worldwide, including free and inactive accounts. Under correction C1, Q’s November note estimates 400,000 monthly active accounts in the EU, with a stated ±15% margin. The estimate is unaudited and gives no paid-seat count. The figures differ in geography and account definition, and the sources provide no common baseline period or paid conversion rate. R cites only P, which supplies no market growth series.
+
+Before revisiting the proposal, obtain comparable paid-user counts for two defined periods in the same geography, a market growth series with a defined scope and period, and an independently supported count of eligible buyers or seats with a price tied to that unit. Multiplying cumulative registrations by an assumed $100 monthly price does not establish TAM.
+
+**Post-correction self-review.** I corrected my initial reading of Q and checked each proposal claim against the revised definitions, geography, and available time periods. The evidence establishes neither a paid-user trend nor a defensible TAM.

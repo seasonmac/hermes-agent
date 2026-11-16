@@ -1,0 +1,135 @@
+{
+  "source_sha256": "8a277760dee24cced450a8f6583b001bd76aeac00702c0c1b994f70e7a64e1f0",
+  "scope": "offline attribution of recorded requests; control candidates are not demonstrated removable overhead",
+  "groups": {
+    "control_candidates": {
+      "requests": [
+        {
+          "role": "root",
+          "usage_event_index": 0,
+          "action": "spawn",
+          "timestamp": "2026-11-16T01:06:13.612Z",
+          "input_tokens": 12176,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 177,
+          "reasoning_output_tokens": 0,
+          "total_tokens": 12353
+        },
+        {
+          "role": "root",
+          "usage_event_index": 3,
+          "action": "wait",
+          "timestamp": "2026-11-16T01:06:36.751Z",
+          "input_tokens": 12885,
+          "cached_input_tokens": 12672,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 21,
+          "reasoning_output_tokens": 0,
+          "total_tokens": 12906
+        },
+        {
+          "role": "peer",
+          "usage_event_index": 0,
+          "action": "receive",
+          "timestamp": "2026-11-16T01:06:26.438Z",
+          "input_tokens": 11670,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 147,
+          "reasoning_output_tokens": 107,
+          "total_tokens": 11817
+        }
+      ],
+      "sums": {
+        "input_tokens": 36731,
+        "cached_input_tokens": 12672,
+        "output_tokens": 345,
+        "total_tokens": 37076,
+        "uncached_input_plus_output": 24404
+      }
+    },
+    "message_generation": {
+      "requests": [
+        {
+          "role": "root",
+          "usage_event_index": 1,
+          "action": "m1",
+          "timestamp": "2026-11-16T01:06:29.281Z",
+          "input_tokens": 12374,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 62,
+          "reasoning_output_tokens": 0,
+          "total_tokens": 12436
+        },
+        {
+          "role": "root",
+          "usage_event_index": 2,
+          "action": "m3",
+          "timestamp": "2026-11-16T01:06:33.290Z",
+          "input_tokens": 12694,
+          "cached_input_tokens": 12160,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 102,
+          "reasoning_output_tokens": 0,
+          "total_tokens": 12796
+        },
+        {
+          "role": "peer",
+          "usage_event_index": 1,
+          "action": "m2",
+          "timestamp": "2026-11-16T01:06:33.238Z",
+          "input_tokens": 12070,
+          "cached_input_tokens": 11648,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 71,
+          "reasoning_output_tokens": 0,
+          "total_tokens": 12141
+        }
+      ],
+      "sums": {
+        "input_tokens": 37138,
+        "cached_input_tokens": 23808,
+        "output_tokens": 235,
+        "total_tokens": 37373,
+        "uncached_input_plus_output": 13565
+      }
+    },
+    "final_answers": {
+      "requests": [
+        {
+          "role": "root",
+          "usage_event_index": 4,
+          "action": "root_final",
+          "timestamp": "2026-11-16T01:06:40.532Z",
+          "input_tokens": 13041,
+          "cached_input_tokens": 12160,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 109,
+          "reasoning_output_tokens": 0,
+          "total_tokens": 13150
+        },
+        {
+          "role": "peer",
+          "usage_event_index": 2,
+          "action": "peer_final",
+          "timestamp": "2026-11-16T01:06:36.740Z",
+          "input_tokens": 12432,
+          "cached_input_tokens": 11904,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 79,
+          "reasoning_output_tokens": 0,
+          "total_tokens": 12511
+        }
+      ],
+      "sums": {
+        "input_tokens": 25473,
+        "cached_input_tokens": 24064,
+        "output_tokens": 188,
+        "total_tokens": 25661,
+        "uncached_input_plus_output": 1597
+      }
+    }
+  }
+}

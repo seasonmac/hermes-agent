@@ -1,0 +1,1215 @@
+{
+  "case": "cached",
+  "limit_tokens": 100,
+  "real_model_calls": 0,
+  "actual_model_cost": 0,
+  "strict_config": {
+    "exit": 0,
+    "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"/private/tmp\" (codex_home: AbsolutePathBuf(\"<isolated-temp>/codex-home\"))\n",
+    "stdout": "{\"appServerVersion\":\"0.169.0-alpha.11.1\",\"configRequirements\":{\"supportsIndependentSpeedModes\":true,\"requirements\":null}}\n"
+  },
+  "root_thread_id": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+  "stages": [
+    {
+      "stage": 0,
+      "provider_requests_before": 0,
+      "provider_requests_after": 1,
+      "result": {
+        "rpc": {
+          "id": 3,
+          "result": {
+            "turn": {
+              "id": "01a1e1e1-edb6-7c31-9804-c15a652fc063",
+              "rootTurnId": "01a1e1e1-edb6-7c31-9804-c15a652fc063",
+              "items": [],
+              "itemsView": "notLoaded",
+              "status": "inProgress",
+              "error": null,
+              "startedAt": null,
+              "completedAt": null,
+              "durationMs": null
+            }
+          }
+        },
+        "terminal": {
+          "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+          "turn": {
+            "id": "01a1e1e1-edb6-7c31-9804-c15a652fc063",
+            "rootTurnId": "01a1e1e1-edb6-7c31-9804-c15a652fc063",
+            "items": [
+              {
+                "type": "agentMessage",
+                "moderation": null,
+                "id": "msg_fixture",
+                "text": "CACHED_OK",
+                "phase": null,
+                "memoryCitation": null,
+                "delivery": null,
+                "questions": null,
+                "startedAtMs": 1794791042498,
+                "completedAtMs": 1794791042498
+              }
+            ],
+            "itemsView": "summary",
+            "status": "completed",
+            "error": null,
+            "startedAt": 1794791042,
+            "completedAt": 1794791042,
+            "durationMs": 12
+          }
+        }
+      }
+    },
+    {
+      "stage": 1,
+      "provider_requests_before": 1,
+      "provider_requests_after": 2,
+      "result": {
+        "rpc": {
+          "id": 4,
+          "result": {
+            "turn": {
+              "id": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd",
+              "rootTurnId": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd",
+              "items": [],
+              "itemsView": "notLoaded",
+              "status": "inProgress",
+              "error": null,
+              "startedAt": null,
+              "completedAt": null,
+              "durationMs": null
+            }
+          }
+        },
+        "terminal": {
+          "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+          "turn": {
+            "id": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd",
+            "rootTurnId": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd",
+            "items": [],
+            "itemsView": "notLoaded",
+            "status": "failed",
+            "error": {
+              "message": "budget reached",
+              "codexErrorInfo": "sessionBudgetExceeded",
+              "additionalDetails": null,
+              "misalignment": null
+            },
+            "startedAt": 1794791042,
+            "completedAt": 1794791042,
+            "durationMs": 18
+          }
+        }
+      }
+    },
+    {
+      "stage": 2,
+      "provider_requests_before": 2,
+      "provider_requests_after": 3,
+      "result": {
+        "rpc": {
+          "id": 5,
+          "result": {
+            "turn": {
+              "id": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0",
+              "rootTurnId": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0",
+              "items": [],
+              "itemsView": "notLoaded",
+              "status": "inProgress",
+              "error": null,
+              "startedAt": null,
+              "completedAt": null,
+              "durationMs": null
+            }
+          }
+        },
+        "terminal": {
+          "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+          "turn": {
+            "id": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0",
+            "rootTurnId": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0",
+            "items": [],
+            "itemsView": "notLoaded",
+            "status": "failed",
+            "error": {
+              "message": "budget reached",
+              "codexErrorInfo": "sessionBudgetExceeded",
+              "additionalDetails": null,
+              "misalignment": null
+            },
+            "startedAt": 1794791043,
+            "completedAt": 1794791043,
+            "durationMs": 17
+          }
+        }
+      }
+    }
+  ],
+  "tool_calls_received": 0,
+  "events": [
+    {
+      "method": "remoteControl/status/changed",
+      "params": {
+        "status": "disabled",
+        "serverName": "seasondeMac-Mini.local",
+        "installationId": "70c43029-bac1-4be3-9afb-47d323cdd5e9",
+        "environmentId": null
+      },
+      "emittedAtMs": 1794791042480
+    },
+    {
+      "method": "thread/started",
+      "params": {
+        "thread": {
+          "id": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+          "environments": [
+            {
+              "environmentId": "local",
+              "cwd": "<isolated-temp>/work",
+              "runtimeWorkspaceRoots": [
+                "<isolated-temp>/work"
+              ]
+            }
+          ],
+          "extra": null,
+          "sessionId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+          "forkedFromId": null,
+          "attachedToThreadId": null,
+          "parentThreadId": null,
+          "preview": "",
+          "ephemeral": false,
+          "section": null,
+          "sectionEnteredAt": null,
+          "projectId": null,
+          "historyMode": "paginated",
+          "modelProvider": "budget_fixture",
+          "model": "gpt-6.1-sol",
+          "reasoningEffort": null,
+          "createdAt": 1794791042,
+          "updatedAt": 1794791042,
+          "recencyAt": 1794791042,
+          "status": {
+            "type": "idle"
+          },
+          "path": "<isolated-temp>/codex-home/sessions/2026/11/16/rollout-2026-11-16T09-04-02-01a1e1e1-edb1-7b32-a326-fdb95458633d.jsonl",
+          "cwd": "<isolated-temp>/work",
+          "cliVersion": "0.169.0-alpha.11.1",
+          "originator": "budget_boundary_fixture",
+          "source": "vscode",
+          "canAcceptDirectInput": true,
+          "threadSource": null,
+          "agentNickname": null,
+          "agentRole": null,
+          "gitInfo": null,
+          "name": null,
+          "daybreakEnabled": null,
+          "turns": []
+        }
+      },
+      "emittedAtMs": 1794791042486
+    },
+    {
+      "method": "warning",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "message": "Under-development features enabled: rollout_budget. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in <isolated-temp>/codex-home/config.toml."
+      },
+      "emittedAtMs": 1794791042486
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1794791042491
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turn": {
+          "id": "01a1e1e1-edb6-7c31-9804-c15a652fc063",
+          "rootTurnId": "01a1e1e1-edb6-7c31-9804-c15a652fc063",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": 1794791042,
+          "completedAt": null,
+          "durationMs": null
+        }
+      },
+      "emittedAtMs": 1794791042491
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a1e1e1-edbe-7481-bb87-5d278e648dec",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "ROOT_BUDGET",
+              "text_elements": []
+            }
+          ],
+          "startedAtMs": 1794791042494,
+          "completedAtMs": null
+        },
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-edb6-7c31-9804-c15a652fc063",
+        "startedAtMs": 1794791042494
+      },
+      "emittedAtMs": 1794791042494
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a1e1e1-edbe-7481-bb87-5d278e648dec",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "ROOT_BUDGET",
+              "text_elements": []
+            }
+          ],
+          "startedAtMs": 1794791042494,
+          "completedAtMs": 1794791042494
+        },
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-edb6-7c31-9804-c15a652fc063",
+        "contentTokenCount": null,
+        "completedAtMs": 1794791042494
+      },
+      "emittedAtMs": 1794791042495
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_fixture",
+          "text": "CACHED_OK",
+          "phase": null,
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794791042498,
+          "completedAtMs": null
+        },
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-edb6-7c31-9804-c15a652fc063",
+        "startedAtMs": 1794791042498
+      },
+      "emittedAtMs": 1794791042498
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_fixture",
+          "text": "CACHED_OK",
+          "phase": null,
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794791042498,
+          "completedAtMs": 1794791042498
+        },
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-edb6-7c31-9804-c15a652fc063",
+        "contentTokenCount": null,
+        "completedAtMs": 1794791042498
+      },
+      "emittedAtMs": 1794791042498
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-edb6-7c31-9804-c15a652fc063",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 1005,
+            "inputTokens": 1000,
+            "cachedInputTokens": 990,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 5,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 1005,
+            "inputTokens": 1000,
+            "cachedInputTokens": 990,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 5,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1794791042499
+    },
+    {
+      "method": "account/rateLimits/updated",
+      "params": {
+        "rateLimits": {
+          "limitId": "codex",
+          "limitName": null,
+          "normalModelSlug": null,
+          "primary": null,
+          "secondary": null,
+          "credits": null,
+          "individualLimit": null,
+          "spendControlReached": null,
+          "planType": null,
+          "rateLimitReachedType": null
+        }
+      },
+      "emittedAtMs": 1794791042499
+    },
+    {
+      "method": "thread/readState/changed",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "readState": {
+          "firstUnread": {
+            "type": "turn",
+            "turnId": "01a1e1e1-edb6-7c31-9804-c15a652fc063"
+          },
+          "revision": "1e203fde-1cbb-4302-bb75-a937a042668d"
+        }
+      },
+      "emittedAtMs": 1794791042500
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "status": {
+          "type": "idle"
+        }
+      },
+      "emittedAtMs": 1794791042500
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turn": {
+          "id": "01a1e1e1-edb6-7c31-9804-c15a652fc063",
+          "rootTurnId": "01a1e1e1-edb6-7c31-9804-c15a652fc063",
+          "items": [
+            {
+              "type": "agentMessage",
+              "moderation": null,
+              "id": "msg_fixture",
+              "text": "CACHED_OK",
+              "phase": null,
+              "memoryCitation": null,
+              "delivery": null,
+              "questions": null,
+              "startedAtMs": 1794791042498,
+              "completedAtMs": 1794791042498
+            }
+          ],
+          "itemsView": "summary",
+          "status": "completed",
+          "error": null,
+          "startedAt": 1794791042,
+          "completedAt": 1794791042,
+          "durationMs": 12
+        }
+      },
+      "emittedAtMs": 1794791042500
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1794791042819
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turn": {
+          "id": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd",
+          "rootTurnId": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": 1794791042,
+          "completedAt": null,
+          "durationMs": null
+        }
+      },
+      "emittedAtMs": 1794791042819
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a1e1e1-ef07-7321-8ffe-50dd1c1ba47a",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "FOLLOWUP_1",
+              "text_elements": []
+            }
+          ],
+          "startedAtMs": 1794791042824,
+          "completedAtMs": null
+        },
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd",
+        "startedAtMs": 1794791042824
+      },
+      "emittedAtMs": 1794791042824
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a1e1e1-ef07-7321-8ffe-50dd1c1ba47a",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "FOLLOWUP_1",
+              "text_elements": []
+            }
+          ],
+          "startedAtMs": 1794791042824,
+          "completedAtMs": 1794791042824
+        },
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd",
+        "contentTokenCount": null,
+        "completedAtMs": 1794791042824
+      },
+      "emittedAtMs": 1794791042825
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_fixture",
+          "text": "CACHED_OK",
+          "phase": null,
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794791042830,
+          "completedAtMs": null
+        },
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd",
+        "startedAtMs": 1794791042830
+      },
+      "emittedAtMs": 1794791042830
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_fixture",
+          "text": "CACHED_OK",
+          "phase": null,
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794791042830,
+          "completedAtMs": 1794791042830
+        },
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd",
+        "contentTokenCount": null,
+        "completedAtMs": 1794791042830
+      },
+      "emittedAtMs": 1794791042831
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 1091,
+            "inputTokens": 1086,
+            "cachedInputTokens": 990,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 5,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 86,
+            "inputTokens": 86,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 0,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1794791042832
+    },
+    {
+      "method": "account/rateLimits/updated",
+      "params": {
+        "rateLimits": {
+          "limitId": "codex",
+          "limitName": null,
+          "normalModelSlug": null,
+          "primary": null,
+          "secondary": null,
+          "credits": null,
+          "individualLimit": null,
+          "spendControlReached": null,
+          "planType": null,
+          "rateLimitReachedType": null
+        }
+      },
+      "emittedAtMs": 1794791042832
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "status": {
+          "type": "systemError"
+        }
+      },
+      "emittedAtMs": 1794791042832
+    },
+    {
+      "method": "error",
+      "params": {
+        "error": {
+          "message": "budget reached",
+          "codexErrorInfo": "sessionBudgetExceeded",
+          "additionalDetails": null,
+          "misalignment": null
+        },
+        "willRetry": false,
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd"
+      },
+      "emittedAtMs": 1794791042832
+    },
+    {
+      "method": "thread/readState/changed",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "readState": {
+          "firstUnread": {
+            "type": "turn",
+            "turnId": "01a1e1e1-edb6-7c31-9804-c15a652fc063"
+          },
+          "revision": "f37f7a45-38c6-40a9-ae1d-a74ec5566c92"
+        }
+      },
+      "emittedAtMs": 1794791042836
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turn": {
+          "id": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd",
+          "rootTurnId": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          },
+          "startedAt": 1794791042,
+          "completedAt": 1794791042,
+          "durationMs": 18
+        }
+      },
+      "emittedAtMs": 1794791042836
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1794791043150
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turn": {
+          "id": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0",
+          "rootTurnId": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": 1794791043,
+          "completedAt": null,
+          "durationMs": null
+        }
+      },
+      "emittedAtMs": 1794791043150
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a1e1e1-f052-7e71-94ff-36c0d9b77281",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "FOLLOWUP_2",
+              "text_elements": []
+            }
+          ],
+          "startedAtMs": 1794791043155,
+          "completedAtMs": null
+        },
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0",
+        "startedAtMs": 1794791043155
+      },
+      "emittedAtMs": 1794791043155
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a1e1e1-f052-7e71-94ff-36c0d9b77281",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "FOLLOWUP_2",
+              "text_elements": []
+            }
+          ],
+          "startedAtMs": 1794791043155,
+          "completedAtMs": 1794791043155
+        },
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0",
+        "contentTokenCount": null,
+        "completedAtMs": 1794791043155
+      },
+      "emittedAtMs": 1794791043156
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_fixture",
+          "text": "CACHED_OK",
+          "phase": null,
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794791043161,
+          "completedAtMs": null
+        },
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0",
+        "startedAtMs": 1794791043161
+      },
+      "emittedAtMs": 1794791043161
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_fixture",
+          "text": "CACHED_OK",
+          "phase": null,
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794791043161,
+          "completedAtMs": 1794791043161
+        },
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0",
+        "contentTokenCount": null,
+        "completedAtMs": 1794791043161
+      },
+      "emittedAtMs": 1794791043162
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 1177,
+            "inputTokens": 1172,
+            "cachedInputTokens": 990,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 5,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 86,
+            "inputTokens": 86,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 0,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1794791043163
+    },
+    {
+      "method": "account/rateLimits/updated",
+      "params": {
+        "rateLimits": {
+          "limitId": "codex",
+          "limitName": null,
+          "normalModelSlug": null,
+          "primary": null,
+          "secondary": null,
+          "credits": null,
+          "individualLimit": null,
+          "spendControlReached": null,
+          "planType": null,
+          "rateLimitReachedType": null
+        }
+      },
+      "emittedAtMs": 1794791043163
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "status": {
+          "type": "systemError"
+        }
+      },
+      "emittedAtMs": 1794791043164
+    },
+    {
+      "method": "error",
+      "params": {
+        "error": {
+          "message": "budget reached",
+          "codexErrorInfo": "sessionBudgetExceeded",
+          "additionalDetails": null,
+          "misalignment": null
+        },
+        "willRetry": false,
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turnId": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0"
+      },
+      "emittedAtMs": 1794791043164
+    },
+    {
+      "method": "thread/readState/changed",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "readState": {
+          "firstUnread": {
+            "type": "turn",
+            "turnId": "01a1e1e1-edb6-7c31-9804-c15a652fc063"
+          },
+          "revision": "84c386ef-dabb-4a94-bbf3-cc886eb6208d"
+        }
+      },
+      "emittedAtMs": 1794791043167
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "turn": {
+          "id": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0",
+          "rootTurnId": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "failed",
+          "error": {
+            "message": "budget reached",
+            "codexErrorInfo": "sessionBudgetExceeded",
+            "additionalDetails": null,
+            "misalignment": null
+          },
+          "startedAt": 1794791043,
+          "completedAt": 1794791043,
+          "durationMs": 17
+        }
+      },
+      "emittedAtMs": 1794791043167
+    },
+    {
+      "method": "deprecationNotice",
+      "params": {
+        "summary": "Full-history hydration is deprecated for paginated threads; omit `includeTurns` or set it to `false`, then page with `thread/turns/list` and `thread/items/list`.",
+        "details": null
+      },
+      "emittedAtMs": 1794791043470
+    }
+  ],
+  "root_read": {
+    "id": 6,
+    "result": {
+      "thread": {
+        "id": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "environments": [
+          {
+            "environmentId": "local",
+            "cwd": "<isolated-temp>/work",
+            "runtimeWorkspaceRoots": [
+              "<isolated-temp>/work"
+            ]
+          }
+        ],
+        "extra": null,
+        "sessionId": "01a1e1e1-edb1-7b32-a326-fdb95458633d",
+        "forkedFromId": null,
+        "attachedToThreadId": null,
+        "parentThreadId": null,
+        "preview": "ROOT_BUDGET",
+        "ephemeral": false,
+        "section": null,
+        "sectionEnteredAt": null,
+        "projectId": null,
+        "historyMode": "paginated",
+        "modelProvider": "budget_fixture",
+        "model": "gpt-6.1-sol",
+        "reasoningEffort": null,
+        "createdAt": 1794791042,
+        "updatedAt": 1794791043,
+        "recencyAt": 1794791043,
+        "status": {
+          "type": "systemError"
+        },
+        "path": "<isolated-temp>/codex-home/sessions/2026/11/16/rollout-2026-11-16T09-04-02-01a1e1e1-edb1-7b32-a326-fdb95458633d.jsonl",
+        "cwd": "<isolated-temp>/work",
+        "cliVersion": "0.169.0-alpha.11.1",
+        "originator": "budget_boundary_fixture",
+        "source": "vscode",
+        "canAcceptDirectInput": true,
+        "threadSource": null,
+        "agentNickname": null,
+        "agentRole": null,
+        "gitInfo": null,
+        "name": null,
+        "daybreakEnabled": null,
+        "turns": [
+          {
+            "id": "01a1e1e1-edb6-7c31-9804-c15a652fc063",
+            "rootTurnId": "01a1e1e1-edb6-7c31-9804-c15a652fc063",
+            "items": [
+              {
+                "type": "userMessage",
+                "id": "01a1e1e1-edbe-7481-bb87-5d278e648dec",
+                "clientId": null,
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "ROOT_BUDGET",
+                    "text_elements": []
+                  }
+                ],
+                "startedAtMs": 1794791042494,
+                "completedAtMs": 1794791042494
+              },
+              {
+                "type": "agentMessage",
+                "moderation": null,
+                "id": "msg_fixture",
+                "text": "CACHED_OK",
+                "phase": null,
+                "memoryCitation": null,
+                "delivery": null,
+                "questions": null,
+                "startedAtMs": 1794791042498,
+                "completedAtMs": 1794791042498
+              }
+            ],
+            "itemsView": "full",
+            "status": "completed",
+            "error": null,
+            "startedAt": 1794791042,
+            "completedAt": 1794791042,
+            "durationMs": 12
+          },
+          {
+            "id": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd",
+            "rootTurnId": "01a1e1e1-eefc-7780-8c83-00b86bdd2ffd",
+            "items": [
+              {
+                "type": "userMessage",
+                "id": "01a1e1e1-ef07-7321-8ffe-50dd1c1ba47a",
+                "clientId": null,
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "FOLLOWUP_1",
+                    "text_elements": []
+                  }
+                ],
+                "startedAtMs": 1794791042824,
+                "completedAtMs": 1794791042824
+              },
+              {
+                "type": "agentMessage",
+                "moderation": null,
+                "id": "msg_fixture",
+                "text": "CACHED_OK",
+                "phase": null,
+                "memoryCitation": null,
+                "delivery": null,
+                "questions": null,
+                "startedAtMs": 1794791042830,
+                "completedAtMs": 1794791042830
+              }
+            ],
+            "itemsView": "full",
+            "status": "failed",
+            "error": {
+              "message": "budget reached",
+              "codexErrorInfo": "sessionBudgetExceeded",
+              "additionalDetails": null,
+              "misalignment": null
+            },
+            "startedAt": 1794791042,
+            "completedAt": 1794791042,
+            "durationMs": 18
+          },
+          {
+            "id": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0",
+            "rootTurnId": "01a1e1e1-f049-73e0-b08b-4cfdf62715f0",
+            "items": [
+              {
+                "type": "userMessage",
+                "id": "01a1e1e1-f052-7e71-94ff-36c0d9b77281",
+                "clientId": null,
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "FOLLOWUP_2",
+                    "text_elements": []
+                  }
+                ],
+                "startedAtMs": 1794791043155,
+                "completedAtMs": 1794791043155
+              },
+              {
+                "type": "agentMessage",
+                "moderation": null,
+                "id": "msg_fixture",
+                "text": "CACHED_OK",
+                "phase": null,
+                "memoryCitation": null,
+                "delivery": null,
+                "questions": null,
+                "startedAtMs": 1794791043161,
+                "completedAtMs": 1794791043161
+              }
+            ],
+            "itemsView": "full",
+            "status": "failed",
+            "error": {
+              "message": "budget reached",
+              "codexErrorInfo": "sessionBudgetExceeded",
+              "additionalDetails": null,
+              "misalignment": null
+            },
+            "startedAt": 1794791043,
+            "completedAt": 1794791043,
+            "durationMs": 17
+          }
+        ]
+      },
+      "readState": {
+        "firstUnread": {
+          "type": "turn",
+          "turnId": "01a1e1e1-edb6-7c31-9804-c15a652fc063"
+        },
+        "revision": "84c386ef-dabb-4a94-bbf3-cc886eb6208d"
+      }
+    }
+  },
+  "server_exit": 0,
+  "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"/private/tmp\" (codex_home: AbsolutePathBuf(\"<isolated-temp>/codex-home\"))\n",
+  "requests": [
+    {
+      "index": 1,
+      "role": "root",
+      "role_request": 1,
+      "arrived": 297433.800103125,
+      "route": "/v1/responses",
+      "authorization_present": false,
+      "budget_messages": [
+        {
+          "type": "message",
+          "id": "msg_01a1e1e1-edbf-7c62-8b47-ba2508054fe6",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 100 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        }
+      ],
+      "tools": [],
+      "usage": {
+        "input_tokens": 1000,
+        "input_tokens_details": {
+          "cached_tokens": 990
+        },
+        "output_tokens": 5,
+        "total_tokens": 1005
+      },
+      "sent": true,
+      "completed": 297433.800221833
+    },
+    {
+      "index": 2,
+      "role": "root",
+      "role_request": 2,
+      "arrived": 297434.131970833,
+      "route": "/v1/responses",
+      "authorization_present": false,
+      "budget_messages": [
+        {
+          "type": "message",
+          "id": "msg_01a1e1e1-edbf-7c62-8b47-ba2508054fe6",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 100 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "msg_01a1e1e1-ef0a-7ab2-b479-fdc7686e8654",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 85 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        }
+      ],
+      "tools": [],
+      "usage": {
+        "input_tokens": 86,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 0,
+        "total_tokens": 86
+      },
+      "sent": true,
+      "completed": 297434.132268416
+    },
+    {
+      "index": 3,
+      "role": "root",
+      "role_request": 3,
+      "arrived": 297434.463155041,
+      "route": "/v1/responses",
+      "authorization_present": false,
+      "budget_messages": [
+        {
+          "type": "message",
+          "id": "msg_01a1e1e1-edbf-7c62-8b47-ba2508054fe6",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 100 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "msg_01a1e1e1-ef0a-7ab2-b479-fdc7686e8654",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 85 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "msg_01a1e1e1-f055-7523-a72c-fe2e070be9e6",
+          "role": "developer",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<rollout_budget>\nYou have 0 weighted tokens left in the shared session token budget.\n</rollout_budget>"
+            }
+          ]
+        }
+      ],
+      "tools": [],
+      "usage": {
+        "input_tokens": 86,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 0,
+        "total_tokens": 86
+      },
+      "sent": true,
+      "completed": 297434.463461166
+    }
+  ],
+  "max_simultaneous_fixture_requests": 1
+}

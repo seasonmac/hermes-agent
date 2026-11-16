@@ -1,0 +1,33 @@
+{
+  "threads": {
+    "root": {
+      "thread_id": "01a1e1e2-be16-7591-8e51-2ce65dc506bf",
+      "usage_increment_events": 2,
+      "complete_usage_available": false,
+      "recorded_cumulative_usage": {
+        "input_tokens": 24550,
+        "cached_input_tokens": 12160,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 237,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 24787
+      }
+    },
+    "peer": {
+      "thread_id": "01a1e1e3-0868-7522-ab28-26fb3bae05c4",
+      "usage_increment_events": 0,
+      "complete_usage_available": false,
+      "recorded_cumulative_usage": null
+    }
+  },
+  "recorded_group_usage": {
+    "input_tokens": 24550,
+    "cached_input_tokens": 12160,
+    "output_tokens": 237,
+    "reasoning_output_tokens": 0,
+    "total_tokens": 24787,
+    "uncached_input_tokens": 12390
+  },
+  "scope": "lower bound only; peer made a tool call but no final usage event was persisted before probe shutdown; missing is not zero",
+  "actual_currency_cost": null
+}

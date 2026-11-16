@@ -1,0 +1,62 @@
+{
+  "run_id": "market-B-2-persistent",
+  "usage_method": "Latest cumulative total_token_usage in each exact root/peer rollout. Sum one total per thread. Cached input and reasoning output are breakdown fields.",
+  "threads": [
+    {
+      "role": "root",
+      "thread_id": "01a1e051-60f2-78f1-a64c-585f52d31f7a",
+      "turn_statuses": [
+        {
+          "id": "01a1e051-7b09-7372-b515-b106e5c0f018",
+          "status": "completed"
+        }
+      ],
+      "rollout_usage": {
+        "outcome": "observed",
+        "token_count_event_count": 6,
+        "latest_total": {
+          "total_tokens": 171791,
+          "input_tokens": 170919,
+          "cached_input_tokens": 140416,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 872,
+          "reasoning_output_tokens": 17
+        }
+      }
+    },
+    {
+      "role": "peer",
+      "thread_id": "01a1e051-ca8d-70e1-a57f-f79eb589b0bc",
+      "turn_statuses": [
+        {
+          "id": "01a1e051-ca94-7c10-833f-4ca41b69a7f4",
+          "status": "completed"
+        }
+      ],
+      "rollout_usage": {
+        "outcome": "observed",
+        "token_count_event_count": 4,
+        "latest_total": {
+          "total_tokens": 88319,
+          "input_tokens": 88153,
+          "cached_input_tokens": 65408,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 166,
+          "reasoning_output_tokens": 28
+        }
+      }
+    }
+  ],
+  "peer_count": 1,
+  "root_to_peer_interactions": 2,
+  "peer_to_root_interactions": 1,
+  "all_session_usage_available": true,
+  "sum_observed_thread_totals": {
+    "total_tokens": 260110,
+    "input_tokens": 259072,
+    "cached_input_tokens": 205824,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1038,
+    "reasoning_output_tokens": 45
+  }
+}

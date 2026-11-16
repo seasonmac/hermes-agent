@@ -1,0 +1,29 @@
+[
+  {
+    "threadId": "01a1e352-8225-75b1-a60e-9f93f4a9834d",
+    "turn": {
+      "id": "01a1e352-822b-7c63-975e-2ce4edd2ddab",
+      "rootTurnId": "01a1e352-822b-7c63-975e-2ce4edd2ddab",
+      "items": [
+        {
+          "type": "agentMessage",
+          "moderation": null,
+          "id": "msg_0eea7a0e8e7a6906016afab4e74e6887d2a18ca70bf9df65fd",
+          "text": "{\n  \"task_id\": \"T-A\",\n  \"deliverable\": \"research_report\",\n  \"trading_allowed\": false,\n  \"list_policy\": \"historical_point_in_time\",\n  \"coverage_year\": 2022,\n  \"execution_allowed\": false,\n  \"progress\": \"gap_checklist_done_backtest_not_run\",\n  \"rejection_reason\": \"survivorship_bias\",\n  \"sources\": {\n    \"deliverable\": [\"T-A\"],\n    \"trading_allowed\": [\"T-A\"],\n    \"list_policy\": [\"E-A2\"],\n    \"coverage_year\": [\"D-A-v2\"],\n    \"execution_allowed\": [\"E-A3\", \"E-A5\"],\n    \"progress\": [\"R-A\"],\n    \"rejection_reason\": [\"E-A1\", \"E-A2\"]\n  }\n}",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null,
+          "startedAtMs": 1794815207432,
+          "completedAtMs": 1794815211557
+        }
+      ],
+      "itemsView": "summary",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1794815197,
+      "completedAt": 1794815211,
+      "durationMs": 13847
+    }
+  }
+]
