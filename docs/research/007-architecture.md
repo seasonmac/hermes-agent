@@ -1,159 +1,170 @@
-# 007 Architecture
+# 007 Architecture：状态怎样保存，harness 怎样接入
 
-本章定义模块边界、持久化记录和适配契约。行为规则分别归属[Authorization](002-authorization.md)与[Execution](003-execution.md)，不在这里建立第二套状态机。
+前几章定义了工作规则，本章说明哪些模块执行这些规则，以及哪些事实必须保存。授权以 [002](002-authorization.md) 为准，状态转换以 [003](003-execution.md) 为准；适配器不能建立另一套更宽松的恢复或授权规则。
 
-## 运行时是独立基础能力
+## 独立运行时的模块边界
 
 ```mermaid
 flowchart TB
     U[人 / 飞书群] <--> C[渠道适配器]
-    C <--> R[运行时控制核心]
-    R <--> J[(单一 journal 与派生表)]
+    C <--> R[控制核心]
+    R <--> J[(journal 与当前状态)]
     R <--> K[上下文索引与产物存储]
-    R --> P[准入 / 费用 / 权限检查]
+    R --> P[准入：授权 / 依赖 / 费用]
     P --> H[Harness 适配端口]
-    H <--> N1[节点一 Hermes]
-    H <--> N2[节点二 Codex]
-    R -. 按需计费工作 .-> L[Router / Lead / Worker / Reviewer]
-    J --> V[群聊投影 / 状态查询]
+    H <--> N1[Hermes 执行节点]
+    H <--> N2[Codex 执行节点]
+    R -. 按需登记模型工作 .-> L[Lead / Worker / Reviewer / Router]
+    J --> V[状态查询与群聊投影]
     V --> C
 ```
 
-Router是可选模型角色，不是所有消息必经的模型中间人；路由、准入和派发是三个不同动作。上下文索引负责查找和版本，产物Owner负责知识接受，存储组件不判断结论真假。
+图展示完整首版。内核切片把两个适配器放在同机，省去远程节点代理，但保留相同的绑定和回执语义。
 
-控制核心只依赖端口契约，不导入具体harness核心。Agent角色通过同一执行路径调用harness，不能绕过账本。节点只拥有执行绑定与可重传回执，不成为任务目标或费用的第二权威。
+控制核心管理授权版本、工作归属、状态转换和执行准入；上下文组件管理来源、索引和有效性，知识是否可采纳由合同指定的接受者决定。渠道适配器呈现已有事实，执行适配器连接 harness。二者均不成为业务状态的第二权威。
 
-图展示完整首版；内核切片将两个执行适配器放在同机，不先建远程节点代理。阶段校验器只解释[有限动作合同](003-execution.md)，不运行模型任意代码。逻辑Step先于Workflow存在，计划是其编排视图，避免让规划调用依赖自己尚未生成的计划。
+Router 是按需调用的模型角色。直接寻址由程序完成，Router 只为归属不明的已授权工作提出建议。Lead 提出下一阶段，有限动作校验器检查提案；内核切片不执行模型生成的任意代码。所有模型角色都走同一准入和记账路径。
 
-## 单一持久化权威
+运行时核心只依赖端口契约，不导入 Hermes 或 Codex 的私有控制模块。Hermes 插件是外部适配器；其他 harness 也分别映射自身公开接口，不要求它们修改成同一种内部结构。
 
-建议初版SQLite内保存journal及同事务更新的当前状态表、inbox/outbox和费用表；它们是同一个权威存储的事实与物化状态，不是两套需要业务对账的工作流引擎。产物正文可放独立文件存储，通过hash和引用关联。
+## 一份权威存储，保存事实和当前状态
 
-journal只记录已接受的状态变更与必要执行意图，不声称能从事件流重放所有外部副作用。恢复读取持久状态并对账外部Attempt，不重新执行过去的模型调用。Temporal和另一套工作流权威暂不引入。
+建议在同一个 SQLite 数据库中保存 journal、当前状态表、inbox/outbox 和费用记录。它们在同一事务内更新：journal 解释发生了什么，当前表便于查询。产物正文可以独立存放，以内容 hash 和稳定引用关联。
 
-### 建议记录结构
+恢复从持久状态出发，查询原执行并核对回执，不重新调用历史模型。journal 记录事实和意图，不承诺重放外部副作用。内核切片因此不引入 Temporal 或第二套工作流权威。
 
-下表是逻辑数据契约，具体SQL迁移尚未实现。所有时间使用有时区时间；带version的更新使用预期版本比较，失败后重新读取，不能覆盖并发决定。
+### 逻辑数据合同
 
-| 记录 | 主键与主要字段 | 约束 |
+下表描述记录职责，尚不是已实现的 SQL。时间含时区，变更带预期版本；并发版本不符时重新读取，不能覆盖另一项决定。
+
+| 记录 | 必要信息 | 核心约束 |
 |---|---|---|
-| missions / mission_revisions | mission_id；revision、目标、标准、权限引用、Owner、期限、预算、pause | 唯一有效revision，历史不可覆盖 |
-| collaborations | collaboration_id；mission_id、成员、Owner、范围、额度、收敛条件、version | 额度汇总到Mission，不形成额外可花总额 |
-| steps / step_revisions | step_id；mission_id、collaboration_id、kind、step_revision、合同、supersedes_step_id、状态 | 身份独立于Workflow；工作修订保留身份，替代链不能绕过旧unknown |
-| workflows / workflow_members | workflow_id＋revision；step_key/item_key/iteration → step_id＋step_revision；带gate的结果依赖与待绑定/已绑定Decision | 编排位置唯一；Step可无Workflow；未完成上游可先unresolved引用 |
-| attempts | attempt_id；step_id/revision、input_set_id、adapter/node/session/turn、request_id、配置快照、状态 | 同逻辑Step跨版本/替代链至多一个活跃或unknown执行；单session只一个受控turn |
-| agents / bindings | agent_id；能力、角色；binding_id、设备、会话、配置版本 | 身份与在线状态分离；绑定变化可追溯 |
-| messages / deliveries | message_id；作者、目标、归属、request_id/reply_to、指纹、协作响应；delivery_id、目标通道、回执状态 | message_id冲突须比内容；request_id＋收件人唯一工作；各通道送达分别记录 |
-| decisions | decision_id；对象ID/version、接受者、依据、条件、决定及当前有效性 | 历史验收保留；过期Decision不能满足新的后继准入 |
-| context_items / dependencies | item_id＋version；来源/hash、适用范围、接受状态；依赖及观测等级 | 保留反证；没有完整依赖时不声明完整stale传播 |
-| artifacts / checkpoints | artifact_id、hash、位置、保留策略；checkpoint_id、合同/计划引用、恢复快照 | 活跃引用不可普通清理；摘要不是原始证据 |
-| input_sets / message_consumption | input_set_id；Attempt、提交payload/hash、消息及合同/证据版本、binding/消费记录ID；消费记录另存证据/游标 | 输入快照不可变，原生回执在关联记录追加；每个收件Step的同消息至多一个未对账消费绑定 |
-| reservations / usage_events | reservation_id、Attempt、额度；usage_event_id、实际tokens/provider units、来源、计价、counter scope/epoch/sequence、coverage | 逐响应或可靠累计差额只结算一次，不同时叠加；未知费用不清零 |
-| inbox / outbox / timers | 外部事件键、指纹、游标；意图ID、pending/claimed/回执、绑定版本；定时器及版本 | 事务内写意图，领取时重新检查控制版本；已claimed结果未知不当未发送 |
-| journal | event_id、aggregate_id/version、事件类型、因果引用、时间 | 追加事实；与相应状态及outbox原子提交 |
+| missions / mission_revisions | 目标、标准、禁止项、任务授权人、期限、权限、风险分类、允许调整范围，以及暂停范围和控制版本 | 当前有效版本唯一，旧授权不覆盖 |
+| collaborations | 归属、成员、交付负责人、范围、额度、收敛条件和版本 | 额度是 Mission 总额的分配，不产生额外总额 |
+| steps / step_revisions | 稳定 ID、工作合同、当前修订、替代关系、当前 Attempt 引用、业务状态及控制标记 | 状态按修订记录；阻塞保留原因、先前阶段与等待；三个控制标记遵循 003 |
+| step_dependencies | 所属 Step 修订、依赖 ID、上游引用、dispatch/acceptance 门槛、设立依据及变更权限 | **唯一的执行依赖定义**；未完成上游可待绑定，修改须经授权并产生新修订 |
+| workflows / workflow_members | 计划版本、编排位置、Step 修订与依赖 ID 引用 | 仅组织已有工作；删除计划节点不删除其依赖或历史 |
+| dependency_bindings | 依赖 ID、所用 Decision/证据版本、input_set 或验收引用 | 明确某次派发或验收采用了哪个结果，不能用后来版本覆写 |
+| attempts / attempt_dispositions | Attempt 归属、请求与配置快照、原生执行关联、状态；处置依据、批准人、范围、残留风险 | 终态与处置分开；处置可解除特定阻塞，同时撤销旧 Attempt 推进业务的资格 |
+| agents / bindings | 逻辑成员身份、角色、设备、会话、配置版本、绑定是否退役 | 在线状态不是身份；已退役绑定不接新工作 |
+| messages / deliveries | 作者、收件人、原请求、回复关联、正文指纹；通道投递及回执 | 同 ID 不同内容拒绝；接收请求不等于业务验收 |
+| decisions | 对象及版本、接受者、授权来源、依据、审查条件、适用性 | 历史决定保留；过期决定不满足新的依赖检查 |
+| context_items / context_dependencies | 来源、版本/hash、范围、知识状态、证据引用及观测等级 | 此处记录知识来源关系，不替代 step_dependencies 的执行门槛 |
+| artifacts / checkpoints | 产物 hash、位置、保留策略；目标、控制、证据、待办和恢复引用 | 活跃引用不可普通清理；摘要不能替代原始证据 |
+| input_sets / message_consumption | 固定 payload/hash、合同与证据版本、消息及接收者、Attempt、消费凭证 | 输入快照不可变；原生 ID 后到时追加关联，不改原输入 |
+| reservations / fee_provisions / usage_events | 额度预约、未结费用准备、真实用量、计数范围/epoch/序列及 coverage | 预约与准备均占可用额度；准备不是实际费用；累计和逐响应不重复相加 |
+| inbox / outbox / timers | 外部事件身份与指纹、执行意图、领取状态、控制版本、等待期限 | 事务内保存；领取时复查；已领取但未确认不能当作未发送 |
+| journal | 事件 ID、对象版本、因果引用、事实、时间和操作者 | 追加保存，与相应当前状态及执行意图原子提交 |
+
+同一逻辑工作跨修订和替代链，最多有一个活跃或尚未获准处置的未知 Attempt；同一会话最多有一个受控回合。此约束在准入事务中检查，而不是交给提示词。若批准了未知执行处置，应能查到解除的是哪条阻塞、依据是什么、哪些费用仍占额度。
+
+例如，A 的验收要求 B 独立核对。该门槛属于 A 的 Step 修订，Workflow 只引用它。Lead 删除图中的 B 节点不能使 A 自动通过；必须按 [依赖变更规则](002-authorization.md#dependency-changes)处理。重新验收时，dependency_bindings 另记实际采用的新 Decision，保留原绑定供追溯。
 
 ### 消息合同
 
-| 字段 | 含义 |
+| 字段组 | 含义 |
 |---|---|
-| message_id / payload_fingerprint | 内部稳定身份与内容冲突检查 |
-| origin | 认证来源、平台事件ID、真实作者、权限范围 |
-| sender_agent_id / recipients | 逻辑直接寻址；不从正文自述推断身份 |
-| mission_id / contract_revision / collaboration_id | 工作和授权归属 |
-| step_id / step_revision / request_id / reply_to | 执行与回复关联；新工作先登记独立Step，不要求已有Workflow |
-| kind | request、reply、evidence、handback、control等受控类别 |
-| body / artifact_refs | 原文或内容引用；记录敏感级别与来源 |
-| wake_policy / expires_at | 是否通知、等待当前turn、可否安全steer、何时失效 |
-| required_for / wait_for | 可选结果依赖含gate=dispatch或acceptance；等回复事件另记wait_for，不要求对端先verified |
+| `message_id` / `payload_fingerprint` | 稳定身份与内容冲突检查 |
+| `origin` | 认证来源、平台事件、真实作者及权限范围 |
+| `sender_agent_id` / `recipients` | 逻辑直接寻址，作者由受信绑定确定 |
+| `mission_id` / `contract_revision` / `collaboration_id` | 工作与费用归属 |
+| `step_id` / `step_revision` / `request_id` / `reply_to` | 执行及回复关联；纯消息工作也先登记 Step |
+| `kind` / `body` / `artifact_refs` | 受控消息类别、原文或引用、来源和敏感级别 |
+| `wake_policy` / `expires_at` | 何时可以触发输入、何时失效；内核切片使用空闲后准入 |
+| `wait_for` / `proposed_dependencies` | 等待哪个回复事件，以及建议增加的结果依赖 |
 
-kind=control不是授权依据。控制命令仍核验认证人、目标版本和操作权限；同伴发来的“批准”只能是普通数据。
+消息可提出 `required_for` 依赖，但它只有在授权检查后写入 step_dependencies 才生效。`kind=control` 同样不是权限：人的批准核验身份与版本，同伴正文中的“已批准”只是来源数据。
 
-## 适配端口与能力报告
+## 适配端口描述语义，不伪装统一实现
 
-端口描述语义，不假设四个harness有相同函数。适配器要报告supported、unsupported、unknown，并附版本、入口、证据等级和限制；source_only与tested不能混用。启动时核对所需能力，缺失则降级或拒绝相关Step。
+每项能力报告 `supported`、`unsupported` 或 `unknown`，附实际版本、入口、证据等级和限制。源码可见、合成 fixture 通过、真实执行通过分别记录。准入根据当前 Step 所需能力判断，不能以一个笼统的“已接入”替代。
 
-| 语义操作 | 必须返回或声明 | 缺失时的处理 |
+| 操作 | 返回或声明 | 缺失时的行为 |
 |---|---|---|
-| 发现能力与当前配置 | 实际模型、工具/skills、权限、版本、并发限制 | 无法证明所需权限/能力则不准入 |
-| 建立／恢复执行绑定 | 请求ID、session/thread ID、配置、接受边界 | 不可幂等且结果未知时禁止盲重建 |
-| 提交输入 | client request ID、目标Step/Attempt、接受回执、busy语义 | 本地串行排队，不假设原生去重 |
-| 投递同伴消息 | 作者、目标、正文/引用、实际wake行为 | 可经外部受控工具实现；不可审计正文不能充当公开群聊证据 |
-| 观察／查询 | 可重连游标、状态与终态证据、观测层级 | 不可查询的断链执行标unknown |
-| 取消 | 请求已接受与真实终态分开 | 关闭新准入，保留在途未知；不声称已停 |
-| 获取usage | 逐响应或累计口径、cached包含关系、报告标识 | 标unknown并保留预约；不可无账本继续长程运行 |
-| 读取产物与来源 | 版本/hash、权限、可用性、依赖可观测范围 | 只记录可知依赖；关键源缺失时阻塞或补证 |
-| 释放会话／节点 | 可确认结束、残留资源和重连策略 | 活跃或未知执行不能只删本地记录 |
+| 查询能力与实效配置 | 版本、模型、工具/skills、权限、并发限制 | 无法证明必要能力时拒绝相关工作 |
+| 建立或恢复绑定 | 请求身份、session/thread、配置、接受边界 | 接受情况未知时先查询，不盲重建 |
+| 提交输入 | input_set/Attempt 关联、客户端请求 ID、接受回执和 busy 行为 | 由运行时串行排队，不假定原生去重 |
+| 同伴消息工具 | 受信作者、目标、原文和持久业务回执 | 不可认证或不能持久化时拒绝，不降级成不记账的私聊 |
+| 观察与查询 | 游标、状态、原生终态和观察范围 | 断链无法确认则标 `unknown` |
+| 取消与停止证明 | 请求已接受、是否终态、是否有隔离证据 | 继续对账，不能仅凭取消请求释放执行占用 |
+| 获取用量 | 原生单位、逐响应或累计口径、计数范围和覆盖项 | 保留未知费用及预约，不以零继续花费 |
+| 读取来源与产物 | 版本/hash、可用性、权限和读取可观测范围 | 关键源缺失时补证或阻塞；黑盒读取标不可见 |
+| 释放绑定或节点 | 结束证据、残留资源和重连策略 | 活跃或未知执行不能靠删除本地记录结束 |
 
-生命周期接入和群聊展示可以使用不同接口，但必须归入同一执行记录。原生API没有的功能可以由适配器实现，不得仅换个名称便宣称语义等价。
+生命周期和工具回调可使用不同接口，但必须关联同一个 Attempt。默认只允许运行时创建和纳管的成员；原生子 Agent 树只有在身份、权限、用量和取消/恢复都可覆盖时才允许接入。能力声明本身并不能阻止未纳管子调用，仍需核验实效配置和执行限制。
 
-首版默认由运行时创建和绑定成员，不开放未纳管的原生子Agent树。只有子线程的身份、权限、usage和取消/恢复都可覆盖时，才允许接入原生再委派；否则会突破单一账本和准入边界。
+<a id="adapters"></a>
+## Hermes：Gateway 加外部薄插件
 
-## 内核切片的实际适配路径
+选择 Gateway 负责会话生命周期，外部插件提供最少的协作工具。规划中的 `collab_send` 保存消息并立即返回持久回执；证据读取工具提供受控来源。接收者空闲且获准后，再由运行时提交固定 input_set。插件不持有模型回调长期等同伴，也不导入私有控制模块。
 
-下面区分已有实测入口、当前源码可见接口和待实现组合，不把接口存在当成接入完成。证据版本仍以原报告为准，本次只做静态核对。
-
-### Hermes Gateway加外部薄插件
-
-| 责任 | 选择的路径与证据 | 仍需证明 |
+| 责任 | 已有入口与证据 | 接入时仍需补齐 |
 |---|---|---|
-| 建立与执行 | 使用`hermes gateway attach --json`发现/认证，协商`hermes-gateway-v1`、`runtime.describe`，调用`session.create`及`prompt.submit`；保持原request_id/input_id | 独立运行时对Gateway的组合尚未实现；禁止用工作区HEAD替代运行版本 |
-| 终态、取消、重连 | `prompt.receipt`/`prompt.cancel`、`session.events.since`、`session.resume`；按epoch和游标复核 | 已有同进程局部烟测，不保证Gateway冷恢复；回放缺口先快照对账 |
-| Agent发消息/读证据 | 外部插件经`ctx.register_tool`注册最少工具，处理器调用运行时端口；不改Hermes核心或stock工具表 | 插件尚未编写；toolset选择、输入/回执绑定与实际生效权限需静态和最小集成验收 |
-| 作者与执行归属 | 依据受信handler上下文的session_id/task_id及已保存绑定寻找当前Attempt，消息参数不接受自报作者授权 | 缺绑定、来自摘要fork或未纳管子树则拒绝；压缩换session时先重建绑定 |
-| usage | 先核对Gateway终态usage；公开`post_api_request`、`post_auxiliary_call`等观察钩子是补齐逐调用的候选路径 | 源码可见不等于安装版覆盖全部辅助调用；需验证ID、重复报告、失败及压缩覆盖 |
+| 建立与执行 | T0 静态核对 `hermes gateway attach --json`、`hermes-gateway-v1`、`runtime.describe`、`session.create`、`prompt.submit` | 确认存活 Gateway 版本，验证与独立运行时的组合 |
+| 查询和取消 | `prompt.receipt`、`prompt.cancel`、`session.events.since`、`session.resume`；历史有同进程局部烟测 | Gateway 冷恢复、回放缺口及在途接受边界 |
+| 插件加载 | T0-P 通过公开 discover/register/`ctx.register_tool` 路径 | 产品插件、真实模型工具选择和持久业务回执 |
+| 身份 | 普通 handler 接收 task/session/conversation；合成缺失、旧绑定、子会话及伪造目标被拒 | 正常 Gateway 回合如何可信地映射唯一 Attempt；压缩后的重绑定 |
+| 用量 | 终态 usage，以及 `post_api_request`、`post_auxiliary_call` 公开观察钩子候选 | 主调用、辅助调用、失败、流式尾账和压缩覆盖，重复报告关联 |
 
-插件通过公开API注册，不能直接导入私有会话控制模块。处理器返回持久message_id/request_id回执，不阻塞等待同伴模型；接收侧由运行时在空闲且获准时用`prompt.submit`注入input_set。忙时消息在运行时排队，原生排队能力仅作已知边界，不作为首版预排多回合的依据。
+T0-P 使用源码 `cf02ef9e5196649b0884b0fd4e9ca341b42cc9bb`、Python 3.14.9，未启动 Gateway 或 AIAgent。它不能更新历史 Gateway 的运行版本结论。完整版本、路径与哈希保存在 [T0 基线](kernel-slice-validation/capability-baseline.json)及 [T0-P 记录](kernel-slice-validation/preflight/README.md)。
 
-当前普通工具handler的上下文并未直接透传tool_call_id，不能把观察钩子的字段当成handler必有参数。首个方案以显式request_id＋受信会话绑定做业务幂等，公开pre/post工具钩子作为原生调用关联候选；同一请求指纹冲突拒绝，工具回执重传必须复用原ID。工具回执在中断/压缩后的准确关联尚需验证，未证明时不能启用自动重放。
+### safe_mode 的替代配置仍需完整验证
 
-conversation_id可跨压缩保持，但委派子Agent可能共享它；session_id又可能随压缩轮换。两者都不能单独当逻辑Agent ID，需与运行时绑定、真实调用来源及当前受控Attempt一起核验。无会话上下文的调用不回退为默认Agent。
+环境 safe mode 会跳过插件加载，会话 safe mode 会移除插件工具，因而不适合作为保留协作插件的配置。候选路径是隔离 profile，设置 `safe_mode=false`、`ignore_user_config=false`、`yolo=false`，显式选择协作 toolset，并关闭 `tools.tool_search.enabled`。T0-P 的最终直接工具表只有测试用 `collab_send`；这是配置观测，不是完整权限证明。
 
-依据：[Hermes G1](g0-g2-2026-11-16/hermes/G1-evidence.md)、[插件注册](/Users/season/workspace/github/hermes-agent/hermes_cli/plugins_context.py:272)、[公开handler上下文](/Users/season/workspace/github/hermes-agent/website/docs/developer-guide/plugins/index.md:887)、[实际工具派发](/Users/season/workspace/github/hermes-agent/model_tools.py:851)、[用量观察钩子](/Users/season/workspace/github/hermes-agent/website/docs/developer-guide/plugins/index.md:1609)。
+底层 `handle_function_call` 即使收到工具选择参数，仍可调用未选中的测试工具。公开 `pre_tool_call` 拒绝钩子阻止了该测试调用，说明有可用扩展点；钩子异常、超时、跳过路径、并发 profile 和完整 Agent 执行层尚未验证。不能把工具展示过滤视为授权闸门，也不能把该底层探针描述为已经证实的完整 Agent 越权。
 
-### Codex公开AppServer加dynamicTools
+未来若启用 Tool Search，需要重新验证桥接身份与权限，并在新会话固定工具表。插件不靠提示词承担隔离责任。
 
-运行时通过`thread/start`为每个由Codex承载的成员建立独立持久线程，将最小dynamicTools直接注入各线程；Hermes＋Codex双成员切片只需一个Codex线程，不额外启动两个。它不依赖原生spawn继承，也不让原生子树绕过成员控制。已存在且兼容的线程优先续用，经准入后`turn/start`执行输入；busy时运行时排队，不把它当独立新turn提交。
+### 身份和业务回执怎样关联
 
-`item/tool/call`的threadId、turnId、callId来自服务端请求，与运行时绑定共同认证作者和Attempt。消息工具只写journal/outbox并立即返回持久回执；Worker可报告waiting并结束。接收者在原turn终态后，通过下一次获准`turn/start`读入input_set，不采用持有工具回调等待同伴的长期收件方式。
+普通 handler 没有原生 turn_id/tool_call_id；观察钩子有某字段，也不代表 handler 一定收到它。初步方案以显式业务 `request_id`、正文指纹和受信会话绑定核验当前 Attempt。重复请求复用持久回执，内容冲突拒绝。当前测试返回的 JSON receipt 尚不是这个产品回执。
 
-以`turn/completed`和`thread/read`核对已知turn及结果，`turn/interrupt`请求停止，`thread/resume`候选用于恢复绑定。clientUserMessageId不是去重保证；没有拿到turn ID时即使线程存在也不证明输入未被接受，必须对账或保持unknown。
+conversation_id 可能跨压缩保留，也可能被子 Agent 共享；session_id 又可能随压缩变化。二者均不能单独作为逻辑成员身份。缺少唯一绑定就拒绝，不能回退为默认 Agent。中断、压缩或工具重放后的准确关联仍需验证，未证明前不开启自动重放。
 
-`thread/tokenUsage/updated`及线程快照有total/last口径；持久化基线后取差额。单thread仅一个受控turn有助归属，但断连快照仍可能缺逐请求明细。只承诺实际可观测的聚合量与coverage，不把一段累计差额拆成虚构provider事件；原生units与商业金额另记。源码Host准入/记账扩展仍不作为公开AppServer必有能力。
+## Codex：公开 AppServer 加动态工具
 
-依据：[公开正文实验](g0-g2-2026-11-16/boundary-validation/messages/README.md)、[协议与冷恢复fixture](g0-g2-2026-11-16/codex-dsh/README.md)、[公开工具参数](/Users/season/workspace/github/codex/codex-rs/app-server-protocol/schema/typescript/v2/DynamicToolCallParams.ts:6)、[usage类型](/Users/season/workspace/github/codex/codex-rs/app-server-protocol/schema/typescript/v2/ThreadTokenUsage.ts:6)。旧正文实验采用原生父子Agent和回合内等待，只证明该公开工具路径的局部能力，没有证明这里的独立线程组合。
+每个由 Codex 承载的成员使用独立持久线程。Hermes 与 Codex 双成员切片只需一个 Codex 线程；无需为“多 Agent”再启动原生子树。运行时经 `thread/start` 建立绑定并注入动态工具，配置兼容时续用线程，通过 `turn/start` 提交下一份输入。busy 时在运行时排队。
 
-### 接入停止条件
+`item/tool/call` 带服务端 threadId、turnId、callId，与运行时保存的绑定共同确定作者和 Attempt。发送工具先保存消息，再返回回执。接收者在旧回合终态后读取下一份 input_set，不长期占用工具回调等待。
 
-不能从受信调用映射唯一成员/Attempt、无法保存可恢复输入、消息路径会绕过暂停唤醒、或费用总量不可对账时，该路径不能宣称G-A/B通过。先补薄适配器或限制能力；不以增加治理Agent替代接入缺口。Gateway冷恢复、真实压缩绑定轮换、独立线程双向消息和辅助费用覆盖仍待验证；本次不动态运行OpenClaw/DSH。
+### T0-P 的冷恢复证明到哪里
 
-## 四个harness的证据定位
+安装二进制为 `0.169.0-alpha.11.1`，其构建提交未被证明等同于本地源码。真实 AppServer 对接本机合成 Responses provider，验证了能力门控、动态回调和以下恢复路径：旧回合 completed → 关闭旧进程 → 同一 CODEX_HOME 启动新进程并 initialize → `thread/resume` 只传 threadId → 查询旧 turn → 新 turn 再次调用同一工具。恢复时没有重新传入工具定义。
 
-| Harness | 当前可依据 | 首版不能假定 |
+该版本实际工具声明位于 `input.additional_tools`，`collab_send` 经 `functions.exec` 调用后产生原生回调。适配器必须检查有效工具声明及真实回调，不能比较空的顶层 tools 数组就宣布恢复成功。未声明 experimentalApi 时，dynamicTools 被拒绝且未触发 provider。
+
+恢复前后合成累计值为 26 和 52，说明这条测试路径中的计数可延续。它们由 fixture 人工给定，不是实际成本校准。`thread/tokenUsage/updated` 和线程快照的 total/last 应保留基线、epoch 与 coverage；累计差额与逐响应明细不重复相加，cached/reasoning 分项也不再次加入 total。
+
+### 工具限制和在途恢复仍是缺口
+
+T0-P 发现只关闭 multi_agent/multi_agent_v2 仍会暴露原生协作工具，还需 `agents.enabled=false`。即便如此，仍存在 exec、wait、用户输入、clock，以及 exec 内的 apply_patch、goal、resource、view_image 等工具声明。当前不能承诺“只有协作工具”。read-only/never 配置被接受，但文件写入限制和人类审批流程尚未作执行验证。
+
+`turn/completed` 和 `thread/read` 用于查询原执行，`turn/interrupt` 是取消请求。clientUserMessageId 不构成原生去重保证；未拿到 turn ID 时，线程存在也不证明输入未被接受。T0-P 没有覆盖待决工具 RPC、在途模型请求、丢回执及未知费用窗口，不能将终态后的冷恢复扩大为这些能力。此类场景仍按 [003](003-execution.md#unknown-disposition)保留未知并单独验证。
+
+## 接入何时必须停下来
+
+无法认证唯一成员/Attempt、无法保存可恢复输入、消息会绕过暂停，或必要费用无法对账时，相关路径不能宣称 G-A/B 通过。可以限制能力或补适配器，但不能用增加管理 Agent 代替这些缺口。
+
+| Harness | 当前证据定位 | 当前边界 |
 |---|---|---|
-| Hermes | Gateway局部实测支持请求去重/冲突、排队、取消、观察者回放、同进程resume | Gateway冷恢复、完整read_set、跨harness闭环已通过 |
-| Codex | AppServer局部实测、dynamicTools公开消息交换；本地源码可核对多Agent核心 | clientUserMessageId原生去重、内部Host接口已公开、原生加密消息体可公开审计 |
-| DSH | 原型文档及路由、投递、事务effects等源码依据 | 已完成独立运行时适配或动态验证 |
-| OpenClaw | 待补静态能力映射，动态接入延期 | 四框架统一能力已成立 |
+| Hermes | Gateway 历史局部烟测；T0-P 真实加载器与派发器的零模型测试 | 尚无 Gateway 冷恢复、真实绑定和完整费用覆盖 |
+| Codex | 公开通信历史证据；安装版终态后动态工具冷恢复 fixture | 尚无本设计的跨 harness 闭环、在途恢复和完整权限证明 |
+| DSH | 原型理念、路由、投递和事务 effects 的文档与源码 | 动态接入延期 |
+| OpenClaw | 静态能力映射仍待补齐 | 动态接入延期，不阻塞当前切片 |
 
-详细版本与测试范围见[研究入口](README.md)及[三方源码报告](MULTI-AGENT-SOURCE-REVIEW.md)。适配器需继续核对本机版本，不能用这张表替代运行时能力协商。
+历史正文实验使用过原生父子 Agent 和回合内等待，只证明当时公开工具的局部能力，不能替代这里的独立线程组合验收。依据集中于 [T0](kernel-slice-validation/adapter-preflight.md)、[T0-P](kernel-slice-validation/preflight/README.md)与[原始消息实验](g0-g2-2026-11-16/boundary-validation/messages/README.md)，不使用会随工作区变动的行号当作固定版本证据。
 
-## 值得采用的源码机制
+## 从已有系统采用什么
 
-| 来源 | 采用或条件采用 | 不直接照搬 |
+| 来源 | 采用的机制 | 保留的边界 |
 |---|---|---|
-| DSH Router与所有权 | 明确Owner直达、无归属才路由、保留原请求引用、handback、context-only区分 | 固定卡片长度、每条通知必调模型、把订阅当授权 |
-| DSH事务effects | 域变化与执行意图同事务、完成时核对代际、delivery ID去重 | 把写入历史当理解；把外部effect当exactly-once |
-| Claude本地快照 | 直接peer消息、闲时事件唤醒、摘要分支不消费业务邮箱 | 文件邮箱当可靠分布式队列；未经验证的快照当官方产品保证 |
-| Codex生命周期与准入 | 区分身份/驻留/并发，按实际执行上下文授予permit，接受前后清理边界 | 私有Host扩展作为首版公开依赖；用本地Drop保障远端恢复 |
-| Codex消息板 | 持久记录先提交，短通知随后，request ID＋内容指纹 | 通知成功等于工作完成；数据库可写等于有权发布 |
-| Codex费用与子配置 | 逐响应计费含压缩，捕获实际有效权限与配置 | 原生预算当严格硬限；fork默认等于省总tokens |
+| DSH 路由与所有权 | 已知负责人直达，保留原请求，支持交还与仅供上下文的投递 | 卡片长度不是已验证最优参数；订阅不产生授权 |
+| DSH 事务 effects | 状态与执行意图同事务，完成时核对版本，投递按 ID 去重 | 外部副作用不因此获得 exactly-once 保证 |
+| Claude 本地快照 | 直接同伴消息、空闲唤醒、摘要分支不消费业务邮箱 | 文件邮箱不是分布式可靠队列；快照真实性未经独立确认 |
+| Codex 生命周期与准入 | 区分身份、会话驻留和并发，按实际执行取得许可 | 私有 Host 扩展不是公开 AppServer 的接入承诺 |
+| Codex 消息与费用 | 持久记录先于通知，ID 加内容指纹，捕获实效配置及压缩费用 | 原生预算不是严格硬限；fork 不必然降低总 tokens |
 
-Claude源目录真实性未经独立确认，引用仅表示本地观察。当前源码报告也未在该快照找到完整dynamic workflow执行实现，不能从产品文章推断具体内部恢复代码。
+详细依据见[三方源码报告](MULTI-AGENT-SOURCE-REVIEW.md)。该报告未在 Claude 快照中找到完整 dynamic workflow 实现，因此本设计采用公开机制的思路，不声称复刻其内部执行代码。
 
-## 决策边界
-
-已纳入设计：混合上下文、按需Router、平级协作Step、稳定消息ID、持久outbox、外部费用账本、版本化证据、人工控制与有界恢复。
-
-建议默认而非既定事实：一个控制实例、SQLite、一个桥接机器人、单组织信任域和通知节奏。待验证：真实群聊、两设备断线、统一usage、冷恢复、真实压缩、质量收益和30天连续性。延期：任意代码工作流、多控制实例容灾、OpenClaw/DSH动态适配与全协作模板库。
-
-下一篇：[008 Cookbook](008-cookbook.md)。
+下一篇：[008 Cookbook：怎样逐步接入和验证](008-cookbook.md)。
