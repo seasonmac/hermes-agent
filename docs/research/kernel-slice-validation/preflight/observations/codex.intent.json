@@ -1,0 +1,11 @@
+{
+  "mission": "preflight-20261117",
+  "step": "tool-roundtrip",
+  "body": "SYNTHETIC_ONLY: preserve this message exactly.",
+  "body_sha256": "764b96b3a6d84b8612268e95afbcf455ceff7a3bbae7287a6dab27fbb9682416",
+  "tool_schema_sha256": "95d1b88a787aa85350cf2edd4315ac8dd66695459bb8d551f1b7e74341074559",
+  "request_ids": [
+    "codex-before",
+    "codex-after"
+  ]
+}

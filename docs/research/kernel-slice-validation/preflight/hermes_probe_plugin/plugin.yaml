@@ -1,0 +1,8 @@
+name: t0p-collaboration-probe
+version: 0.0.1
+description: Synthetic preflight diagnostic; no transport or model calls
+provides_tools:
+  - collab_send
+  - t0p_unselected_echo
+provides_hooks:
+  - pre_tool_call

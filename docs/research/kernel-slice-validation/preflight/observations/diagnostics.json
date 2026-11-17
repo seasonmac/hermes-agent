@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-17",
+  "initial_sandbox_attempt": "loopback bind denied before any AppServer start; rerun with reviewed local-network permission",
+  "entries": [
+    {
+      "source_record": "codex-initial.json",
+      "status": "superseded_probe_incomplete",
+      "fixture_requests": 4,
+      "real_model_calls": 0,
+      "version": "codex-cli 0.169.0-alpha.11.1",
+      "request_body_keys": null,
+      "initial_tools_field": [],
+      "tool_call_transport": "direct function_call instead of advertised functions.exec",
+      "note": "Cold callback worked; first probe only inspected top-level tools and falsely accepted equality of empty lists. Second inspected input.additional_tools and found declaration and native collaboration namespace."
+    },
+    {
+      "source_record": "codex-advertisement.json",
+      "status": "superseded_probe_incomplete",
+      "fixture_requests": 4,
+      "real_model_calls": 0,
+      "version": "codex-cli 0.169.0-alpha.11.1",
+      "request_body_keys": [
+        "client_metadata",
+        "include",
+        "input",
+        "model",
+        "parallel_tool_calls",
+        "prompt_cache_key",
+        "reasoning",
+        "store",
+        "stream",
+        "text",
+        "tool_choice"
+      ],
+      "initial_tools_field": [],
+      "tool_call_transport": "direct function_call instead of advertised functions.exec",
+      "note": "Cold callback worked; first probe only inspected top-level tools and falsely accepted equality of empty lists. Second inspected input.additional_tools and found declaration and native collaboration namespace."
+    },
+    {
+      "source_record": "hermes-initial.json",
+      "status": "probe_setup_or_assertion_failure",
+      "error": "ModuleNotFoundError(\"No module named 'ruamel'\")",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/season/workspace/github/hermes-agent/docs/research/kernel-slice-validation/preflight/probe_hermes.py\", line 48, in child\n    from hermes_cli.plugins import discover_plugins, get_plugin_manager\n  File \"/Users/season/workspace/github/hermes-agent/hermes_cli/plugins.py\", line 31, in <module>\n    from utils import env_var_enabled\n  File \"/Users/season/workspace/github/hermes-agent/utils.py\", line 20, in <module>\n    import hermes_yaml as yaml\n  File \"/Users/season/workspace/github/hermes-agent/hermes_yaml.py\", line 10, in <module>\n    from ruamel.yaml import YAML\nModuleNotFoundError: No module named 'ruamel'\n",
+      "policy": null,
+      "tool_names": [],
+      "dispatch_cases": null,
+      "network_model_calls": 0
+    },
+    {
+      "source_record": "hermes-policy-initial.json",
+      "status": "probe_setup_or_assertion_failure",
+      "error": "RuntimeStoreError('launch_credentials_unavailable')",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/season/workspace/github/hermes-agent/docs/research/kernel-slice-validation/preflight/probe_hermes.py\", line 60, in child\n    policy = build_policy(params, load_config_readonly())\n  File \"/Users/season/workspace/github/hermes-agent/gateway/session_policy.py\", line 504, in build_policy\n    _extract_config_secrets(config, private_secrets)\n    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/season/workspace/github/hermes-agent/gateway/session_policy.py\", line 779, in _extract_config_secrets\n    _extract_config_secrets(child, private, child_path)\n    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/season/workspace/github/hermes-agent/gateway/session_policy.py\", line 775, in _extract_config_secrets\n    raise RuntimeStoreError('launch_credentials_unavailable')\nhermes_state_runtime.RuntimeStoreError: launch_credentials_unavailable\n",
+      "policy": null,
+      "tool_names": [],
+      "dispatch_cases": null,
+      "network_model_calls": 0
+    },
+    {
+      "source_record": "hermes-tool-table-initial.json",
+      "status": "probe_setup_or_assertion_failure",
+      "error": "AssertionError(['tool_search', 'tool_describe', 'tool_call'])",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/season/workspace/github/hermes-agent/docs/research/kernel-slice-validation/preflight/probe_hermes.py\", line 68, in child\n    assert names == [\"collab_send\"], names\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ['tool_search', 'tool_describe', 'tool_call']\n",
+      "policy": {
+        "toolsets": [
+          "t0p_collaboration"
+        ],
+        "safe_mode": false,
+        "ignore_user_config": false,
+        "yolo": false
+      },
+      "tool_names": [
+        "tool_search",
+        "tool_describe",
+        "tool_call"
+      ],
+      "dispatch_cases": null,
+      "network_model_calls": 0
+    },
+    {
+      "source_record": "hermes-handler-initial.json",
+      "status": "probe_setup_or_assertion_failure",
+      "error": "KeyError('accepted')",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/season/workspace/github/hermes-agent/docs/research/kernel-slice-validation/preflight/probe_hermes.py\", line 95, in child\n    assert not dispatch(\"forged_body_identity\", {}, {**args, \"sender\": \"worker-fixture\"})[\"accepted\"]\n               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\nKeyError: 'accepted'\n",
+      "policy": {
+        "toolsets": [
+          "t0p_collaboration"
+        ],
+        "safe_mode": false,
+        "ignore_user_config": false,
+        "yolo": false
+      },
+      "tool_names": [
+        "collab_send"
+      ],
+      "dispatch_cases": {
+        "normal": {
+          "accepted": true,
+          "observed": {
+            "task_id": "task-hermes-probe",
+            "session_id": "session-hermes-probe",
+            "conversation_id": "conversation-hermes-probe",
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "peer-fixture",
+            "body": "SYNTHETIC_ONLY: preserve this message exactly."
+          },
+          "author": "worker-fixture",
+          "receipt": "receipt:hermes-dispatch"
+        },
+        "missing_context": {
+          "accepted": false,
+          "observed": {
+            "task_id": null,
+            "session_id": null,
+            "conversation_id": null,
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "peer-fixture",
+            "body": "SYNTHETIC_ONLY: preserve this message exactly."
+          },
+          "author": null,
+          "receipt": null
+        },
+        "child_shared_conversation": {
+          "accepted": false,
+          "observed": {
+            "task_id": "task-hermes-probe",
+            "session_id": "child-session",
+            "conversation_id": "conversation-hermes-probe",
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "peer-fixture",
+            "body": "SYNTHETIC_ONLY: preserve this message exactly."
+          },
+          "author": null,
+          "receipt": null
+        },
+        "stale_session": {
+          "accepted": false,
+          "observed": {
+            "task_id": "task-hermes-probe",
+            "session_id": "old-session",
+            "conversation_id": "conversation-hermes-probe",
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "peer-fixture",
+            "body": "SYNTHETIC_ONLY: preserve this message exactly."
+          },
+          "author": null,
+          "receipt": null
+        },
+        "forged_body_identity": {
+          "error": "sender: not a parameter of collab_send. The tool was NOT invoked. Valid parameters: request_id, target, body."
+        }
+      },
+      "network_model_calls": 0
+    }
+  ]
+}

@@ -1,0 +1,546 @@
+{
+  "date": "2026-11-17",
+  "real_model_calls": 0,
+  "real_model_tokens": 0,
+  "gateway_started_or_connected": false,
+  "runs": [
+    {
+      "mode": "unguarded",
+      "dependency_directory": "/Users/season/.hermes/installs/200df0a063e145e2/environments/14e3fa7dcddd4d119c8aafc87c40ca19/venv/lib/python3.14/site-packages",
+      "network_model_calls": 0,
+      "identity_source": "synthetic trusted arguments to real dispatcher, not an Agent turn",
+      "plugins": [
+        {
+          "name": "t0p-collaboration-probe",
+          "key": "t0p-collaboration-probe",
+          "kind": "standalone",
+          "version": "0.0.1",
+          "description": "Synthetic preflight diagnostic; no transport or model calls",
+          "source": "user",
+          "enabled": true,
+          "tools": 2,
+          "hooks": 1,
+          "middleware": 0,
+          "commands": 0,
+          "error": null
+        }
+      ],
+      "policy_private_field_paths_only": [
+        [
+          "voice",
+          "record_key"
+        ]
+      ],
+      "policy": {
+        "toolsets": [
+          "t0p_collaboration"
+        ],
+        "safe_mode": false,
+        "ignore_user_config": false,
+        "yolo": false
+      },
+      "tool_definitions": [
+        {
+          "type": "function",
+          "function": {
+            "name": "collab_send",
+            "description": "Synthetic local send; no external transport.",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "request_id": {
+                  "type": "string"
+                },
+                "target": {
+                  "type": "string"
+                },
+                "body": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "request_id",
+                "target",
+                "body"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "safe_mode_policy_toolsets": [],
+      "safe_mode_tool_definitions": [],
+      "intent": {
+        "mission": "preflight-20261117",
+        "step": "tool-roundtrip",
+        "attempt": "hermes-dispatch",
+        "binding": {
+          "task_id": "task-hermes-probe",
+          "session_id": "session-hermes-probe",
+          "conversation_id": "conversation-hermes-probe"
+        },
+        "arguments": {
+          "request_id": "hermes-dispatch",
+          "target": "peer-fixture",
+          "body": "SYNTHETIC_ONLY: preserve this message exactly."
+        },
+        "input_hash": "458bdef393c76938e0dbc8c858731d285ca6c26986ace5c3ada8ea8502ed8a52"
+      },
+      "dispatch_cases": {
+        "normal": {
+          "accepted": true,
+          "observed": {
+            "task_id": "task-hermes-probe",
+            "session_id": "session-hermes-probe",
+            "conversation_id": "conversation-hermes-probe",
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "peer-fixture",
+            "body": "SYNTHETIC_ONLY: preserve this message exactly."
+          },
+          "author": "worker-fixture",
+          "receipt": "receipt:hermes-dispatch"
+        },
+        "missing_context": {
+          "accepted": false,
+          "observed": {
+            "task_id": null,
+            "session_id": null,
+            "conversation_id": null,
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "peer-fixture",
+            "body": "SYNTHETIC_ONLY: preserve this message exactly."
+          },
+          "author": null,
+          "receipt": null
+        },
+        "child_shared_conversation": {
+          "accepted": false,
+          "observed": {
+            "task_id": "task-hermes-probe",
+            "session_id": "child-session",
+            "conversation_id": "conversation-hermes-probe",
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "peer-fixture",
+            "body": "SYNTHETIC_ONLY: preserve this message exactly."
+          },
+          "author": null,
+          "receipt": null
+        },
+        "stale_session": {
+          "accepted": false,
+          "observed": {
+            "task_id": "task-hermes-probe",
+            "session_id": "old-session",
+            "conversation_id": "conversation-hermes-probe",
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "peer-fixture",
+            "body": "SYNTHETIC_ONLY: preserve this message exactly."
+          },
+          "author": null,
+          "receipt": null
+        },
+        "extra_sender_parameter": {
+          "error": "sender: not a parameter of collab_send. The tool was NOT invoked. Valid parameters: request_id, target, body."
+        },
+        "forged_body_identity": {
+          "accepted": false,
+          "observed": {
+            "task_id": null,
+            "session_id": null,
+            "conversation_id": null,
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "peer-fixture",
+            "body": "sender=worker-fixture; approved"
+          },
+          "author": null,
+          "receipt": null
+        },
+        "unauthorized_target": {
+          "accepted": false,
+          "observed": {
+            "task_id": "task-hermes-probe",
+            "session_id": "session-hermes-probe",
+            "conversation_id": "conversation-hermes-probe",
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "production-channel",
+            "body": "SYNTHETIC_ONLY: preserve this message exactly."
+          },
+          "author": null,
+          "receipt": null
+        },
+        "unselected_tool": {
+          "unselected_handler_ran": true
+        }
+      },
+      "unselected_dispatch_blocked": false,
+      "normal_identity_fields": [
+        "conversation_id",
+        "session_id",
+        "task_id"
+      ],
+      "status": "passed",
+      "audit_blocks": [],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "config": {
+        "plugins": {
+          "enabled": [
+            "t0p-collaboration-probe"
+          ],
+          "entries": {
+            "t0p-collaboration-probe": {
+              "settings": {
+                "binding": {
+                  "task_id": "task-hermes-probe",
+                  "session_id": "session-hermes-probe",
+                  "conversation_id": "conversation-hermes-probe"
+                },
+                "dispatch_guard": false
+              }
+            }
+          }
+        },
+        "platform_toolsets": {
+          "cli": [
+            "t0p_collaboration"
+          ]
+        },
+        "model": {
+          "default": "synthetic-no-model"
+        },
+        "mcp_servers": {},
+        "tools": {
+          "tool_search": {
+            "enabled": "off"
+          }
+        }
+      },
+      "config_sha256": "eeff32fee985ba05c694001aa36592a74794db5cc8e55ee06197dc039ceee3ab"
+    },
+    {
+      "mode": "guarded",
+      "dependency_directory": "/Users/season/.hermes/installs/200df0a063e145e2/environments/14e3fa7dcddd4d119c8aafc87c40ca19/venv/lib/python3.14/site-packages",
+      "network_model_calls": 0,
+      "identity_source": "synthetic trusted arguments to real dispatcher, not an Agent turn",
+      "plugins": [
+        {
+          "name": "t0p-collaboration-probe",
+          "key": "t0p-collaboration-probe",
+          "kind": "standalone",
+          "version": "0.0.1",
+          "description": "Synthetic preflight diagnostic; no transport or model calls",
+          "source": "user",
+          "enabled": true,
+          "tools": 2,
+          "hooks": 1,
+          "middleware": 0,
+          "commands": 0,
+          "error": null
+        }
+      ],
+      "policy_private_field_paths_only": [
+        [
+          "voice",
+          "record_key"
+        ]
+      ],
+      "policy": {
+        "toolsets": [
+          "t0p_collaboration"
+        ],
+        "safe_mode": false,
+        "ignore_user_config": false,
+        "yolo": false
+      },
+      "tool_definitions": [
+        {
+          "type": "function",
+          "function": {
+            "name": "collab_send",
+            "description": "Synthetic local send; no external transport.",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "request_id": {
+                  "type": "string"
+                },
+                "target": {
+                  "type": "string"
+                },
+                "body": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "request_id",
+                "target",
+                "body"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "safe_mode_policy_toolsets": [],
+      "safe_mode_tool_definitions": [],
+      "intent": {
+        "mission": "preflight-20261117",
+        "step": "tool-roundtrip",
+        "attempt": "hermes-dispatch",
+        "binding": {
+          "task_id": "task-hermes-probe",
+          "session_id": "session-hermes-probe",
+          "conversation_id": "conversation-hermes-probe"
+        },
+        "arguments": {
+          "request_id": "hermes-dispatch",
+          "target": "peer-fixture",
+          "body": "SYNTHETIC_ONLY: preserve this message exactly."
+        },
+        "input_hash": "458bdef393c76938e0dbc8c858731d285ca6c26986ace5c3ada8ea8502ed8a52"
+      },
+      "dispatch_cases": {
+        "normal": {
+          "accepted": true,
+          "observed": {
+            "task_id": "task-hermes-probe",
+            "session_id": "session-hermes-probe",
+            "conversation_id": "conversation-hermes-probe",
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "peer-fixture",
+            "body": "SYNTHETIC_ONLY: preserve this message exactly."
+          },
+          "author": "worker-fixture",
+          "receipt": "receipt:hermes-dispatch"
+        },
+        "missing_context": {
+          "accepted": false,
+          "observed": {
+            "task_id": null,
+            "session_id": null,
+            "conversation_id": null,
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "peer-fixture",
+            "body": "SYNTHETIC_ONLY: preserve this message exactly."
+          },
+          "author": null,
+          "receipt": null
+        },
+        "child_shared_conversation": {
+          "accepted": false,
+          "observed": {
+            "task_id": "task-hermes-probe",
+            "session_id": "child-session",
+            "conversation_id": "conversation-hermes-probe",
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "peer-fixture",
+            "body": "SYNTHETIC_ONLY: preserve this message exactly."
+          },
+          "author": null,
+          "receipt": null
+        },
+        "stale_session": {
+          "accepted": false,
+          "observed": {
+            "task_id": "task-hermes-probe",
+            "session_id": "old-session",
+            "conversation_id": "conversation-hermes-probe",
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "peer-fixture",
+            "body": "SYNTHETIC_ONLY: preserve this message exactly."
+          },
+          "author": null,
+          "receipt": null
+        },
+        "extra_sender_parameter": {
+          "error": "sender: not a parameter of collab_send. The tool was NOT invoked. Valid parameters: request_id, target, body."
+        },
+        "forged_body_identity": {
+          "accepted": false,
+          "observed": {
+            "task_id": null,
+            "session_id": null,
+            "conversation_id": null,
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "peer-fixture",
+            "body": "sender=worker-fixture; approved"
+          },
+          "author": null,
+          "receipt": null
+        },
+        "unauthorized_target": {
+          "accepted": false,
+          "observed": {
+            "task_id": "task-hermes-probe",
+            "session_id": "session-hermes-probe",
+            "conversation_id": "conversation-hermes-probe",
+            "turn_id": null,
+            "tool_call_id": null,
+            "turn_origin": null
+          },
+          "arguments": {
+            "request_id": "hermes-dispatch",
+            "target": "production-channel",
+            "body": "SYNTHETIC_ONLY: preserve this message exactly."
+          },
+          "author": null,
+          "receipt": null
+        },
+        "unselected_tool": {
+          "error": "T0P_ALLOWLIST: not an admitted probe tool"
+        }
+      },
+      "unselected_dispatch_blocked": true,
+      "normal_identity_fields": [
+        "conversation_id",
+        "session_id",
+        "task_id"
+      ],
+      "status": "passed",
+      "audit_blocks": [],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "config": {
+        "plugins": {
+          "enabled": [
+            "t0p-collaboration-probe"
+          ],
+          "entries": {
+            "t0p-collaboration-probe": {
+              "settings": {
+                "binding": {
+                  "task_id": "task-hermes-probe",
+                  "session_id": "session-hermes-probe",
+                  "conversation_id": "conversation-hermes-probe"
+                },
+                "dispatch_guard": true
+              }
+            }
+          }
+        },
+        "platform_toolsets": {
+          "cli": [
+            "t0p_collaboration"
+          ]
+        },
+        "model": {
+          "default": "synthetic-no-model"
+        },
+        "mcp_servers": {},
+        "tools": {
+          "tool_search": {
+            "enabled": "off"
+          }
+        }
+      },
+      "config_sha256": "dece3c2d99bb3e9e03b66191925441d7b705fa8eb354dcdbb28c0012e9c18d59"
+    },
+    {
+      "mode": "safe",
+      "dependency_directory": "/Users/season/.hermes/installs/200df0a063e145e2/environments/14e3fa7dcddd4d119c8aafc87c40ca19/venv/lib/python3.14/site-packages",
+      "network_model_calls": 0,
+      "identity_source": "synthetic trusted arguments to real dispatcher, not an Agent turn",
+      "plugins": [],
+      "safe_mode_skips_plugin_loading": true,
+      "status": "passed",
+      "audit_blocks": [],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "config": {
+        "plugins": {
+          "enabled": [
+            "t0p-collaboration-probe"
+          ],
+          "entries": {
+            "t0p-collaboration-probe": {
+              "settings": {
+                "binding": {
+                  "task_id": "task-hermes-probe",
+                  "session_id": "session-hermes-probe",
+                  "conversation_id": "conversation-hermes-probe"
+                },
+                "dispatch_guard": false
+              }
+            }
+          }
+        },
+        "platform_toolsets": {
+          "cli": [
+            "t0p_collaboration"
+          ]
+        },
+        "model": {
+          "default": "synthetic-no-model"
+        },
+        "mcp_servers": {},
+        "tools": {
+          "tool_search": {
+            "enabled": "off"
+          }
+        }
+      },
+      "config_sha256": "eeff32fee985ba05c694001aa36592a74794db5cc8e55ee06197dc039ceee3ab"
+    }
+  ],
+  "source_commit": "cf02ef9e5196649b0884b0fd4e9ca341b42cc9bb",
+  "python_version": "Python 3.14.9",
+  "status": "passed"
+}

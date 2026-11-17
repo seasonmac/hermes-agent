@@ -1,0 +1,19 @@
+{
+  "codex": {
+    "status": "passed",
+    "fixture_requests": 4,
+    "checks": {
+      "experimental_gate": true,
+      "normal_callback": true,
+      "cold_history_resume": true,
+      "cold_dynamic_tool_callback": true,
+      "identical_effective_tool_schema": true,
+      "synthetic_cumulative_usage": true
+    },
+    "real_model_calls": 0
+  },
+  "hermes": {
+    "status": "passed"
+  },
+  "reason_for_final_rerun": "Added durable pre-call intent artifacts and strict final process-exit check."
+}

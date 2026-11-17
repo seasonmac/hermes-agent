@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-17",
+  "stage": "T0-P zero-paid subset",
+  "T0_P_complete": false,
+  "real_model_cost_calibration": "not_run",
+  "real_model_calls": 0,
+  "real_model_tokens": 0,
+  "research_assistant_usage_included": false,
+  "plan_soft_budget_tokens": 360000,
+  "new_paid_experiment_budget_spent_tokens": 0,
+  "fixture_counts": {
+    "codex_final_run_requests": 4,
+    "codex_all_runs_requests": 16,
+    "codex_runs": 4,
+    "final_run_synthetic_total": 52,
+    "all_runs_synthetic_total": 208,
+    "synthetic_usage_is_not_measured_cost": true
+  },
+  "codex": {
+    "version": "codex-cli 0.169.0-alpha.11.1",
+    "binary_sha256": "3ea20787e106af94573d3d6c19480aed93a1334b0dd32b6b04e2f780ce82cf4b",
+    "source_commit": "e241c18544bab47f729dbfea6d6f2e21531ba0a7",
+    "binary_source_commit_equivalence": "unknown",
+    "config_sha256": "13e06473cabcf1f958b2bc7ceee3009c98aadec369ab563a4773cd2a0e65f732",
+    "config_template": "cli_auth_credentials_store=\"file\"\nmodel=\"gpt-6.1-sol\"\nmodel_provider=\"preflight_fixture\"\nweb_search=\"disabled\"\n[model_providers.preflight_fixture]\nname=\"Zero paid local preflight fixture\"\nbase_url=\"http://127.0.0.1:{port}/v1\"\nwire_api=\"responses\"\nrequires_openai_auth=false\nrequest_max_retries=0\nstream_max_retries=0\n[agents]\nenabled=false\n[features]\nenable_request_compression=false\nrespect_system_proxy=true\nplugins=false\napps=false\nrecommended_plugins=false\nskill_search=false\nshell_tool=false\nmulti_agent_v2=false\nmulti_agent_v2_dynamic_tools=false\n[skills]\ninclude_instructions=false\n[skills.bundled]\nenabled=false\n[cloud.skills]\nenabled=false\n[analytics]\nenabled=false\n",
+    "controlled_turns": 2,
+    "provider_requests_per_turn": [
+      2,
+      2
+    ],
+    "request_bytes": [
+      20255,
+      20854,
+      21144,
+      21739
+    ],
+    "tool_schema_hash": "10a06519993e7c7b18a485bd1b3c4675ba106510b9cb25fbd4a4824477571c0d",
+    "top_level_namespaces": {
+      "functions": [
+        "exec",
+        "wait",
+        "request_user_input",
+        "request_user_input_async"
+      ],
+      "clock": [
+        "sleep"
+      ]
+    },
+    "nested_exec_tools": [
+      "apply_patch",
+      "collab_send",
+      "create_goal",
+      "get_goal",
+      "list_mcp_resource_templates",
+      "list_mcp_resources",
+      "read_mcp_resource",
+      "update_goal",
+      "view_image",
+      "clock__curr_time"
+    ],
+    "checks": {
+      "experimental_gate": true,
+      "normal_callback": true,
+      "cold_history_resume": true,
+      "cold_dynamic_tool_callback": true,
+      "identical_effective_tool_schema": true,
+      "synthetic_cumulative_usage": true
+    },
+    "effective_surface_is_only_collaboration_tools": false,
+    "permissions_execution_tested": false,
+    "pending_callback_recovery": "not_tested",
+    "inflight_billing_recovery": "not_tested",
+    "real_cost_estimate": null
+  },
+  "hermes": {
+    "source_commit": "cf02ef9e5196649b0884b0fd4e9ca341b42cc9bb",
+    "python_version": "Python 3.14.9",
+    "modes": [
+      {
+        "mode": "unguarded",
+        "config_sha256": "eeff32fee985ba05c694001aa36592a74794db5cc8e55ee06197dc039ceee3ab",
+        "policy": {
+          "toolsets": [
+            "t0p_collaboration"
+          ],
+          "safe_mode": false,
+          "ignore_user_config": false,
+          "yolo": false
+        },
+        "normal_identity_fields": [
+          "conversation_id",
+          "session_id",
+          "task_id"
+        ],
+        "unselected_dispatch_blocked": false,
+        "safe_mode_skips_plugin_loading": null,
+        "audit_blocks": []
+      },
+      {
+        "mode": "guarded",
+        "config_sha256": "dece3c2d99bb3e9e03b66191925441d7b705fa8eb354dcdbb28c0012e9c18d59",
+        "policy": {
+          "toolsets": [
+            "t0p_collaboration"
+          ],
+          "safe_mode": false,
+          "ignore_user_config": false,
+          "yolo": false
+        },
+        "normal_identity_fields": [
+          "conversation_id",
+          "session_id",
+          "task_id"
+        ],
+        "unselected_dispatch_blocked": true,
+        "safe_mode_skips_plugin_loading": null,
+        "audit_blocks": []
+      },
+      {
+        "mode": "safe",
+        "config_sha256": "eeff32fee985ba05c694001aa36592a74794db5cc8e55ee06197dc039ceee3ab",
+        "policy": null,
+        "normal_identity_fields": null,
+        "unselected_dispatch_blocked": null,
+        "safe_mode_skips_plugin_loading": true,
+        "audit_blocks": []
+      }
+    ],
+    "identity_evidence": "synthetic arguments through real dispatcher, not native Agent turn",
+    "real_gateway_version": "not_queried",
+    "real_usage_coverage": "not_tested",
+    "real_cost_estimate": null,
+    "limitations": [
+      "Hook error/timeout, skipped hooks and alternate dispatcher entrypoints not tested.",
+      "Explicit toolset filters advertised tools; low-level direct dispatch needs separate enforcement.",
+      "Test handler binding/receipt is not runtime implementation.",
+      "Profile isolation and Python audit guard are not a production OS sandbox."
+    ]
+  },
+  "capability_delta": {
+    "B01": "Codex installed API tested; live Hermes remains unknown",
+    "B02": "Hermes loader and candidate config tested without model; actual turn remains unknown",
+    "B03": "Synthetic identity propagation and refusal cases tested; native Attempt binding unknown",
+    "B04": "real usage remains unknown",
+    "B05": "terminal-then-cold dynamic definition+callback verified",
+    "B06": "inflight recovery not tested",
+    "B07": "effective tools observed; broader permissions and opaque reads remain unknown"
+  },
+  "artifact_sha256": {
+    "README.md": "6148ffbbe9a961fb6336173ea5b05f49b01594db8dc2807a6a1d9a6a8a8f972b",
+    "fixture_responses.py": "810cf4f94ba185126b9370624646f71f9437a0b090192cf4a41d5aff03f3d099",
+    "hermes_probe_plugin/__init__.py": "75ccc785e9352e11fbd7de2fca9efd5cb8a08c9750b1100e25d4a48a08648bba",
+    "hermes_probe_plugin/plugin.yaml": "62e5189a381b05694ad52d2a774d7948a0f9667902fa956bafa4ac5f4b47910b",
+    "observations/codex.intent.json": "54958e01ea6c2dc1cc86839e4f76090e4fb5132ff78c2037541fa831b4d625b3",
+    "observations/codex.json": "f3c8d1e01920324dffcc4a9ed541e8c3cc54d5637a925e1053485019bec369bd",
+    "observations/diagnostics.json": "3ece5378d11362b16cd003206795250afc0cfb3327e838c47327803cbd817761",
+    "observations/hermes.intent.json": "907c0eabb01c1d0e7bd46a89c02a90df3b732a9860916f3c0b83123616eb6f09",
+    "observations/hermes.json": "bafa5a7643ce9bae6e6a996d1ffdf58ea6d4747e887781ccce888bede97213ce",
+    "observations/prior-success.json": "4ed67a9d2bdf2913f1fb1894abe5ce791b53a31178b7b8bbd89dcb939e57fb5b",
+    "probe_codex.py": "3d2b58859275de553711e793f899ffac6205e01357a367cf5173081597fdcc65",
+    "probe_hermes.py": "1d6133f37777bee2786828a1350a8a7deff3efeb48b4238f71e480c884c35b6a",
+    "protocol.md": "6763d709a02bb024e1352aa852493ef16bf68d0980233f7d93e6682b93222d70",
+    "verify_evidence.py": "aaa43e5a57c16e05a7daa1436360ccbf7438c7873fcebb656af11c0c993c54f9"
+  }
+}

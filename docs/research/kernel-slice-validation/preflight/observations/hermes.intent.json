@@ -1,0 +1,17 @@
+{
+  "mission": "preflight-20261117",
+  "step": "tool-roundtrip",
+  "attempt": "hermes-dispatch",
+  "binding": {
+    "task_id": "task-hermes-probe",
+    "session_id": "session-hermes-probe",
+    "conversation_id": "conversation-hermes-probe"
+  },
+  "modes": [
+    "unguarded",
+    "guarded",
+    "safe"
+  ],
+  "target": "peer-fixture",
+  "body": "SYNTHETIC_ONLY: preserve this message exactly."
+}
